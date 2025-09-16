@@ -1,0 +1,39 @@
+{
+  "name": "ragx",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.31.0",
+    "@playwright/test": "^1.53.1",
+    "@types/node": "^24.0.4",
+    "allure-playwright": "^3.3.0",
+    "csv-parse": "^6.1.0",
+    "eslint": "^9.31.0",
+    "globals": "^16.3.0"
+  },
+  "dependencies": {
+    "@playwright/mcp": "^0.0.30",
+    "allure": "^3.0.0-beta.15",
+    "axios": "^1.12.2",
+    "canvas": "^3.1.2",
+    "dotenv": "^17.2.2",
+    "fast-levenshtein": "^3.0.0",
+    "jimp": "^1.6.0",
+    "node-cron": "^4.2.1",
+    "openai": "^5.12.2",
+    "pdf-img-convert": "^2.0.0",
+    "pdf-parse": "^1.1.1",
+    "pdf-poppler": "^0.2.1",
+    "pdf2pic": "^3.2.0",
+    "pdfjs-dist": "^5.4.54",
+    "tesseract.js": "^6.0.1"
+  }
+}
