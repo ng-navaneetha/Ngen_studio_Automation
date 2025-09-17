@@ -34,24 +34,27 @@ jobs:
 
       - name: Run Playwright smoke tests with HTML + JSON report
         run: |
-          npx playwright test --grep @smoke --reporter=json,html > results.json
+          mkdir -p reports
+          npx playwright test --grep @smoke --reporter=json,html
+          mv playwright-report "reports/$(date +'%Y-%m-%d_%H-%M-%S')"
 
-      - name: Deploy Playwright report to GitHub Pages
+      - name: Deploy Playwright reports to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./playwright-report
+          publish_dir: ./reports
+          publish_branch: gh-pages
+          keep_files: true  # keep older reports instead of deleting them
 
       - name: Parse results and send summary to Teams
         run: |
-          echo "📊 Formatting Playwright results..."
           summary=$(jq -r '
             .suites[].specs[] | 
             .title + " → " + (.tests[0].results[0].status)
-          ' results.json | sed ':a;N;$!ba;s/\n/\\n/g')
+          ' reports/*/results.json | sed ':a;N;$!ba;s/\n/\\n/g')
 
-          report_url="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+          latest_url="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/$(ls -t reports | head -n1)/"
 
           curl -H 'Content-Type: application/json' \
-            -d "{\"text\": \"🧪 Playwright Smoke Test Report\n$summary\n\n📑 [View Full HTML Report]($report_url)\"}" \
+            -d "{\"text\": \"🧪 Playwright Smoke Test Report\n$summary\n\n📑 [View Latest Report]($latest_url)\"}" \
             ${{ secrets.TEAMS_WEBHOOK_URL }}
