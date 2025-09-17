@@ -13,7 +13,7 @@ class InsightsPage {
 
     this.insightsTitle = page.getByRole('heading', { name: 'My Workspaces' });
     this.createButton = page.getByRole('button', { name: 'Create new' });
-    this.workspacesList = page.locator('.absolute.inset-0.bg-gradient-to-tr').first();
+    this.workspacesList = page.locator('.absolute.inset-0.bg-gradient-to-tr');
     
     // Create workspace dialog elements
     this.workspaceNameInput = page.getByPlaceholder('Enter workspace name');

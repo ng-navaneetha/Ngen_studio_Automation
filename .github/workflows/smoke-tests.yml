@@ -1,0 +1,29 @@
+name: Playwright Smoke Tests
+
+on:
+  schedule:
+    - cron: "30 3 * * *" # daily at 6 AM UTC
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Playwright smoke tests
+        run: npx playwright test --grep @smoke --reporter=line
+
+      - name: Send Teams Notification
+        run: |
+         curl -H 'Content-Type: application/json' \
+          -d '{"text": "✅ Playwright smoke tests completed successfully"}' \
+          ${{ secrets.TEAMS_WEBHOOK_URL }}
