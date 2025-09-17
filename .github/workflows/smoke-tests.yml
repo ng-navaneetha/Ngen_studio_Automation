@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: "npm" # cache node_modules
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
@@ -32,11 +32,26 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright smoke tests
-        run: npx playwright test --grep @smoke --reporter=line
-
-      - name: Send Teams Notification
+      - name: Run Playwright smoke tests with HTML + JSON report
         run: |
+          npx playwright test --grep @smoke --reporter=json,html > results.json
+
+      - name: Deploy Playwright report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./playwright-report
+
+      - name: Parse results and send summary to Teams
+        run: |
+          echo "📊 Formatting Playwright results..."
+          summary=$(jq -r '
+            .suites[].specs[] | 
+            .title + " → " + (.tests[0].results[0].status)
+          ' results.json | sed ':a;N;$!ba;s/\n/\\n/g')
+
+          report_url="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+
           curl -H 'Content-Type: application/json' \
-           -d '{"text": "✅ Playwright smoke tests completed successfully"}' \
-           ${{ secrets.TEAMS_WEBHOOK_URL }}
+            -d "{\"text\": \"🧪 Playwright Smoke Test Report\n$summary\n\n📑 [View Full HTML Report]($report_url)\"}" \
+            ${{ secrets.TEAMS_WEBHOOK_URL }}
