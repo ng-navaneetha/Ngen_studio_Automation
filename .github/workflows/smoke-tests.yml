@@ -1,4 +1,4 @@
-name: NgenStudio report
+name: NgenStudio test Report
 
 on:
   schedule:
@@ -8,9 +8,7 @@ on:
 jobs:
   smoke:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        browser: [chromium]
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -35,55 +33,32 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright smoke tests
+      - name: Run Playwright smoke tests with HTML + JSON report
         run: |
           mkdir -p reports
-          npx playwright test --grep @smoke --browser ${{ matrix.browser }} --reporter=json,html
+          npx playwright test --grep @smoke --reporter=json,html
           ts=$(date +'%Y-%m-%d_%H-%M-%S')
-          mv playwright-report "reports/$ts-${{ matrix.browser }}"
-          mv results.json "reports/$ts-${{ matrix.browser }}/results.json"
+          mv playwright-report "reports/$ts"
+          mv results.json "reports/$ts/results.json"
           echo "REPORT_TS=$ts" >> $GITHUB_ENV
 
-      - name: Upload reports as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report-${{ matrix.browser }}
-          path: reports/
-
-  merge-reports:
-    needs: smoke
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Download reports
-        uses: actions/download-artifact@v4
-        with:
-          path: reports
-
-      - name: Merge Playwright reports
-        run: |
-          mkdir -p merged-report
-          npx playwright merge-reports --reporter html,json reports/*/*
-
-      - name: Deploy merged report to GitHub Pages
+      - name: Deploy Playwright reports to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./playwright-report
+          publish_dir: ./reports
           publish_branch: gh-pages
-          keep_files: true
+          keep_files: true  # keep older reports instead of deleting them
 
       - name: Parse results and send summary to Teams
         run: |
           summary=$(jq -r '
-            .suites[].specs[]? |
+            .suites[].specs[]? | 
             .title + " → " + (.tests[0].results[0].status)
-          ' playwright-report/results.json | sed ':a;N;$!ba;s/\n/\\n/g')
+          ' reports/$REPORT_TS/results.json | sed ':a;N;$!ba;s/\n/\\n/g')
 
-          latest_url="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+          latest_url="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/$REPORT_TS/"
 
           curl -H 'Content-Type: application/json' \
-            -d "{\"text\": \"🧪 Playwright Smoke Test Report\n\n$summary\n\n📑 [View Full Report]($latest_url)\"}" \
+            -d "{\"text\": \"🧪 Chromium Smoke Test Report\n\n$summary\n\n📑 [View Full Report]($latest_url)\"}" \
             ${{ secrets.TEAMS_WEBHOOK_URL }}
