@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        browser: [chromium, firefox, webkit]   # parallel jobs across browsers
+        browser: [chromium, firefox, webkit]
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -35,21 +35,55 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright smoke tests on ${{ matrix.browser }} with workers
+      - name: Run Playwright smoke tests
         run: |
           mkdir -p reports
-          npx playwright test --grep @smoke \
-            --browser ${{ matrix.browser }} \
-            --reporter=json,html \
-            --workers=4   # parallelism inside each job
-          
-          ts=$(date +'%Y-%m-%d_%H-%M-%S')-${{ matrix.browser }}
-          mv playwright-report "reports/$ts"
-          mv results.json "reports/$ts/results.json"
+          npx playwright test --grep @smoke --browser ${{ matrix.browser }} --reporter=json,html
+          ts=$(date +'%Y-%m-%d_%H-%M-%S')
+          mv playwright-report "reports/$ts-${{ matrix.browser }}"
+          mv results.json "reports/$ts-${{ matrix.browser }}/results.json"
           echo "REPORT_TS=$ts" >> $GITHUB_ENV
 
       - name: Upload reports as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: playwright-report-${{ matrix.browser }}
-          path: reports/${{ env.REPORT_TS }}
+          path: reports/
+
+  merge-reports:
+    needs: smoke
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Download reports
+        uses: actions/download-artifact@v4
+        with:
+          path: reports
+
+      - name: Merge Playwright reports
+        run: |
+          mkdir -p merged-report
+          npx playwright merge-reports --reporter html,json reports/*/*
+
+      - name: Deploy merged report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./playwright-report
+          publish_branch: gh-pages
+          keep_files: true
+
+      - name: Parse results and send summary to Teams
+        run: |
+          summary=$(jq -r '
+            .suites[].specs[]? |
+            .title + " → " + (.tests[0].results[0].status)
+          ' playwright-report/results.json | sed ':a;N;$!ba;s/\n/\\n/g')
+
+          latest_url="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+
+          curl -H 'Content-Type: application/json' \
+            -d "{\"text\": \"🧪 Playwright Smoke Test Report\n\n$summary\n\n📑 [View Full Report]($latest_url)\"}" \
+            ${{ secrets.TEAMS_WEBHOOK_URL }}
