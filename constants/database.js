@@ -3,7 +3,7 @@
 export const DB_CONFIG = {
   POSTGRES: {
     DB_TYPE: "postgres",
-    DB_HOST: "ep-orange-hall-ad1wbmat-pooler.c-2.us-east-1.aws.neon.tech", 
+    DB_HOST: "ep-orange-hall-ad1wbmat-pooler.c-2.us-east-1.aws.neon.tech",
     DB_PORT: 5432,
     DB_NAME: "Query",
     DB_USERNAME: "neondb_owner",
@@ -11,7 +11,20 @@ export const DB_CONFIG = {
     // or retrieved from a secrets manager. The password is masked for security.
     DB_PASSWORD: process.env.DB_PASSWORD || "npg_S5jF3UgekpiL",
     DB_SCHEMA: "public",
-    EMBEDDING_TYPE: ""
+    EMBEDDING_TYPE: "",
   },
   // Add more database configurations as needed
+};
+
+export const AcmeDB = {
+  POSTGRES: {
+    DB_TYPE: "postgresql",
+    DB_HOST: "database-1.cjgkq0246t77.us-east-1.rds.amazonaws.com",
+    DB_PORT: 5432,
+    DB_NAME: "postgres",
+    DB_USERNAME: "postgres",
+    DB_PASSWORD: "DynamodbRDS",
+    DB_SCHEMA: "acme-chatbot",
+    EMBEDDING_TYPE: "cohere",
+  },
 };

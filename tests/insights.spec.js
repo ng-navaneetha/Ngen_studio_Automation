@@ -106,7 +106,7 @@ test.describe('Insights Feature Tests', () => {
   });
   
  
-  test('@smoke TC06: Verify workspace functionality - upload document', async ({ page }) => {
+  test('@smoke TC06:Insights use case - Verify workspace functionality - upload document', async ({ page }) => {
     // Create a workspace first
     const data = WORKSPACE_DATA.UPLOAD_TEST;
     await insightsPage.clickCreateButton();

@@ -164,7 +164,7 @@ test.describe("Call Summarization", () => {
     console.table(results);
   });
 
-  test("@smoke TC06: Summary screen - UI and content assertions", async ({ page }) => {
+  test("@smoke TC06: Happy flow - Summary screen - UI and content assertions", async ({ page }) => {
     test.setTimeout(160000);
     await setupSummaryWorkspace(page);
     // Header and navigation

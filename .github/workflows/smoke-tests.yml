@@ -1,13 +1,16 @@
-name: Playwright Smoke Tests
+name: NgenStudio report
 
 on:
   schedule:
-    - cron: "30 3 * * *" # daily at 6 AM UTC
+    - cron: "30 3 * * 1-5"   # 9:00 AM IST, Monday–Friday
   workflow_dispatch:
 
 jobs:
   smoke:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        browser: [chromium, firefox, webkit]   # parallel jobs across browsers
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -32,29 +35,21 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright smoke tests with HTML + JSON report
+      - name: Run Playwright smoke tests on ${{ matrix.browser }} with workers
         run: |
           mkdir -p reports
-          npx playwright test --grep @smoke --reporter=json,html
-          mv playwright-report "reports/$(date +'%Y-%m-%d_%H-%M-%S')"
+          npx playwright test --grep @smoke \
+            --browser ${{ matrix.browser }} \
+            --reporter=json,html \
+            --workers=4   # parallelism inside each job
+          
+          ts=$(date +'%Y-%m-%d_%H-%M-%S')-${{ matrix.browser }}
+          mv playwright-report "reports/$ts"
+          mv results.json "reports/$ts/results.json"
+          echo "REPORT_TS=$ts" >> $GITHUB_ENV
 
-      - name: Deploy Playwright reports to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload reports as artifact
+        uses: actions/upload-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./reports
-          publish_branch: gh-pages
-          keep_files: true  # keep older reports instead of deleting them
-
-      - name: Parse results and send summary to Teams
-        run: |
-          summary=$(jq -r '
-            .suites[].specs[] | 
-            .title + " → " + (.tests[0].results[0].status)
-          ' reports/*/results.json | sed ':a;N;$!ba;s/\n/\\n/g')
-
-          latest_url="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/$(ls -t reports | head -n1)/"
-
-          curl -H 'Content-Type: application/json' \
-            -d "{\"text\": \"🧪 Playwright Smoke Test Report\n$summary\n\n📑 [View Latest Report]($latest_url)\"}" \
-            ${{ secrets.TEAMS_WEBHOOK_URL }}
+          name: playwright-report-${{ matrix.browser }}
+          path: reports/${{ env.REPORT_TS }}
