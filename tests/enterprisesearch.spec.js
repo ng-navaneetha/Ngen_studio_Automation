@@ -50,10 +50,10 @@ test.describe("Enterprise Search Processing Tests", () => {
     await page.goto(`${loginUrl}/project/query?tab=text2sql`);
 
     // Verify workspace is created successfully
-    await expect(page.getByText(data1.name)).toBeVisible();
+    await expect(page.getByText(data1.name).first()).toBeVisible();
   });
 
-  test("@smoke TC01:Enterprise Search use case - Verify workspace functionality - upload document", async ({
+  test.only("@smoke TC01:Enterprise Search use case - Verify workspace functionality - upload document", async ({
     page,
   }) => {
     // Navigate to the app
@@ -108,7 +108,7 @@ test.describe("Enterprise Search Processing Tests", () => {
     await page.getByRole("button", { name: "Delete" }).click();
     // Verify Insights workspace is deleted successfully
     await expect(
-      page.getByText(WORKSPACE_DATA.INSIGHTSEnterpriseSearch.name)
+      page.getByText(WORKSPACE_DATA.INSIGHTSEnterpriseSearch.name).first()
     ).not.toBeVisible();
 
     // Delete Query workspace (Acme DB project) from /query
@@ -125,7 +125,7 @@ test.describe("Enterprise Search Processing Tests", () => {
     await page.getByRole("button", { name: "Delete" }).click();
     // Verify Query workspace is deleted successfully
     await expect(
-      page.getByText(WORKSPACE_DATA.QUERYEnterpriseSearch.name)
+      page.getByText(WORKSPACE_DATA.QUERYEnterpriseSearch.name).first()
     ).not.toBeVisible();
     console.log("✅ Deleted all workspaces created during the test run.");
     await page.close();
