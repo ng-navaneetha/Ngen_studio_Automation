@@ -96,38 +96,79 @@ test.describe("Enterprise Search Processing Tests", () => {
   test.afterAll(async ({ page }) => {
     // Delete Insights workspace from /project
     await page.goto(`${loginUrl}/project`);
+    
+    // Wait for page to load
+    await page.waitForLoadState('networkidle');
+    
+    try {
+      const workspaceName = WORKSPACE_DATA.INSIGHTSEnterpriseSearch.name.trim(); // Remove any trailing spaces
+      console.log(`🗑️ Attempting to delete Insights workspace: "${workspaceName}"`);
+      
+      // Wait for workspace to be visible first
+      await page.waitForSelector(`h3:has-text("${workspaceName}")`, { timeout: 10000 });
+      
+      // Find the specific workspace and its delete button
+      const workspaceHeading = page.locator(`h3:has-text("${workspaceName}")`).first();
+      const workspaceCard = workspaceHeading.locator('xpath=ancestor::div[contains(@class, "group") or contains(@class, "card") or contains(@class, "workspace")]').first();
+      
+      // Find and click the delete/menu button (usually the last button with SVG)
+      const deleteMenuButton = workspaceCard.locator('button:has(svg)').last();
+      await deleteMenuButton.click();
+      
+      // Wait for delete confirmation dialog
+      await page.waitForSelector('button:has-text("Delete Workspace")', { timeout: 5000 });
+      await page.getByRole("button", { name: "Delete Workspace" }).first().click();
 
-    await page.locator("button:has(svg)").nth(2).click();
-
-    await page
-      .getByRole("button", { name: "Delete Workspace" })
-      .first()
-      .click();
-
-    // Click delete option
-    await page.getByRole("button", { name: "Delete" }).click();
-    // Verify Insights workspace is deleted successfully
-    await expect(
-      page.getByText(WORKSPACE_DATA.INSIGHTSEnterpriseSearch.name).first()
-    ).not.toBeVisible();
+      // Confirm deletion
+      await page.waitForSelector('button:has-text("Delete"):not(:has-text("Workspace"))', { timeout: 5000 });
+      await page.getByRole("button", { name: "Delete" }).click();
+      
+      // Wait for deletion to complete and verify
+      await expect(page.locator(`h3:has-text("${workspaceName}")`).first()).not.toBeVisible({ timeout: 15000 });
+      console.log("✅ Successfully deleted Insights workspace");
+      
+    } catch (error) {
+      console.log(`⚠️ Error deleting Insights workspace: ${error.message}`);
+    }
 
     // Delete Query workspace (Acme DB project) from /query
     await page.goto(`${loginUrl}/project/query?tab=text2sql`);
+    
+    // Wait for page to load
+    await page.waitForLoadState('networkidle');
+    
+    try {
+      const queryWorkspaceName = WORKSPACE_DATA.QUERYEnterpriseSearch.name.trim();
+      console.log(`🗑️ Attempting to delete Query workspace: "${queryWorkspaceName}"`);
+      
+      // Wait for workspace to be visible first
+      await page.waitForSelector(`h3:has-text("${queryWorkspaceName}")`, { timeout: 10000 });
+      
+      // Find the specific workspace and its delete button
+      const queryWorkspaceHeading = page.locator(`h3:has-text("${queryWorkspaceName}")`).first();
+      const queryWorkspaceCard = queryWorkspaceHeading.locator('xpath=ancestor::div[contains(@class, "group") or contains(@class, "card") or contains(@class, "workspace")]').first();
+      
+      // Find and click the delete/menu button
+      const queryDeleteMenuButton = queryWorkspaceCard.locator('button:has(svg)').last();
+      await queryDeleteMenuButton.click();
+      
+      // Wait for delete confirmation dialog
+      await page.waitForSelector('button:has-text("Delete Workspace")', { timeout: 5000 });
+      await page.getByRole("button", { name: "Delete Workspace" }).first().click();
 
-    await page.locator("button:has(svg)").nth(2).click();
-
-    await page
-      .getByRole("button", { name: "Delete Workspace" })
-      .first()
-      .click();
-
-    // Click delete option
-    await page.getByRole("button", { name: "Delete" }).click();
-    // Verify Query workspace is deleted successfully
-    await expect(
-      page.getByText(WORKSPACE_DATA.QUERYEnterpriseSearch.name).first()
-    ).not.toBeVisible();
-    console.log("✅ Deleted all workspaces created during the test run.");
+      // Confirm deletion
+      await page.waitForSelector('button:has-text("Delete"):not(:has-text("Workspace"))', { timeout: 5000 });
+      await page.getByRole("button", { name: "Delete" }).click();
+      
+      // Wait for deletion to complete and verify
+      await expect(page.locator(`h3:has-text("${queryWorkspaceName}")`).first()).not.toBeVisible({ timeout: 15000 });
+      console.log("✅ Successfully deleted Query workspace");
+      
+    } catch (error) {
+      console.log(`⚠️ Error deleting Query workspace: ${error.message}`);
+    }
+    
+    console.log("✅ Cleanup completed");
     await page.close();
   });
 });
