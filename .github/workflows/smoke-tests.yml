@@ -43,8 +43,23 @@ jobs:
           mkdir -p reports
           npx playwright test --grep @smoke
           ts=$(date +'%Y-%m-%d_%H-%M-%S')
-          mv playwright-report "reports/$ts"
-          mv results.json "reports/$ts/results.json"
+          
+          # Move reports and handle missing files gracefully
+          if [ -d "playwright-report" ]; then
+            mv playwright-report "reports/$ts"
+          else
+            mkdir -p "reports/$ts"
+            echo "No HTML report generated" > "reports/$ts/index.html"
+          fi
+          
+          if [ -f "results.json" ]; then
+            mv results.json "reports/$ts/results.json"
+          else
+            echo "No results.json file found - tests may have failed during execution"
+            # Create a minimal results file for failed execution
+            echo '{"stats":{"expected":0,"unexpected":1,"flaky":0,"skipped":0,"duration":0},"suites":[]}' > "reports/$ts/results.json"
+          fi
+          
           echo "REPORT_TS=$ts" >> $GITHUB_ENV
 
       - name: Deploy Playwright reports to GitHub Pages
@@ -59,8 +74,10 @@ jobs:
       - name: Parse results and send summary to Teams
         if: always()  # Always send Teams notification, regardless of test outcome
         run: |
-          # Check if results file exists
-          if [ ! -f "reports/$REPORT_TS/results.json" ]; then
+          RESULTS_FILE="reports/$REPORT_TS/results.json"
+          
+          # Check if results file exists and has actual test data
+          if [ ! -f "$RESULTS_FILE" ]; then
             echo "Results file not found, sending failure notification"
             curl -H 'Content-Type: application/json' \
               -d "{\"text\": \"🚨 **Playwright Smoke Tests Failed**\n\n❌ Test execution failed - no results available\n🕐 Time: $(date)\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"}" \
@@ -68,13 +85,38 @@ jobs:
             exit 0
           fi
 
+          # Check if it's a placeholder file (created when tests fail early)
+          TOTAL_FROM_STATS=$(jq -r '.stats.expected + .stats.unexpected + .stats.flaky // 0' $RESULTS_FILE 2>/dev/null || echo "0")
+          
+          if [ "$TOTAL_FROM_STATS" -eq 0 ]; then
+            echo "Empty or invalid results file, checking for actual test results"
+            # Try the robust method to count actual test results
+            ACTUAL_TESTS=$(jq '[.. | objects | select(.status? != null)] | length' $RESULTS_FILE 2>/dev/null || echo "0")
+            
+            if [ "$ACTUAL_TESTS" -eq 0 ]; then
+              echo "No actual test results found, sending failure notification"
+              curl -H 'Content-Type: application/json' \
+                -d "{\"text\": \"🚨 **Playwright Smoke Tests Failed**\n\n❌ Test execution failed - no test results found\n🕐 Time: $(date)\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"}" \
+                ${{ secrets.TEAMS_WEBHOOK_URL }}
+              exit 0
+            fi
+          fi
+
           # Parse test results with robust jq queries that work across Playwright versions
-          RESULTS_FILE="reports/$REPORT_TS/results.json"
           TOTAL_TESTS=$(jq '[.. | objects | select(.status? != null)] | length' $RESULTS_FILE)
           PASSED_TESTS=$(jq '[.. | objects | select(.status? == "passed")] | length' $RESULTS_FILE)
           FAILED_TESTS=$(jq '[.. | objects | select(.status? == "failed")] | length' $RESULTS_FILE)
           FLAKY_TESTS=$(jq '[.. | objects | select(.status? == "flaky")] | length' $RESULTS_FILE)
           DURATION=$(jq -r '.stats.duration // 0' $RESULTS_FILE)
+          
+          # Fallback to stats if robust parsing gives 0 results
+          if [ "$TOTAL_TESTS" -eq 0 ]; then
+            echo "Falling back to stats-based parsing"
+            TOTAL_TESTS=$(jq -r '.stats.expected + .stats.unexpected + .stats.flaky // 0' $RESULTS_FILE)
+            PASSED_TESTS=$(jq -r '.stats.expected // 0' $RESULTS_FILE)
+            FAILED_TESTS=$(jq -r '.stats.unexpected // 0' $RESULTS_FILE)
+            FLAKY_TESTS=$(jq -r '.stats.flaky // 0' $RESULTS_FILE)
+          fi
           
           # Convert duration to seconds
           DURATION_SEC=$(echo "scale=1; $DURATION / 1000" | bc -l 2>/dev/null || echo "0")
