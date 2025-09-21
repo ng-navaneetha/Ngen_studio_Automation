@@ -33,6 +33,9 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
+      - name: Install additional tools
+        run: sudo apt-get update && sudo apt-get install -y bc jq
+
       - name: Run Playwright smoke tests with HTML + JSON report
         id: tests
         continue-on-error: true  # Continue workflow even if tests fail
@@ -65,12 +68,12 @@ jobs:
             exit 0
           fi
 
-          # Parse test results
+          # Parse test results with robust jq queries that work across Playwright versions
           RESULTS_FILE="reports/$REPORT_TS/results.json"
-          TOTAL_TESTS=$(jq -r '.stats.expected + .stats.unexpected + .stats.flaky // 0' $RESULTS_FILE)
-          PASSED_TESTS=$(jq -r '.stats.expected // 0' $RESULTS_FILE)
-          FAILED_TESTS=$(jq -r '.stats.unexpected // 0' $RESULTS_FILE)
-          FLAKY_TESTS=$(jq -r '.stats.flaky // 0' $RESULTS_FILE)
+          TOTAL_TESTS=$(jq '[.. | objects | select(.status? != null)] | length' $RESULTS_FILE)
+          PASSED_TESTS=$(jq '[.. | objects | select(.status? == "passed")] | length' $RESULTS_FILE)
+          FAILED_TESTS=$(jq '[.. | objects | select(.status? == "failed")] | length' $RESULTS_FILE)
+          FLAKY_TESTS=$(jq '[.. | objects | select(.status? == "flaky")] | length' $RESULTS_FILE)
           DURATION=$(jq -r '.stats.duration // 0' $RESULTS_FILE)
           
           # Convert duration to seconds
