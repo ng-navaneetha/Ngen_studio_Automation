@@ -80,10 +80,14 @@ jobs:
           if [ ! -f "$RESULTS_FILE" ]; then
             echo "Results file not found, sending failure notification"
             curl -H 'Content-Type: application/json' \
-              -d "{\"text\": \"🚨 **Playwright Smoke Tests Failed**\n\n❌ Test execution failed - no results available\n🕐 Time: $(date)\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"}" \
+              -d "{\"text\": \"🚨 **Ngen Studio Test Results**\n\n❌ Test execution failed - no results available\n🕐 Time: $(date)\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"}" \
               ${{ secrets.TEAMS_WEBHOOK_URL }}
             exit 0
           fi
+          
+          echo "✅ Results file found. First 30 lines:"
+          head -30 "$RESULTS_FILE"
+          echo "--- End debug info ---"
 
           # Check if it's a placeholder file (created when tests fail early)
           TOTAL_FROM_STATS=$(jq -r '.stats.expected + .stats.unexpected + .stats.flaky // 0' $RESULTS_FILE 2>/dev/null || echo "0")
@@ -96,7 +100,7 @@ jobs:
             if [ "$ACTUAL_TESTS" -eq 0 ]; then
               echo "No actual test results found, sending failure notification"
               curl -H 'Content-Type: application/json' \
-                -d "{\"text\": \"🚨 **Playwright Smoke Tests Failed**\n\n❌ Test execution failed - no test results found\n🕐 Time: $(date)\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"}" \
+                -d "{\"text\": \"🚨 **Ngen Studio Test Results**\n\n❌ Test execution failed - no test results found\n🕐 Time: $(date)\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"}" \
                 ${{ secrets.TEAMS_WEBHOOK_URL }}
               exit 0
             fi
@@ -133,14 +137,44 @@ jobs:
             EMOJI="⚠️"
           fi
 
-          # Get test summary with status
+          # Get test summary with status - try multiple approaches based on actual JSON structure
           summary=$(jq -r '
             .suites[]?.specs[]? | 
-            select(.tests) |
-            .title + " → " + (.tests[0].results[0].status // "unknown")
-          ' $RESULTS_FILE | sed ':a;N;$!ba;s/\n/\\n/g')
+            select(.title) |
+            "📝 " + .title + " → " + (.tests[0].results[0].status // "unknown")
+          ' $RESULTS_FILE 2>/dev/null | head -15)
+          
+          # If first approach fails, try extracting just spec titles from the correct path
+          if [ -z "$summary" ]; then
+            echo "First approach failed, trying title-only extraction"
+            summary=$(jq -r '
+              .suites[]?.specs[]? | 
+              select(.title) |
+              "📝 " + .title
+            ' $RESULTS_FILE 2>/dev/null | head -15)
+          fi
+          
+          # If still empty, try extracting with broader selector
+          if [ -z "$summary" ]; then
+            echo "Second approach failed, trying broader extraction"
+            summary=$(jq -r '
+              .. | 
+              objects | 
+              select(.title? and (.title | contains("TC") or contains("@smoke"))) |
+              "📝 " + .title
+            ' $RESULTS_FILE 2>/dev/null | head -15)
+          fi
+          
+          # If we still have no summary, create a basic one
+          if [ -z "$summary" ]; then
+            echo "All approaches failed, using fallback summary"
+            summary="Tests executed - see full report for details"
+          fi
+          
+          # Convert to single line with proper escaping
+          summary=$(echo "$summary" | sed ':a;N;$!ba;s/\n/\\n/g')
 
-          # Get failed test details if any
+          # Get failed test details if any - try multiple approaches
           failed_details=""
           if [ "$FAILED_TESTS" -gt 0 ] || [ "$FLAKY_TESTS" -gt 0 ]; then
             failed_details=$(jq -r '
@@ -148,9 +182,21 @@ jobs:
               select(.tests) |
               select(.tests[0].results[0].status != "passed") |
               "❌ " + .title + " (" + (.tests[0].results[0].status // "unknown") + ")"
-            ' $RESULTS_FILE | head -5 | sed ':a;N;$!ba;s/\n/\\n/g')
+            ' $RESULTS_FILE 2>/dev/null | head -5)
             
+            # If first approach fails, try alternative
+            if [ -z "$failed_details" ]; then
+              failed_details=$(jq -r '
+                .. | 
+                objects | 
+                select(.status? and .status != "passed") |
+                "❌ Test failed (" + (.status // "unknown") + ")"
+              ' $RESULTS_FILE 2>/dev/null | head -5)
+            fi
+            
+            # Convert to single line and add header if we have details
             if [ ! -z "$failed_details" ]; then
+              failed_details=$(echo "$failed_details" | sed ':a;N;$!ba;s/\n/\\n/g')
               failed_details="\\n\\n**Failed/Flaky Tests:**\\n$failed_details"
             fi
           fi
@@ -160,6 +206,6 @@ jobs:
           # Send comprehensive Teams message
           curl -H 'Content-Type: application/json' \
             -d "{
-              \"text\": \"$EMOJI **Playwright Smoke Test Results**\\n\\n**$STATUS**\\n\\n📊 **Summary:**\\n• Total: $TOTAL_TESTS tests\\n• Passed: $PASSED_TESTS\\n• Failed: $FAILED_TESTS\\n• Flaky: $FLAKY_TESTS\\n• Duration: ${DURATION_SEC}s\\n\\n📋 **Test Details:**\\n$summary$failed_details\\n\\n📑 [View Full Report]($latest_url)\\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"
+              \"text\": \"$EMOJI **Ngen Studio Test Results**\\n\\n**$STATUS**\\n\\n📊 **Summary:**\\n• Total: $TOTAL_TESTS tests\\n• Passed: $PASSED_TESTS\\n• Failed: $FAILED_TESTS\\n• Flaky: $FLAKY_TESTS\\n• Duration: ${DURATION_SEC}s\\n\\n📋 **Test Details:**\\n$summary$failed_details\\n\\n📑 [View Full Report]($latest_url)\\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"
             }" \
             ${{ secrets.TEAMS_WEBHOOK_URL }}
