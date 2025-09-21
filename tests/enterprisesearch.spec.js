@@ -53,7 +53,7 @@ test.describe("Enterprise Search Processing Tests", () => {
     await expect(page.getByText(data1.name).first()).toBeVisible();
   });
 
-  test.only("@smoke TC01:Enterprise Search use case - Verify workspace functionality - upload document", async ({
+  test("@smoke TC01:Enterprise Search use case - Verify workspace functionality - upload document", async ({
     page,
   }) => {
     // Navigate to the app
