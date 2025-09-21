@@ -34,6 +34,8 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright smoke tests with HTML + JSON report
+        id: tests
+        continue-on-error: true  # Continue workflow even if tests fail
         run: |
           mkdir -p reports
           npx playwright test --grep @smoke
@@ -44,6 +46,7 @@ jobs:
 
       - name: Deploy Playwright reports to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
+        if: always()  # Always deploy reports, even if tests failed
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./reports
@@ -51,14 +54,67 @@ jobs:
           keep_files: true  # keep older reports instead of deleting them
 
       - name: Parse results and send summary to Teams
+        if: always()  # Always send Teams notification, regardless of test outcome
         run: |
+          # Check if results file exists
+          if [ ! -f "reports/$REPORT_TS/results.json" ]; then
+            echo "Results file not found, sending failure notification"
+            curl -H 'Content-Type: application/json' \
+              -d "{\"text\": \"🚨 **Playwright Smoke Tests Failed**\n\n❌ Test execution failed - no results available\n🕐 Time: $(date)\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"}" \
+              ${{ secrets.TEAMS_WEBHOOK_URL }}
+            exit 0
+          fi
+
+          # Parse test results
+          RESULTS_FILE="reports/$REPORT_TS/results.json"
+          TOTAL_TESTS=$(jq -r '.stats.expected + .stats.unexpected + .stats.flaky // 0' $RESULTS_FILE)
+          PASSED_TESTS=$(jq -r '.stats.expected // 0' $RESULTS_FILE)
+          FAILED_TESTS=$(jq -r '.stats.unexpected // 0' $RESULTS_FILE)
+          FLAKY_TESTS=$(jq -r '.stats.flaky // 0' $RESULTS_FILE)
+          DURATION=$(jq -r '.stats.duration // 0' $RESULTS_FILE)
+          
+          # Convert duration to seconds
+          DURATION_SEC=$(echo "scale=1; $DURATION / 1000" | bc -l 2>/dev/null || echo "0")
+
+          # Determine status and emoji
+          if [ "$FAILED_TESTS" -eq 0 ] && [ "$FLAKY_TESTS" -eq 0 ]; then
+            STATUS="✅ All Tests Passed"
+            EMOJI="🎉"
+          elif [ "$FAILED_TESTS" -gt 0 ]; then
+            STATUS="❌ Tests Failed"
+            EMOJI="🚨"
+          else
+            STATUS="⚠️ Flaky Tests Detected"
+            EMOJI="⚠️"
+          fi
+
+          # Get test summary with status
           summary=$(jq -r '
-            .suites[].specs[]? | 
-            .title + " → " + (.tests[0].results[0].status)
-          ' reports/$REPORT_TS/results.json | sed ':a;N;$!ba;s/\n/\\n/g')
+            .suites[]?.specs[]? | 
+            select(.tests) |
+            .title + " → " + (.tests[0].results[0].status // "unknown")
+          ' $RESULTS_FILE | sed ':a;N;$!ba;s/\n/\\n/g')
+
+          # Get failed test details if any
+          failed_details=""
+          if [ "$FAILED_TESTS" -gt 0 ] || [ "$FLAKY_TESTS" -gt 0 ]; then
+            failed_details=$(jq -r '
+              .suites[]?.specs[]? | 
+              select(.tests) |
+              select(.tests[0].results[0].status != "passed") |
+              "❌ " + .title + " (" + (.tests[0].results[0].status // "unknown") + ")"
+            ' $RESULTS_FILE | head -5 | sed ':a;N;$!ba;s/\n/\\n/g')
+            
+            if [ ! -z "$failed_details" ]; then
+              failed_details="\\n\\n**Failed/Flaky Tests:**\\n$failed_details"
+            fi
+          fi
 
           latest_url="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/$REPORT_TS/"
 
+          # Send comprehensive Teams message
           curl -H 'Content-Type: application/json' \
-            -d "{\"text\": \"🧪 Chromium Smoke Test Report\n\n$summary\n\n📑 [View Full Report]($latest_url)\"}" \
+            -d "{
+              \"text\": \"$EMOJI **Playwright Smoke Test Results**\\n\\n**$STATUS**\\n\\n📊 **Summary:**\\n• Total: $TOTAL_TESTS tests\\n• Passed: $PASSED_TESTS\\n• Failed: $FAILED_TESTS\\n• Flaky: $FLAKY_TESTS\\n• Duration: ${DURATION_SEC}s\\n\\n📋 **Test Details:**\\n$summary$failed_details\\n\\n📑 [View Full Report]($latest_url)\\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"
+            }" \
             ${{ secrets.TEAMS_WEBHOOK_URL }}
