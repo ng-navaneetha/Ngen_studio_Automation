@@ -141,7 +141,7 @@ jobs:
           summary=$(jq -r '
             .suites[]?.specs[]? | 
             select(.title) |
-            "📝 " + .title + " → " + (.tests[0].results[0].status // "unknown")
+            "• " + .title + " → " + (.tests[0].results[0].status // "unknown")
           ' $RESULTS_FILE 2>/dev/null | head -15)
           
           # If first approach fails, try extracting just spec titles from the correct path
@@ -150,7 +150,7 @@ jobs:
             summary=$(jq -r '
               .suites[]?.specs[]? | 
               select(.title) |
-              "📝 " + .title
+              "• " + .title
             ' $RESULTS_FILE 2>/dev/null | head -15)
           fi
           
@@ -161,17 +161,17 @@ jobs:
               .. | 
               objects | 
               select(.title? and (.title | contains("TC") or contains("@smoke"))) |
-              "📝 " + .title
+              "• " + .title
             ' $RESULTS_FILE 2>/dev/null | head -15)
           fi
           
           # If we still have no summary, create a basic one
           if [ -z "$summary" ]; then
             echo "All approaches failed, using fallback summary"
-            summary="Tests executed - see full report for details"
+            summary="• Tests executed - see full report for details"
           fi
           
-          # Convert to single line with proper escaping
+          # Convert to proper Teams format with line breaks for list items
           summary=$(echo "$summary" | sed ':a;N;$!ba;s/\n/\\n/g')
 
           # Get failed test details if any - try multiple approaches
@@ -181,7 +181,7 @@ jobs:
               .suites[]?.specs[]? | 
               select(.tests) |
               select(.tests[0].results[0].status != "passed") |
-              "❌ " + .title + " (" + (.tests[0].results[0].status // "unknown") + ")"
+              "• " + .title + " (" + (.tests[0].results[0].status // "unknown") + ")"
             ' $RESULTS_FILE 2>/dev/null | head -5)
             
             # If first approach fails, try alternative
@@ -190,14 +190,14 @@ jobs:
                 .. | 
                 objects | 
                 select(.status? and .status != "passed") |
-                "❌ Test failed (" + (.status // "unknown") + ")"
+                "• Test failed (" + (.status // "unknown") + ")"
               ' $RESULTS_FILE 2>/dev/null | head -5)
             fi
             
             # Convert to single line and add header if we have details
             if [ ! -z "$failed_details" ]; then
               failed_details=$(echo "$failed_details" | sed ':a;N;$!ba;s/\n/\\n/g')
-              failed_details="\\n\\n**Failed/Flaky Tests:**\\n$failed_details"
+              failed_details="\\n\\n**❌ Failed/Flaky Tests:**\\n$failed_details"
             fi
           fi
 
