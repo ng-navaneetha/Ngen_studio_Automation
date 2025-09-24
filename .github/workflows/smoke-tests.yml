@@ -41,26 +41,55 @@ jobs:
         continue-on-error: true  # Continue workflow even if tests fail
         run: |
           mkdir -p reports
-          npx playwright test --grep @smoke
           ts=$(date +'%Y-%m-%d_%H-%M-%S')
+          echo "REPORT_TS=$ts" >> $GITHUB_ENV
+          
+          # Run tests and capture exit code
+          set +e  # Don't exit on error
+          npx playwright test --grep @smoke --reporter=json --output-dir="test-results-$ts"
+          TEST_EXIT_CODE=$?
+          set -e  # Re-enable exit on error
+          
+          echo "Test execution completed with exit code: $TEST_EXIT_CODE"
           
           # Move reports and handle missing files gracefully
           if [ -d "playwright-report" ]; then
             mv playwright-report "reports/$ts"
           else
             mkdir -p "reports/$ts"
-            echo "No HTML report generated" > "reports/$ts/index.html"
+            echo "<h1>Test execution failed</h1><p>Exit code: $TEST_EXIT_CODE</p>" > "reports/$ts/index.html"
           fi
           
+          # Look for results.json in multiple locations
           if [ -f "results.json" ]; then
             mv results.json "reports/$ts/results.json"
+            echo "✅ Found results.json in root directory"
+          elif [ -f "test-results-$ts/results.json" ]; then
+            mv "test-results-$ts/results.json" "reports/$ts/results.json"
+            echo "✅ Found results.json in test-results directory"
           else
-            echo "No results.json file found - tests may have failed during execution"
-            # Create a minimal results file for failed execution
-            echo '{"stats":{"expected":0,"unexpected":1,"flaky":0,"skipped":0,"duration":0},"suites":[]}' > "reports/$ts/results.json"
+            echo "⚠️ No results.json file found - checking for any JSON files"
+            find . -name "*.json" -type f -exec echo "Found JSON file: {}" \;
+            
+            # Create a basic results file with failure info
+            echo "{
+              \"stats\": {
+                \"expected\": 0,
+                \"unexpected\": 1,
+                \"flaky\": 0,
+                \"skipped\": 0,
+                \"duration\": 0,
+                \"startTime\": \"$(date -Iseconds)\",
+                \"testExecutionFailed\": true,
+                \"exitCode\": $TEST_EXIT_CODE
+              },
+              \"suites\": [],
+              \"errors\": [\"Test execution failed with exit code $TEST_EXIT_CODE\"]
+            }" > "reports/$ts/results.json"
           fi
           
-          echo "REPORT_TS=$ts" >> $GITHUB_ENV
+          # Store exit code for later use
+          echo "TEST_EXIT_CODE=$TEST_EXIT_CODE" >> $GITHUB_ENV
 
       - name: Deploy Playwright reports to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -76,13 +105,22 @@ jobs:
         run: |
           RESULTS_FILE="reports/$REPORT_TS/results.json"
           
-          # Check if results file exists and has actual test data
+          # Always try to find and process results, even if tests failed
           if [ ! -f "$RESULTS_FILE" ]; then
-            echo "Results file not found, sending failure notification"
-            curl -H 'Content-Type: application/json' \
-              -d "{\"text\": \"🚨 **Ngen Studio Test Results**\n\n❌ Test execution failed - no results available\n🕐 Time: $(date)\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"}" \
-              ${{ secrets.TEAMS_WEBHOOK_URL }}
-            exit 0
+            echo "Primary results file not found, searching for alternatives..."
+            
+            # Try to find any results file
+            FOUND_RESULTS=$(find . -name "results.json" -type f 2>/dev/null | head -1)
+            if [ ! -z "$FOUND_RESULTS" ]; then
+              echo "Found alternative results file: $FOUND_RESULTS"
+              cp "$FOUND_RESULTS" "$RESULTS_FILE"
+            else
+              echo "No results file found anywhere, sending basic failure notification"
+              curl -H 'Content-Type: application/json' \
+                -d "{\"text\": \"🚨 **Ngen Studio Test Results**\\n\\n❌ Test execution failed completely\\n\\n**Details:**\\n• Exit Code: ${TEST_EXIT_CODE:-unknown}\\n• No test results generated\\n• Possible causes: Environment issues, setup failures, or critical errors\\n\\n🕐 Time: $(date)\\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"}" \
+                ${{ secrets.TEAMS_WEBHOOK_URL }}
+              exit 0
+            fi
           fi
           
           echo "✅ Results file found. First 30 lines:"
@@ -107,68 +145,100 @@ jobs:
           fi
 
           # Parse test results with robust jq queries that work across Playwright versions
-          TOTAL_TESTS=$(jq '[.. | objects | select(.status? != null)] | length' $RESULTS_FILE)
-          PASSED_TESTS=$(jq '[.. | objects | select(.status? == "passed")] | length' $RESULTS_FILE)
-          FAILED_TESTS=$(jq '[.. | objects | select(.status? == "failed")] | length' $RESULTS_FILE)
-          FLAKY_TESTS=$(jq '[.. | objects | select(.status? == "flaky")] | length' $RESULTS_FILE)
-          DURATION=$(jq -r '.stats.duration // 0' $RESULTS_FILE)
+          TOTAL_TESTS=$(jq '[.. | objects | select(.status? != null)] | length' $RESULTS_FILE 2>/dev/null || echo "0")
+          PASSED_TESTS=$(jq '[.. | objects | select(.status? == "passed")] | length' $RESULTS_FILE 2>/dev/null || echo "0")
+          FAILED_TESTS=$(jq '[.. | objects | select(.status? == "failed")] | length' $RESULTS_FILE 2>/dev/null || echo "0")
+          FLAKY_TESTS=$(jq '[.. | objects | select(.status? == "flaky")] | length' $RESULTS_FILE 2>/dev/null || echo "0")
+          INTERRUPTED_TESTS=$(jq '[.. | objects | select(.status? == "interrupted")] | length' $RESULTS_FILE 2>/dev/null || echo "0")
+          SKIPPED_TESTS=$(jq '[.. | objects | select(.status? == "skipped")] | length' $RESULTS_FILE 2>/dev/null || echo "0")
+          DURATION=$(jq -r '.stats.duration // 0' $RESULTS_FILE 2>/dev/null || echo "0")
+          
+          # Check if this was a test execution failure
+          EXECUTION_FAILED=$(jq -r '.stats.testExecutionFailed // false' $RESULTS_FILE 2>/dev/null || echo "false")
+          EXIT_CODE=$(jq -r '.stats.exitCode // 0' $RESULTS_FILE 2>/dev/null || echo "${TEST_EXIT_CODE:-0}")
           
           # Fallback to stats if robust parsing gives 0 results
           if [ "$TOTAL_TESTS" -eq 0 ]; then
             echo "Falling back to stats-based parsing"
-            TOTAL_TESTS=$(jq -r '.stats.expected + .stats.unexpected + .stats.flaky // 0' $RESULTS_FILE)
-            PASSED_TESTS=$(jq -r '.stats.expected // 0' $RESULTS_FILE)
-            FAILED_TESTS=$(jq -r '.stats.unexpected // 0' $RESULTS_FILE)
-            FLAKY_TESTS=$(jq -r '.stats.flaky // 0' $RESULTS_FILE)
+            TOTAL_TESTS=$(jq -r '.stats.expected + .stats.unexpected + .stats.flaky + .stats.skipped // 0' $RESULTS_FILE 2>/dev/null || echo "0")
+            PASSED_TESTS=$(jq -r '.stats.expected // 0' $RESULTS_FILE 2>/dev/null || echo "0")
+            FAILED_TESTS=$(jq -r '.stats.unexpected // 0' $RESULTS_FILE 2>/dev/null || echo "0")
+            FLAKY_TESTS=$(jq -r '.stats.flaky // 0' $RESULTS_FILE 2>/dev/null || echo "0")
+            SKIPPED_TESTS=$(jq -r '.stats.skipped // 0' $RESULTS_FILE 2>/dev/null || echo "0")
+          fi
+          
+          # Calculate total including all states
+          ACTUAL_TOTAL=$((PASSED_TESTS + FAILED_TESTS + FLAKY_TESTS + INTERRUPTED_TESTS + SKIPPED_TESTS))
+          if [ "$ACTUAL_TOTAL" -gt "$TOTAL_TESTS" ]; then
+            TOTAL_TESTS=$ACTUAL_TOTAL
           fi
           
           # Convert duration to seconds
           DURATION_SEC=$(echo "scale=1; $DURATION / 1000" | bc -l 2>/dev/null || echo "0")
 
-          # Determine status and emoji
-          if [ "$FAILED_TESTS" -eq 0 ] && [ "$FLAKY_TESTS" -eq 0 ]; then
+          # Determine status and emoji based on comprehensive test results
+          if [ "$EXECUTION_FAILED" = "true" ] || [ "$EXIT_CODE" -ne 0 ]; then
+            STATUS="🚨 Test Execution Failed (Exit Code: $EXIT_CODE)"
+            EMOJI="🚨"
+          elif [ "$FAILED_TESTS" -eq 0 ] && [ "$FLAKY_TESTS" -eq 0 ] && [ "$INTERRUPTED_TESTS" -eq 0 ]; then
             STATUS="✅ All Tests Passed"
             EMOJI="🎉"
           elif [ "$FAILED_TESTS" -gt 0 ]; then
             STATUS="❌ Tests Failed"
             EMOJI="🚨"
+          elif [ "$INTERRUPTED_TESTS" -gt 0 ]; then
+            STATUS="⚠️ Tests Interrupted"
+            EMOJI="⚠️"
           else
             STATUS="⚠️ Flaky Tests Detected"
             EMOJI="⚠️"
           fi
 
-          # Get test summary with status - try multiple approaches based on actual JSON structure
+          # Get comprehensive test summary with status - try multiple approaches
           summary=$(jq -r '
             .suites[]?.specs[]? | 
             select(.title) |
             "• " + .title + " → " + (.tests[0].results[0].status // "unknown")
-          ' $RESULTS_FILE 2>/dev/null | head -15)
+          ' $RESULTS_FILE 2>/dev/null | head -20)
           
-          # If first approach fails, try extracting just spec titles from the correct path
+          # If first approach fails, try extracting just spec titles
           if [ -z "$summary" ]; then
             echo "First approach failed, trying title-only extraction"
             summary=$(jq -r '
               .suites[]?.specs[]? | 
               select(.title) |
-              "• " + .title
-            ' $RESULTS_FILE 2>/dev/null | head -15)
+              "• " + .title + " (status unknown)"
+            ' $RESULTS_FILE 2>/dev/null | head -20)
+          fi
+          
+          # Try to get error information if available
+          if [ -z "$summary" ] && [ "$EXECUTION_FAILED" = "true" ]; then
+            echo "Extraction failed, checking for error information"
+            error_info=$(jq -r '.errors[]? // empty' $RESULTS_FILE 2>/dev/null | head -3)
+            if [ ! -z "$error_info" ]; then
+              summary=$(echo "$error_info" | sed 's/^/• Error: /')
+            fi
           fi
           
           # If still empty, try extracting with broader selector
           if [ -z "$summary" ]; then
-            echo "Second approach failed, trying broader extraction"
+            echo "Trying broader extraction for any test-like entries"
             summary=$(jq -r '
               .. | 
               objects | 
-              select(.title? and (.title | contains("TC") or contains("@smoke"))) |
-              "• " + .title
+              select(.title? and (.title | contains("TC") or contains("@smoke") or contains("test"))) |
+              "• " + .title + " (status unknown)"
             ' $RESULTS_FILE 2>/dev/null | head -15)
           fi
           
-          # If we still have no summary, create a basic one
+          # Last resort - show what we know about the failure
           if [ -z "$summary" ]; then
-            echo "All approaches failed, using fallback summary"
-            summary="• Tests executed - see full report for details"
+            echo "All extraction approaches failed, creating failure summary"
+            if [ "$EXIT_CODE" -ne 0 ]; then
+              summary="• Test execution failed with exit code $EXIT_CODE\\n• No individual test results available\\n• Check workflow logs for detailed error information"
+            else
+              summary="• Tests executed but details unavailable\\n• See full report for more information"
+            fi
           fi
           
           # Convert to proper Teams format with line breaks for list items
@@ -203,9 +273,27 @@ jobs:
 
           latest_url="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/$REPORT_TS/"
 
+          # Build comprehensive summary stats
+          SUMMARY_STATS="• Total: $TOTAL_TESTS tests\\n• Passed: $PASSED_TESTS\\n• Failed: $FAILED_TESTS"
+          if [ "$FLAKY_TESTS" -gt 0 ]; then
+            SUMMARY_STATS="$SUMMARY_STATS\\n• Flaky: $FLAKY_TESTS"
+          fi
+          if [ "$INTERRUPTED_TESTS" -gt 0 ]; then
+            SUMMARY_STATS="$SUMMARY_STATS\\n• Interrupted: $INTERRUPTED_TESTS"
+          fi
+          if [ "$SKIPPED_TESTS" -gt 0 ]; then
+            SUMMARY_STATS="$SUMMARY_STATS\\n• Skipped: $SKIPPED_TESTS"
+          fi
+          SUMMARY_STATS="$SUMMARY_STATS\\n• Duration: ${DURATION_SEC}s"
+          
+          # Add execution info if tests failed at execution level
+          if [ "$EXIT_CODE" -ne 0 ]; then
+            SUMMARY_STATS="$SUMMARY_STATS\\n• Exit Code: $EXIT_CODE"
+          fi
+
           # Send comprehensive Teams message
           curl -H 'Content-Type: application/json' \
             -d "{
-              \"text\": \"$EMOJI **Ngen Studio Test Results**\\n\\n**$STATUS**\\n\\n📊 **Summary:**\\n• Total: $TOTAL_TESTS tests\\n• Passed: $PASSED_TESTS\\n• Failed: $FAILED_TESTS\\n• Flaky: $FLAKY_TESTS\\n• Duration: ${DURATION_SEC}s\\n\\n📋 **Test Details:**\\n$summary$failed_details\\n\\n📑 [View Full Report]($latest_url)\\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"
+              \"text\": \"$EMOJI **Ngen Studio Test Results**\\n\\n**$STATUS**\\n\\n📊 **Summary:**\\n$SUMMARY_STATS\\n\\n📋 **Test Details:**\\n$summary$failed_details\\n\\n📑 [View Full Report]($latest_url)\\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"
             }" \
             ${{ secrets.TEAMS_WEBHOOK_URL }}
