@@ -1,0 +1,887 @@
+{
+  "config": {
+    "configFile": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/playwright.config.js",
+    "rootDir": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests",
+    "forbidOnly": true,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/commit/d43e2520b35190e3e8fd0615e1aa6908b1c51038",
+        "commitHash": "d43e2520b35190e3e8fd0615e1aa6908b1c51038",
+        "buildHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/actions/runs/18118083599"
+      },
+      "gitCommit": {
+        "shortHash": "d43e252",
+        "hash": "d43e2520b35190e3e8fd0615e1aa6908b1c51038",
+        "subject": "Simplify smoke test result processing and notifications",
+        "body": "Simplify smoke test result processing and notifications\n\nRefactor smoke test workflow to simplify result handling and notifications., reverted commit code pasted",
+        "author": {
+          "name": "ng-navaneetha",
+          "email": "navaneetha.b@ngenux.com",
+          "time": 1758697361000
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "time": 1758697361000
+        },
+        "branch": "main"
+      },
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ],
+      [
+        "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/node_modules/allure-playwright/dist/cjs/index.js",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/commit/d43e2520b35190e3e8fd0615e1aa6908b1c51038",
+            "commitHash": "d43e2520b35190e3e8fd0615e1aa6908b1c51038",
+            "buildHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/actions/runs/18118083599"
+          },
+          "gitCommit": {
+            "shortHash": "d43e252",
+            "hash": "d43e2520b35190e3e8fd0615e1aa6908b1c51038",
+            "subject": "Simplify smoke test result processing and notifications",
+            "body": "Simplify smoke test result processing and notifications\n\nRefactor smoke test workflow to simplify result handling and notifications., reverted commit code pasted",
+            "author": {
+              "name": "ng-navaneetha",
+              "email": "navaneetha.b@ngenux.com",
+              "time": 1758697361000
+            },
+            "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "time": 1758697361000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.53.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "call-summarization.spec.js",
+      "file": "call-summarization.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Call Summarization",
+          "file": "call-summarization.spec.js",
+          "line": 57,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke TC06: Happy flow - Summary screen - UI and content assertions",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 160000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 42182,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Creating new auth session...\n"
+                        },
+                        {
+                          "text": "Auth session saved successfully\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/summary\n"
+                        },
+                        {
+                          "text": "art_in8.mp3\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/summary\n"
+                        },
+                        {
+                          "text": "✅ Deleted Summary workspace\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T03:49:24.380Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b4980f566f3e0f5bf01c-f7ce690895eb82d83342",
+              "file": "call-summarization.spec.js",
+              "line": 167,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "enterprisesearch.spec.js",
+      "file": "enterprisesearch.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Enterprise Search Processing Tests",
+          "file": "enterprisesearch.spec.js",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke TC01:Enterprise Search use case - Verify workspace functionality - upload document",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 70054,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/v2/nterprise-search\n"
+                        },
+                        {
+                          "text": "Storage state expired, creating new session...\n"
+                        },
+                        {
+                          "text": "Starting direct login process...\n"
+                        },
+                        {
+                          "text": "Navigated to login URL directly\n"
+                        },
+                        {
+                          "text": "Go to Login button visible: \u001b[33mfalse\u001b[39m\n"
+                        },
+                        {
+                          "text": "Login button visible: \u001b[33mfalse\u001b[39m\n"
+                        },
+                        {
+                          "text": "Waiting for Auth0 login page...\n"
+                        },
+                        {
+                          "text": "Auth check error, continuing with current page state\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "🗑️ Attempting to delete Insights workspace: \"Tesla’s Transforming\"\n"
+                        },
+                        {
+                          "text": "⚠️ Error deleting Insights workspace: page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Delete Workspace\")') to be visible\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "🗑️ Attempting to delete Query workspace: \"acme_chatbot\"\n"
+                        },
+                        {
+                          "text": "⚠️ Error deleting Query workspace: page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Delete Workspace\")') to be visible\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "✅ Cleanup completed\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "Direct login failed: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2025-09-30T03:50:29.897Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "62f9178d886387b97391-8b1bf19c156f2ffea827",
+              "file": "enterprisesearch.spec.js",
+              "line": 56,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Extract.spec.js",
+      "file": "Extract.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login and Navigation Tests",
+          "file": "Extract.spec.js",
+          "line": 18,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "OCR Document Processing Tests",
+              "file": "Extract.spec.js",
+              "line": 20,
+              "column": 8,
+              "specs": [
+                {
+                  "title": " @smoke TC01:Verify File content Extracted successfully",
+                  "ok": true,
+                  "tags": [
+                    "smoke"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 25781,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/extract\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-09-30T03:52:11.382Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fb8171f0e1175ce3cf80-69e3ce5856e7b7419288",
+                  "file": "Extract.spec.js",
+                  "line": 37,
+                  "column": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "insights.spec.js",
+      "file": "insights.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Insights Feature Tests",
+          "file": "insights.spec.js",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke TC02: Create workspace with Insights use case",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6682,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T03:52:37.177Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-09d63cee25eed692936f",
+              "file": "insights.spec.js",
+              "line": 51,
+              "column": 3
+            },
+            {
+              "title": "@smoke TC03: Create workspace with Query use case and database connection",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 16436,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Create workspace with Query use case",
+                          "duration": 12665,
+                          "steps": [
+                            {
+                              "title": "Select database type",
+                              "duration": 299
+                            },
+                            {
+                              "title": "Fill connection details",
+                              "duration": 70
+                            }
+                          ]
+                        }
+                      ],
+                      "startTime": "2025-09-30T03:52:43.865Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-5afec9d704ebdd0f1c01",
+              "file": "insights.spec.js",
+              "line": 63,
+              "column": 3
+            },
+            {
+              "title": "@smoke TC04: Create workspace with Pulse use case",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6774,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T03:53:00.307Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-0d9c4b9dff0bc0bf63a8",
+              "file": "insights.spec.js",
+              "line": 84,
+              "column": 3
+            },
+            {
+              "title": " @smoke TC05: Create workspace with Summary use case",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6747,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T03:53:07.087Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-fb39e33265828ec04128",
+              "file": "insights.spec.js",
+              "line": 96,
+              "column": 3
+            },
+            {
+              "title": "@smoke TC06:Insights use case - Verify workspace functionality - upload document",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11883,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T03:53:13.839Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-f1cba1fb11f2116b06b2",
+              "file": "insights.spec.js",
+              "line": 109,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "pulse.spec.js",
+      "file": "pulse.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Pulse sentiment analysis – functional flow",
+          "file": "pulse.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": " @smoke TC001_generateSentimentFromText",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8857,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T03:53:25.737Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4199f64b3242841a2ce2-673f3ab904ef3d7ae7eb",
+              "file": "pulse.spec.js",
+              "line": 52,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "quality-check.spec.js",
+      "file": "quality-check.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Quality Check Feature Tests",
+          "file": "quality-check.spec.js",
+          "line": 14,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke TC04: Image comparison shows results with similarity score and visual difference",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 13872,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/quality-check\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T03:53:45.769Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "094a1e5d42dc18e53fae-8f79fc4223e8fb49e670",
+              "file": "quality-check.spec.js",
+              "line": 74,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "query.spec.js",
+      "file": "query.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Query feature – functional tests",
+          "file": "query.spec.js",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": " @smoke TC01_validQueryDisplaysResults",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 60118,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T03:53:59.689Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e81f4f68ea27254567d8-282d117fc0d24988b51f",
+              "file": "query.spec.js",
+              "line": 43,
+              "column": 3
+            },
+            {
+              "title": "@smoke TC03_longQueryHandled",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 60916,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T03:55:07.016Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e81f4f68ea27254567d8-aa345018465156b707ee",
+              "file": "query.spec.js",
+              "line": 68,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-09-30T03:49:23.376Z",
+    "duration": 409011.02900000004,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
