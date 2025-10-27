@@ -22,7 +22,7 @@ test.describe("Login and Navigation Tests", () => {
       // Navigate to the Extract page and upload a test invoice document before each test
       await page.goto(`${loginUrl}/project/extract`);
       await expect(
-        page.getByRole("heading", { name: "Analyze Document - Extract" })
+        page.getByRole("heading", { name: "Document - Extract" })
       ).toBeVisible();
       const fileChooserPromise = page.waitForEvent("filechooser");
       await page.getByText("Click to upload").click();
