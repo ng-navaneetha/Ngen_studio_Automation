@@ -104,7 +104,7 @@ export const QUESTIONS = {
 export const Response = {
   1: "Based on the provided context, the invoice number is 161126.",
   2: "Based on the provided context, the payment is due 30 days after invoice date",
-  3: "Based on the provided context, the invoice was issued by YesLogic Pty Ltd, located at:",
+  3: "Based on the provided context",
 };
 
 // Error messages

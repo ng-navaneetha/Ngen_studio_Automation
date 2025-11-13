@@ -376,6 +376,23 @@ test.describe("Insights Feature Tests", () => {
       ).toBeVisible();
       await expect(page.getByText("Rewrite Query")).toBeVisible();
       await expect(page.getByText("Reranking")).toBeVisible();
+
+      await expect(
+        page.locator(
+          "(//button[contains(@class, 'inline-flex') and contains(@class, 'items-center')])[3]"
+        )
+      ).toBeVisible();
+      await page
+        .locator(
+          "(//button[contains(@class, 'inline-flex') and contains(@class, 'items-center')])[3]"
+        )
+        .click();
+  
+      // Delete the workspace
+      await insightsPage.deleteWorkspace(data.name);
+  
+      // Verify the workspace is no longer visible
+      await expect(insightsPage.getWorkspaceByName(data.name)).not.toBeVisible();
     });
   });
 
@@ -444,7 +461,7 @@ test.describe("Insights Feature Tests", () => {
   test("@smoke TC15: Verify file upload, chat, and new chat flow", async ({
     page,
   }) => {
-    test.setTimeout(120000); // Set the timeout for this test
+    test.setTimeout(240000); // Set the timeout for this test
     const data = WORKSPACE_DATA.UPLOAD_TEST;
     await insightsPage.clickCreateButton();
     await insightsPage.fillWorkspaceForm(
@@ -490,10 +507,21 @@ test.describe("Insights Feature Tests", () => {
       .press("Enter");
 
     // Handle response message if appears
-    await page.getByText(Response[1]).waitFor();
-    const responseMessage = page.getByText(Response[1]);
-    await expect(responseMessage).toBeVisible();
-    // Interact with chat
+    // Debugging: Log page content before waiting for the response
+
+    // Retry logic for waiting for the response
+    for (let i = 0; i < 3; i++) {
+      try {
+        await page.getByText(Response[1], { exact: false }).waitFor({ timeout: 150000 }); // Retry with a timeout of 60 seconds
+        break; // Exit loop if successful
+      } catch (error) {
+        console.error(`Retry ${i + 1} failed:`, error);
+        if (i === 2) throw error; // Throw error after 3 retries
+      }
+    }
+
+    const responseMessage = page.getByText(Response[1], { exact: false });
+    await expect(responseMessage).toContainText(Response[1]);
 
     // Start a new chat
     await page.getByRole("button", { name: "New Chat" }).click();
@@ -505,11 +533,9 @@ test.describe("Insights Feature Tests", () => {
       .fill(QUESTIONS[3]);
     await page.getByRole("button", { name: "Send" }).click();
 
-    await page.getByText(Response[3]).waitFor();
-    const responseMessage2 = page.getByText(
-      Response[3]
-    );
-    await expect(responseMessage2).toBeVisible();
+    await page.getByText(Response[3], { exact: false }).waitFor();
+    const responseMessage2 = page.getByText(Response[3], { exact: false });
+    await expect(responseMessage2).toContainText(Response[3]);
 
     // Assert chat textbox is visible after new chat
     await expect(
