@@ -79,9 +79,13 @@ jobs:
           # Check if results file exists and has actual test data
           if [ ! -f "$RESULTS_FILE" ]; then
             echo "Results file not found, sending failure notification"
+            if [ -z "${{ secrets.TEAMS_WEBHOOK_URL }}" ]; then
+              echo "Warning: TEAMS_WEBHOOK_URL secret not configured"
+              exit 0
+            fi
             curl -H 'Content-Type: application/json' \
               -d "{\"text\": \"🚨 **Ngen Studio Test Results**\n\n❌ Test execution failed - no results available\n🕐 Time: $(date)\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"}" \
-              ${{ secrets.TEAMS_WEBHOOK_URL }}
+              "${{ secrets.TEAMS_WEBHOOK_URL }}"
             exit 0
           fi
           
@@ -99,9 +103,13 @@ jobs:
             
             if [ "$ACTUAL_TESTS" -eq 0 ]; then
               echo "No actual test results found, sending failure notification"
+              if [ -z "${{ secrets.TEAMS_WEBHOOK_URL }}" ]; then
+                echo "Warning: TEAMS_WEBHOOK_URL secret not configured"
+                exit 0
+              fi
               curl -H 'Content-Type: application/json' \
                 -d "{\"text\": \"🚨 **Ngen Studio Test Results**\n\n❌ Test execution failed - no test results found\n🕐 Time: $(date)\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"}" \
-                ${{ secrets.TEAMS_WEBHOOK_URL }}
+                "${{ secrets.TEAMS_WEBHOOK_URL }}"
               exit 0
             fi
           fi
@@ -190,9 +198,15 @@ jobs:
 
           latest_url="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/$REPORT_TS/"
 
+
           # Send comprehensive Teams message
+          if [ -z "${{ secrets.TEAMS_WEBHOOK_URL }}" ]; then
+            echo "Warning: TEAMS_WEBHOOK_URL secret not configured"
+            exit 0
+          fi
+          
           curl -H 'Content-Type: application/json' \
             -d "{
-              \"text\": \"$EMOJI **Ngen Studio Test Results**\\n\\n**$STATUS**\\n\\n📊 **Summary:**\\n• Total: $TOTAL_TESTS tests\\n• Passed: $PASSED_TESTS\\n• Failed: $FAILED_TESTS\\n• Flaky: $FLAKY_TESTS\\n• Skipped: $SKIPPED_TESTS\\n• Duration: ${DURATION_SEC}s (${DURATION_MIN}m)\\n\\n📋 **Test Details:**\\n$summary$failed_details\\n\\n📑 [View Full Report]($latest_url)\\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"
+              \"text\": \"$EMOJI **Ngen Studio Test Results**\\n\\n**$STATUS**\\n\\n📊 **Summary:**\\n• Total: $TOTAL_TESTS tests\\n• Passed: $PASSED_TESTS\\n• Failed: $FAILED_TESTS\\n• Flaky: $FLAKY_TESTS\\n• Skipped: $SKIPPED_TESTS\\n• Duration: ${DURATION_SEC}s (${DURATION_MIN}m)\\n\\n📋 **Test Details:**\\n$summary$failed_details\\n\\n📑 [View Full Report]($latest_url)\\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\\n\\n---\\n👤 **Sent by:** Navaneetha B | 🕐 **Time:** $(TZ='Asia/Kolkata' date +'%a %b %d %Y, %I:%M:%S %p IST')\"
             }" \
-            ${{ secrets.TEAMS_WEBHOOK_URL }}
+            "${{ secrets.TEAMS_WEBHOOK_URL }}"

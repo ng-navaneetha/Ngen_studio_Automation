@@ -1,0 +1,1 @@
+export const URL_OF_YOUR_KPI_DASHBOARD='https://nsight-dev.ngenux.app/project/ai-dashboard';
