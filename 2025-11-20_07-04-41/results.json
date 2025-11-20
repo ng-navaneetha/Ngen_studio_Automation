@@ -1,0 +1,1761 @@
+{
+  "config": {
+    "configFile": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/playwright.config.js",
+    "rootDir": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests",
+    "forbidOnly": true,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/commit/f3360e1772e39e638846f1789fcb948974afc33a",
+        "commitHash": "f3360e1772e39e638846f1789fcb948974afc33a",
+        "buildHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/actions/runs/19528116144"
+      },
+      "gitCommit": {
+        "shortHash": "f3360e1",
+        "hash": "f3360e1772e39e638846f1789fcb948974afc33a",
+        "subject": "revrtt the changes of yml file",
+        "body": "revrtt the changes of yml file\n",
+        "author": {
+          "name": "ng-navaneetha",
+          "email": "navaneetha.b@ngenux.com",
+          "time": 1763620895000
+        },
+        "committer": {
+          "name": "ng-navaneetha",
+          "email": "navaneetha.b@ngenux.com",
+          "time": 1763620895000
+        },
+        "branch": "testing-branch"
+      },
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ],
+      [
+        "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/node_modules/allure-playwright/dist/cjs/index.js",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/commit/f3360e1772e39e638846f1789fcb948974afc33a",
+            "commitHash": "f3360e1772e39e638846f1789fcb948974afc33a",
+            "buildHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/actions/runs/19528116144"
+          },
+          "gitCommit": {
+            "shortHash": "f3360e1",
+            "hash": "f3360e1772e39e638846f1789fcb948974afc33a",
+            "subject": "revrtt the changes of yml file",
+            "body": "revrtt the changes of yml file\n",
+            "author": {
+              "name": "ng-navaneetha",
+              "email": "navaneetha.b@ngenux.com",
+              "time": 1763620895000
+            },
+            "committer": {
+              "name": "ng-navaneetha",
+              "email": "navaneetha.b@ngenux.com",
+              "time": 1763620895000
+            },
+            "branch": "testing-branch"
+          },
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.53.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "call-summarization.spec.js",
+      "file": "call-summarization.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Call Summarization",
+          "file": "call-summarization.spec.js",
+          "line": 57,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke TC06: Happy flow - Summary screen - UI and content assertions",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 160000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 38480,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Creating new auth session...\n"
+                        },
+                        {
+                          "text": "Auth session saved successfully\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/summary\n"
+                        },
+                        {
+                          "text": "art_in8.mp3\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/summary\n"
+                        },
+                        {
+                          "text": "✅ Deleted Summary workspace\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-20T06:43:37.299Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b4980f566f3e0f5bf01c-f7ce690895eb82d83342",
+              "file": "call-summarization.spec.js",
+              "line": 167,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "enterprisesearch.spec.js",
+      "file": "enterprisesearch.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Enterprise Search Processing Tests",
+          "file": "enterprisesearch.spec.js",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke TC01:Enterprise Search use case - Verify workspace functionality - upload document",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 61765,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/v2/nterprise-search\n"
+                        },
+                        {
+                          "text": "Storage state expired, creating new session...\n"
+                        },
+                        {
+                          "text": "Starting direct login process...\n"
+                        },
+                        {
+                          "text": "Navigated to login URL directly\n"
+                        },
+                        {
+                          "text": "Go to Login button visible: \u001b[33mfalse\u001b[39m\n"
+                        },
+                        {
+                          "text": "Login button visible: \u001b[33mfalse\u001b[39m\n"
+                        },
+                        {
+                          "text": "Waiting for Auth0 login page...\n"
+                        },
+                        {
+                          "text": "Auth check error, continuing with current page state\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "🗑️ Attempting to delete Insights workspace: \"Tesla’s Transforming\"\n"
+                        },
+                        {
+                          "text": "⚠️ Error deleting Insights workspace: page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Delete Workspace\")') to be visible\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "🗑️ Attempting to delete Query workspace: \"acme_chatbot\"\n"
+                        },
+                        {
+                          "text": "⚠️ Error deleting Query workspace: page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Delete Workspace\")') to be visible\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "✅ Cleanup completed\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "Direct login failed: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2025-11-20T06:44:36.787Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "62f9178d886387b97391-8b1bf19c156f2ffea827",
+              "file": "enterprisesearch.spec.js",
+              "line": 56,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Extract.spec.js",
+      "file": "Extract.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login and Navigation Tests",
+          "file": "Extract.spec.js",
+          "line": 18,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "OCR Document Processing Tests",
+              "file": "Extract.spec.js",
+              "line": 20,
+              "column": 8,
+              "specs": [
+                {
+                  "title": " @smoke TC01:Verify File content Extracted successfully",
+                  "ok": true,
+                  "tags": [
+                    "smoke"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 26600,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/extract\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-11-20T06:46:09.730Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fb8171f0e1175ce3cf80-69e3ce5856e7b7419288",
+                  "file": "Extract.spec.js",
+                  "line": 37,
+                  "column": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "insights.spec.js",
+      "file": "insights.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Insights Feature Tests",
+          "file": "insights.spec.js",
+          "line": 14,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke TC02: Create workspace with Insights use case",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6594,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-20T06:46:36.346Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-09d63cee25eed692936f",
+              "file": "insights.spec.js",
+              "line": 65,
+              "column": 3
+            },
+            {
+              "title": "@smoke TC03: Create workspace with Query use case and database connection",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 13302,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Create workspace with Query use case",
+                          "duration": 9736,
+                          "steps": [
+                            {
+                              "title": "Select database type",
+                              "duration": 316
+                            },
+                            {
+                              "title": "Fill connection details",
+                              "duration": 85
+                            }
+                          ]
+                        }
+                      ],
+                      "startTime": "2025-11-20T06:46:42.946Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-5afec9d704ebdd0f1c01",
+              "file": "insights.spec.js",
+              "line": 82,
+              "column": 3
+            },
+            {
+              "title": "@smoke TC04: Create workspace with Pulse use case",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6624,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-20T06:46:56.254Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-0d9c4b9dff0bc0bf63a8",
+              "file": "insights.spec.js",
+              "line": 112,
+              "column": 3
+            },
+            {
+              "title": " @smoke TC05: Create workspace with Summary use case",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6684,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-20T06:47:02.884Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-fb39e33265828ec04128",
+              "file": "insights.spec.js",
+              "line": 130,
+              "column": 3
+            },
+            {
+              "title": "@smoke TC06:Insights use case - Verify workspace functionality - upload document",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11847,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-20T06:47:09.574Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-f1cba1fb11f2116b06b2",
+              "file": "insights.spec.js",
+              "line": 148,
+              "column": 3
+            },
+            {
+              "title": "@smoke TC15: Verify file upload, chat, and new chat flow",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 240000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 240009,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 240000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 240000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 240000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/insights.spec.js",
+                            "column": 61,
+                            "line": 515
+                          },
+                          "message": "Error: locator.waitFor: Target page, context or browser has been closed\n\n  513 |     for (let i = 0; i < 3; i++) {\n  514 |       try {\n> 515 |         await page.getByText(Response[1], { exact: false }).waitFor({ timeout: 150000 }); // Retry with a timeout of 60 seconds\n      |                                                             ^\n  516 |         break; // Exit loop if successful\n  517 |       } catch (error) {\n  518 |         console.error(`Retry ${i + 1} failed:`, error);\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/insights.spec.js:515:61"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "Retry 1 failed: locator.waitFor: Timeout 150000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Based on the provided context, the invoice number is 161126.') to be visible\u001b[22m\n\n    at \u001b[90m/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/\u001b[39mtests/insights.spec.js:515:61 {\n  name: \u001b[32m'TimeoutError'\u001b[39m,\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@39'\u001b[39m,\n    location: {\n      file: \u001b[32m'/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/insights.spec.js'\u001b[39m,\n      line: \u001b[33m515\u001b[39m,\n      column: \u001b[33m61\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m\"Wait for selector getByText('Based on the provided context, the invoice number is 161126.')\"\u001b[39m,\n    apiName: \u001b[32m'locator.waitFor'\u001b[39m,\n    params: {\n      selector: \u001b[32m'internal:text=\"Based on the provided context, the invoice number is 161126.\"i'\u001b[39m,\n      strict: \u001b[33mtrue\u001b[39m,\n      omitReturnValue: \u001b[33mtrue\u001b[39m,\n      timeout: \u001b[33m150000\u001b[39m\n    },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    attachmentIndices: [],\n    info: TestStepInfoImpl {\n      annotations: [],\n      _testInfo: \u001b[36m[TestInfoImpl]\u001b[39m,\n      _stepId: \u001b[32m'pw:api@39'\u001b[39m\n    },\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1763621407900\u001b[39m,\n    error: {\n      message: \u001b[32m'TimeoutError: locator.waitFor: Timeout 150000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m\"\\x1B[2m  - waiting for getByText('Based on the provided context, the invoice number is 161126.') to be visible\\x1B[22m\\n\"\u001b[39m,\n      stack: \u001b[32m'TimeoutError: locator.waitFor: Timeout 150000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m\"\\x1B[2m  - waiting for getByText('Based on the provided context, the invoice number is 161126.') to be visible\\x1B[22m\\n\"\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/insights.spec.js:515:61'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                        },
+                        {
+                          "text": "Retry 2 failed: locator.waitFor: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByText('Based on the provided context, the invoice number is 161126.') to be visible\u001b[22m\n\n    at \u001b[90m/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/\u001b[39mtests/insights.spec.js:515:61 {\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@40'\u001b[39m,\n    location: {\n      file: \u001b[32m'/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/insights.spec.js'\u001b[39m,\n      line: \u001b[33m515\u001b[39m,\n      column: \u001b[33m61\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m\"Wait for selector getByText('Based on the provided context, the invoice number is 161126.')\"\u001b[39m,\n    apiName: \u001b[32m'locator.waitFor'\u001b[39m,\n    params: {\n      selector: \u001b[32m'internal:text=\"Based on the provided context, the invoice number is 161126.\"i'\u001b[39m,\n      strict: \u001b[33mtrue\u001b[39m,\n      omitReturnValue: \u001b[33mtrue\u001b[39m,\n      timeout: \u001b[33m150000\u001b[39m\n    },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    attachmentIndices: [],\n    info: TestStepInfoImpl {\n      annotations: [],\n      _testInfo: \u001b[36m[TestInfoImpl]\u001b[39m,\n      _stepId: \u001b[32m'pw:api@40'\u001b[39m\n    },\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1763621481433\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: locator.waitFor: Target page, context or browser has been closed\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m\"\\x1B[2m  - waiting for getByText('Based on the provided context, the invoice number is 161126.') to be visible\\x1B[22m\\n\"\u001b[39m,\n      stack: \u001b[32m'Error: locator.waitFor: Target page, context or browser has been closed\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m\"\\x1B[2m  - waiting for getByText('Based on the provided context, the invoice number is 161126.') to be visible\\x1B[22m\\n\"\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/insights.spec.js:515:61'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                        },
+                        {
+                          "text": "Retry 3 failed: locator.waitFor: Target page, context or browser has been closed\n    at \u001b[90m/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/\u001b[39mtests/insights.spec.js:515:61 {\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@44'\u001b[39m,\n    location: {\n      file: \u001b[32m'/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/insights.spec.js'\u001b[39m,\n      line: \u001b[33m515\u001b[39m,\n      column: \u001b[33m61\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m\"Wait for selector getByText('Based on the provided context, the invoice number is 161126.')\"\u001b[39m,\n    apiName: \u001b[32m'locator.waitFor'\u001b[39m,\n    params: {\n      selector: \u001b[32m'internal:text=\"Based on the provided context, the invoice number is 161126.\"i'\u001b[39m,\n      strict: \u001b[33mtrue\u001b[39m,\n      omitReturnValue: \u001b[33mtrue\u001b[39m,\n      timeout: \u001b[33m150000\u001b[39m\n    },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    attachmentIndices: [],\n    info: TestStepInfoImpl {\n      annotations: [],\n      _testInfo: \u001b[36m[TestInfoImpl]\u001b[39m,\n      _stepId: \u001b[32m'pw:api@44'\u001b[39m\n    },\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1763621481436\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: locator.waitFor: Target page, context or browser has been closed'\u001b[39m,\n      stack: \u001b[32m'Error: locator.waitFor: Target page, context or browser has been closed\\n'\u001b[39m +\n        \u001b[32m'    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/insights.spec.js:515:61'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2025-11-20T06:47:21.428Z",
+                      "annotations": [],
+                      "attachments": []
+                    },
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 52037,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Using existing auth session...\n"
+                        },
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-11-20T06:51:22.124Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/insights-Insights-Feature--7ab7a-load-chat-and-new-chat-flow-chromium-retry1/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "flaky"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-1c4bd017dc4499f272ae",
+              "file": "insights.spec.js",
+              "line": 461,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "KPIdashboard/AIAssistant.spec.js",
+      "file": "KPIdashboard/AIAssistant.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "AI Assistant Text_Bot Tests",
+          "file": "KPIdashboard/AIAssistant.spec.js",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke Ask a question and verify results",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 240000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 47368,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Matching elements for \"Executing SQL query\": 4\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Toggle AI Assistant and ask a question",
+                          "duration": 767
+                        },
+                        {
+                          "title": "Wait for processing and verify results",
+                          "duration": 43829
+                        }
+                      ],
+                      "startTime": "2025-11-20T06:52:15.058Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a6ff67ba357b9c52e637-efd1ed18f6703ad8829c",
+              "file": "KPIdashboard/AIAssistant.spec.js",
+              "line": 17,
+              "column": 3
+            },
+            {
+              "title": "@smoke Start a new chat and verify results",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 240000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 240015,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 240000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 240000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 240000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                            "column": 42,
+                            "line": 96
+                          },
+                          "message": "Error: locator.textContent: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('div.text-center.p-4.text-muted-foreground')\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/AIAssistant.js:96\n\n  94 |       \"div.text-center.p-4.text-muted-foreground\"\n  95 |     );\n> 96 |     const textContent = await noDataText.textContent();\n     |                                          ^\n  97 |\n  98 |     if (textContent === \"No data available\") {\n  99 |       // Verify the \"No data available\" text is visible\n    at AIAssistantPage.verifyTabsAndNoData (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:96:42)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:40:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:38:5"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Matching elements for \"Executing SQL query\": 4\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Start a new chat and ask a question",
+                          "duration": 3956
+                        },
+                        {
+                          "title": "Verify results in the new chat",
+                          "duration": 233380,
+                          "error": {
+                            "message": "Error: locator.textContent: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('div.text-center.p-4.text-muted-foreground')\u001b[22m\n",
+                            "stack": "Error: locator.textContent: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('div.text-center.p-4.text-muted-foreground')\u001b[22m\n\n    at AIAssistantPage.verifyTabsAndNoData (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:96:42)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:40:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:38:5",
+                            "location": {
+                              "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                              "column": 42,
+                              "line": 96
+                            },
+                            "snippet": "   at ../pages/KpiDashboardPages/AIAssistant.js:96\n\n\u001b[0m \u001b[90m 94 |\u001b[39m       \u001b[32m\"div.text-center.p-4.text-muted-foreground\"\u001b[39m\n \u001b[90m 95 |\u001b[39m     )\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 96 |\u001b[39m     \u001b[36mconst\u001b[39m textContent \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m noDataText\u001b[33m.\u001b[39mtextContent()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 97 |\u001b[39m\n \u001b[90m 98 |\u001b[39m     \u001b[36mif\u001b[39m (textContent \u001b[33m===\u001b[39m \u001b[32m\"No data available\"\u001b[39m) {\n \u001b[90m 99 |\u001b[39m       \u001b[90m// Verify the \"No data available\" text is visible\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2025-11-20T06:53:02.435Z",
+                      "annotations": [],
+                      "attachments": []
+                    },
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 48753,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Matching elements for \"Executing SQL query\": 4\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "steps": [
+                        {
+                          "title": "Start a new chat and ask a question",
+                          "duration": 4382
+                        },
+                        {
+                          "title": "Verify results in the new chat",
+                          "duration": 40569
+                        }
+                      ],
+                      "startTime": "2025-11-20T06:57:03.093Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-AIAssistant-A-a0b47-new-chat-and-verify-results-chromium-retry1/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "flaky"
+                }
+              ],
+              "id": "a6ff67ba357b9c52e637-146cf818e41cb2806083",
+              "file": "KPIdashboard/AIAssistant.spec.js",
+              "line": 31,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "KPIdashboard/aiDashboard.spec.js",
+      "file": "KPIdashboard/aiDashboard.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": " AI Dashboard KPI Flow",
+          "file": "KPIdashboard/aiDashboard.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke  Verify Supply Chain metrics availability",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 600000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11842,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ Switched to Supply Chain Head role\n"
+                        },
+                        {
+                          "text": "✅ Verified Supply Chain metric: OTIF (On-Time In-Full) is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Supply Chain metric: DOH (Days on Hand) is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Supply Chain metric: Inventory Turnover Ratio is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Supply Chain metric: Forecast Accuracy is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Supply Chain metric: Supplier Lead Time is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Supply Chain metric: SLA Adherence (Vendor) is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Supply Chain metric: Backorder Rate is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Supply Chain metric: Logistics Cost per Unit is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Supply Chain metric: Order Cycle Time is available\n"
+                        },
+                        {
+                          "text": "✅ Completed verification of 9 Supply Chain metrics\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Switch to Supply Chain Head role",
+                          "duration": 63
+                        },
+                        {
+                          "title": "Verify all Supply Chain metrics are available",
+                          "duration": 8071
+                        }
+                      ],
+                      "startTime": "2025-11-20T06:57:52.425Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e1d7752688fb686de41b-34d5b28d91ec7db19a55",
+              "file": "KPIdashboard/aiDashboard.spec.js",
+              "line": 63,
+              "column": 3
+            },
+            {
+              "title": "@smoke  Verify Sales Head metrics availability",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 600000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 48659,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ Switched to Sales Head role\n"
+                        },
+                        {
+                          "text": "✅ Verified Sales Head metric (partial): Sales Volume by SKU / Region is available\n"
+                        },
+                        {
+                          "text": "⚠️ Could not verify metric: Revenue Growth Rate - \u001b[31mTimed out 2000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('Revenue')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Revenue')\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "✅ Verified Sales Head metric: Quote-to-Close Ratio is available\n"
+                        },
+                        {
+                          "text": "⚠️ Could not verify metric: Average Deal Size - \u001b[31mTimed out 2000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByText('Average')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Average')\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "✅ Verified Sales Head metric: Win Rate is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Sales Head metric (partial): Sales Cycle Length is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Sales Head metric: Customer Retention Rate is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Sales Head metric: New vs. Repeat Business Ratio is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Sales Head metric: Contribution Margin by Customer/Product is available\n"
+                        },
+                        {
+                          "text": "✅ Completed verification of 9 Sales Head metrics\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Switch to Sales Head role",
+                          "duration": 114
+                        },
+                        {
+                          "title": "Verify all Sales Head metrics are available",
+                          "duration": 45135
+                        }
+                      ],
+                      "startTime": "2025-11-20T06:58:04.275Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e1d7752688fb686de41b-cac23156e73c9a756ccf",
+              "file": "KPIdashboard/aiDashboard.spec.js",
+              "line": 141,
+              "column": 3
+            },
+            {
+              "title": "@smoke  Verify Operations Head metrics availability",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 600000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11980,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ Switched to Operations Head role\n"
+                        },
+                        {
+                          "text": "✅ Verified Operations Head metric: OEE (Overall Equipment Efficiency) is available\n"
+                        },
+                        {
+                          "text": "⚠️ Could not verify metric: Yield - expect.toBeVisible: Error: strict mode violation: getByText('Yield') resolved to 3 elements:\n    1) <text role=\"presentation\">Yield</text> aka getByText('Yield').first()\n    2) <text role=\"presentation\">Yield</text> aka getByText('Yield').nth(1)\n    3) <text role=\"presentation\">First Pass Yield</text> aka getByText('First Pass Yield')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Yield')\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "✅ Verified Operations Head metric: First Pass Yield is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Operations Head metric: Downtime Hours is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Operations Head metric: Throughput Time is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Operations Head metric: Scrap Rate is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Operations Head metric: Energy Consumption per Unit is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Operations Head metric: Batch Cycle Time is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Operations Head metric: CAPEX/OPEX Ratio is available\n"
+                        },
+                        {
+                          "text": "✅ Completed verification of 9 Operations Head metrics\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Switch to Operations Head role",
+                          "duration": 102
+                        },
+                        {
+                          "title": "Verify all Operations Head metrics are available",
+                          "duration": 8877
+                        }
+                      ],
+                      "startTime": "2025-11-20T06:58:52.942Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e1d7752688fb686de41b-38f48723b59e75514315",
+              "file": "KPIdashboard/aiDashboard.spec.js",
+              "line": 219,
+              "column": 3
+            },
+            {
+              "title": "@smoke OTIF metrics chart operations",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 600000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 100181,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "⚠️ Page ready check failed: page.waitForLoadState: Timeout 10000ms exceeded.\n"
+                        },
+                        {
+                          "text": "🎯 Attempting to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "🔄 Trying strategy 1 to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "✅ Successfully opened metric: OTIF (On-Time In-Full) using strategy 1 (1 indicators verified, URL changed: true)\n"
+                        },
+                        {
+                          "text": "🔍 Verifying correct metric opened: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "✅ Confirmed correct metric opened: OTIF (On-Time In-Full) (3/4 verifications passed, URL match: true)\n"
+                        },
+                        {
+                          "text": "✅ Opened OTIF metrics view\n"
+                        },
+                        {
+                          "text": "📊 Captured initial chart state\n"
+                        },
+                        {
+                          "text": "🔄 Testing chart type: Bar Chart\n"
+                        },
+                        {
+                          "text": "🔄 Changing chart type to: Bar Chart\n"
+                        },
+                        {
+                          "text": "✅ Changed chart type to: Bar Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart rendering verified for Bar Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart visually changed to: Bar Chart\n"
+                        },
+                        {
+                          "text": "🔄 Testing chart type: Line Chart\n"
+                        },
+                        {
+                          "text": "🔄 Changing chart type to: Line Chart\n"
+                        },
+                        {
+                          "text": "✅ Changed chart type to: Line Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart rendering verified for Line Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart visually changed to: Line Chart\n"
+                        },
+                        {
+                          "text": "🔄 Testing chart type: Area Chart\n"
+                        },
+                        {
+                          "text": "🔄 Changing chart type to: Area Chart\n"
+                        },
+                        {
+                          "text": "✅ Changed chart type to: Area Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart rendering verified for Area Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart visually changed to: Area Chart\n"
+                        },
+                        {
+                          "text": "🔄 Testing chart type: Pie Chart\n"
+                        },
+                        {
+                          "text": "🔄 Changing chart type to: Pie Chart\n"
+                        },
+                        {
+                          "text": "✅ Changed chart type to: Pie Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart rendering verified for Pie Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart visually changed to: Pie Chart\n"
+                        },
+                        {
+                          "text": "🔄 Testing chart type: Gauge Chart\n"
+                        },
+                        {
+                          "text": "🔄 Changing chart type to: Gauge Chart\n"
+                        },
+                        {
+                          "text": "✅ Changed chart type to: Gauge Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart rendering verified for Gauge Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart visually changed to: Gauge Chart\n"
+                        },
+                        {
+                          "text": "✅ All chart type changes tested and verified\n"
+                        },
+                        {
+                          "text": "✅ Returned to main dashboard\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Navigate to Supply Chain Head and open OTIF metrics",
+                          "duration": 77456
+                        },
+                        {
+                          "title": "Test different chart types with visual verification",
+                          "duration": 19502
+                        },
+                        {
+                          "title": "Return to main dashboard",
+                          "duration": 170
+                        }
+                      ],
+                      "startTime": "2025-11-20T06:59:04.928Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e1d7752688fb686de41b-08cedae2eb16f377aa2a",
+              "file": "KPIdashboard/aiDashboard.spec.js",
+              "line": 297,
+              "column": 3
+            },
+            {
+              "title": "@smoke Dashboard data export functionality",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 600000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 32560,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🎯 Attempting to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "🔄 Trying strategy 1 to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "✅ Successfully opened metric: OTIF (On-Time In-Full) using strategy 1 (1 indicators verified, URL changed: true)\n"
+                        },
+                        {
+                          "text": "✅ Switched to Supply Chain Head for export test\n"
+                        },
+                        {
+                          "text": "otif-on-time-in-full--2025-05-20_to_2025-11-20.csv\n"
+                        },
+                        {
+                          "text": "✅ Successfully exported dashboard data\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Navigate to Supply Chain Head role",
+                          "duration": 23063
+                        },
+                        {
+                          "title": "Export dashboard data",
+                          "duration": 1220
+                        }
+                      ],
+                      "startTime": "2025-11-20T07:00:45.116Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e1d7752688fb686de41b-d2be71590c1ced393c72",
+              "file": "KPIdashboard/aiDashboard.spec.js",
+              "line": 427,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "KPIdashboard/generateAIInsights.spec.js",
+      "file": "KPIdashboard/generateAIInsights.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Generate AI Insights Tests",
+          "file": "KPIdashboard/generateAIInsights.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke Generate AI Insights and verify results",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 600000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 59113,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "\n🎯 COMPREHENSIVE TIME PERIOD METRIC TEST - OTIF\n"
+                        },
+                        {
+                          "text": "⚠️ Page ready check failed: page.waitForLoadState: Timeout 10000ms exceeded.\n"
+                        },
+                        {
+                          "text": "🎯 Attempting to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "🔄 Trying strategy 1 to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "✅ Successfully opened metric: OTIF (On-Time In-Full) using strategy 1 (2 indicators verified, URL changed: true)\n"
+                        },
+                        {
+                          "text": "🔍 Verifying correct metric opened: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "Verification method failed: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('heading', { name: 'OTIF (On-Time In-Full)' }) to be visible\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "✅ Confirmed correct metric opened: OTIF (On-Time In-Full) (1/4 verifications passed, URL match: true)\n"
+                        },
+                        {
+                          "text": "\u001b[33mtrue\u001b[39m\n"
+                        },
+                        {
+                          "text": "✅ Successfully opened OTIF metric detail view\n"
+                        },
+                        {
+                          "text": "🔍 Verifying results content: •The overall fill rate for orders placed between May 20, 2025, and November 20, 2025, is around 93%, indicating that most orders are being fulfilled satisfactorily.•Jones-Newton had a perfect OTIF (On-Time In-Full) performance, with orders arriving on time, in full quantity, and meeting customer expectations.•Davis-Scott in Utah experienced a slightly lower fill rate of 89.66% for their orders, suggesting potential issues in order fulfillment for this customer.•Despite being on time, Jimenez Group in West Virginia had a fill rate of 91.93%, indicating a gap in delivering the full quantity of products ordered.•The actual delivery dates for some orders are missing, which may impact the accuracy of OTIF metrics for those cases.▴\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Navigate to Supply Chain Head and open OTIF metrics",
+                          "duration": 27040
+                        },
+                        {
+                          "title": "Click Generate AI Insights button",
+                          "duration": 23170
+                        },
+                        {
+                          "title": "Wait for loading and verify results",
+                          "duration": 5331
+                        }
+                      ],
+                      "startTime": "2025-11-20T07:01:17.688Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4c71a8a457cfce231c08-704598a99641e284e988",
+              "file": "KPIdashboard/generateAIInsights.spec.js",
+              "line": 18,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "pulse.spec.js",
+      "file": "pulse.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Pulse sentiment analysis – functional flow",
+          "file": "pulse.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": " @smoke TC001_generateSentimentFromText",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8666,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Using existing auth session...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-20T07:02:16.829Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4199f64b3242841a2ce2-673f3ab904ef3d7ae7eb",
+              "file": "pulse.spec.js",
+              "line": 52,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "quality-check.spec.js",
+      "file": "quality-check.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Quality Check Feature Tests",
+          "file": "quality-check.spec.js",
+          "line": 14,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke TC04: Image comparison shows results with similarity score and visual difference",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 15205,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/quality-check\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-20T07:02:38.108Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "094a1e5d42dc18e53fae-8f79fc4223e8fb49e670",
+              "file": "quality-check.spec.js",
+              "line": 74,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "query.spec.js",
+      "file": "query.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Query feature – functional tests",
+          "file": "query.spec.js",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": " @smoke TC01_validQueryDisplaysResults",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 48681,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-20T07:02:53.369Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e81f4f68ea27254567d8-282d117fc0d24988b51f",
+              "file": "query.spec.js",
+              "line": 43,
+              "column": 3
+            },
+            {
+              "title": "@smoke TC03_longQueryHandled",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 47422,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-20T07:03:49.186Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e81f4f68ea27254567d8-aa345018465156b707ee",
+              "file": "query.spec.js",
+              "line": 68,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-20T06:43:36.130Z",
+    "duration": 1264720.0119999999,
+    "expected": 19,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 2
+  }
+}
