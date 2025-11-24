@@ -53,7 +53,7 @@ jobs:
           
           # Playwright generates results.json by default in the current directory
           if [ -f "results.json" ]; then
-            cp results.json "reports/$ts/results.json"
+            mv results.json "reports/$ts/results.json"
             echo "✅ Found and copied results.json"
           else
             echo "⚠️ results.json not found - checking test-results directory"
@@ -77,6 +77,7 @@ jobs:
 
       - name: Parse results and send summary to Teams
         if: always()  # Always send Teams notification, regardless of test outcome
+        continue-on-error: true  # Continue even if Teams notification fails
         run: |
           RESULTS_FILE="reports/$REPORT_TS/results.json"
           
@@ -87,84 +88,96 @@ jobs:
               echo "Warning: TEAMS_WEBHOOK_URL secret not configured"
               exit 0
             fi
-            curl -X POST -H 'Content-Type: application/json' \
+            curl -H 'Content-Type: application/json' \
               -d "{\"text\": \"🚨 **Ngen Studio Test Results**\n\n❌ Test execution completed but no results file found.\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"}" \
               "${{ secrets.TEAMS_WEBHOOK_URL }}"
             exit 0
           fi
           
-          echo "✅ Results file found. Parsing data..."
+          echo "✅ Results file found. First 30 lines:"
+          head -30 "$RESULTS_FILE"
+          echo "--- End debug info ---"
+
+          # Validate test result data
+          TOTAL_FROM_STATS=$(jq -r '.stats.expected + .stats.unexpected + .stats.flaky // 0' $RESULTS_FILE 2>/dev/null || echo "0")
           
-          # Parse test statistics from results.json
-          TOTAL_TESTS=$(jq '[.suites[]?.suites[]?.specs[] // .suites[]?.specs[]] | length' $RESULTS_FILE 2>/dev/null || echo "0")
-          PASSED_TESTS=$(jq '[.suites[]?.suites[]?.specs[] // .suites[]?.specs[] | select(.ok == true)] | length' $RESULTS_FILE 2>/dev/null || echo "0")
-          FAILED_TESTS=$(jq '[.suites[]?.suites[]?.specs[] // .suites[]?.specs[] | select(.ok == false)] | length' $RESULTS_FILE 2>/dev/null || echo "0")
-          FLAKY_TESTS=$(jq '[.suites[]?.suites[]?.specs[] // .suites[]?.specs[] | select(.flaky == true)] | length' $RESULTS_FILE 2>/dev/null || echo "0")
-          SKIPPED_TESTS=$(jq '[.suites[]?.suites[]?.specs[] // .suites[]?.specs[] | select(.skipped == true)] | length' $RESULTS_FILE 2>/dev/null || echo "0")
-          DURATION=$(jq '.stats.duration // 0' $RESULTS_FILE 2>/dev/null || echo "0")
+          if [ "$TOTAL_FROM_STATS" -eq 0 ]; then
+            ACTUAL_TESTS=$(jq '[.. | objects | select(.status? != null)] | length' $RESULTS_FILE 2>/dev/null || echo "0")
+            
+            if [ "$ACTUAL_TESTS" -eq 0 ]; then
+              echo "No test results found, sending failure notification"
+              curl -H 'Content-Type: application/json' \
+                -d "{\"text\": \"🚨 **Ngen Studio Test Results**\n\n❌ Test execution failed - no valid results found\n🕐 Time: $(date)\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"}" \
+                "${{ secrets.TEAMS_WEBHOOK_URL }}"
+              exit 0
+            fi
+          fi
+
+          # Extract stats
+          TOTAL_TESTS=$(jq -r '.stats.expected + .stats.unexpected + .stats.flaky + .stats.skipped' $RESULTS_FILE)
+          PASSED_TESTS=$(jq -r '.stats.expected // 0' $RESULTS_FILE)
+          FAILED_TESTS=$(jq -r '.stats.unexpected // 0' $RESULTS_FILE)
+          FLAKY_TESTS=$(jq -r '.stats.flaky // 0' $RESULTS_FILE)
+          SKIPPED_TESTS=$(jq -r '.stats.skipped // 0' $RESULTS_FILE)
+          DURATION=$(jq -r '.stats.duration // 0' $RESULTS_FILE)
           
-          # Convert duration to seconds and minutes
-          DURATION_SEC=$(echo "scale=1; $DURATION / 1000" | bc 2>/dev/null || echo "0")
-          DURATION_MIN=$(echo "scale=1; $DURATION / 60000" | bc 2>/dev/null || echo "0")
-          
-          # Determine status emoji
-          if [ "$FAILED_TESTS" -eq 0 ] && [ "$FLAKY_TESTS" -eq 0 ] && [ "$TOTAL_TESTS" -gt 0 ]; then
+          DURATION_SEC=$(jq -r "(.stats.duration // 0) / 1000 * 10 | floor / 10" $RESULTS_FILE)
+          DURATION_MIN=$(jq -r "(.stats.duration // 0) / 60000 * 10 | floor / 10" $RESULTS_FILE)
+
+          # Determine result status
+          if [ "$FAILED_TESTS" -eq 0 ] && [ "$FLAKY_TESTS" -eq 0 ]; then
             STATUS="✅ All Tests Passed"
             EMOJI="🎉"
-          elif [ "$FAILED_TESTS" -gt 0 ] && [ "$PASSED_TESTS" -gt 0 ]; then
-            STATUS="⚠️ Partial Success"
-            EMOJI="⚠️"
           elif [ "$FAILED_TESTS" -gt 0 ]; then
             STATUS="❌ Tests Failed"
             EMOJI="🚨"
-          elif [ "$FLAKY_TESTS" -gt 0 ]; then
+          else
             STATUS="⚠️ Flaky Tests Detected"
             EMOJI="⚠️"
-          else
-            STATUS="❓ No Test Results"
-            EMOJI="❓"
           fi
-          
-          # Get test summary - all tests with their status
-          summary=$(jq -r '.suites[]?.suites[]?.specs[], .suites[]?.specs[] | select(.title) | if .ok == true then "• " + .title + " → ✅ passed" elif .flaky == true then "• " + .title + " → ⚠️ flaky" else "• " + .title + " → ❌ failed" end' $RESULTS_FILE 2>/dev/null)
-          
-          # Get only failed/flaky tests for the detailed section
-          failed_flaky=$(jq -r '.suites[]?.suites[]?.specs[], .suites[]?.specs[] | select(.title) | select(.ok == false or .flaky == true) | "• " + .title + (if .tests[]?.error?.message then " (" + (.tests[]?.error?.message | split("\n")[0] | .[0:60]) + "...)" else " (unknown issue)" end)' $RESULTS_FILE 2>/dev/null)
-          
-          # Limit summary to 20 tests
-          summary=$(echo "$summary" | head -20)
-          
-          # Build the Teams message
-          message_header="${EMOJI} **Ngen Studio Test Results**"$'\n'"${STATUS}"
-          message_summary="📊 Summary: • Total: ${TOTAL_TESTS} • Passed: ${PASSED_TESTS} • Failed: ${FAILED_TESTS} • Flaky: ${FLAKY_TESTS} • Skipped: ${SKIPPED_TESTS} • Duration: ${DURATION_SEC}s (${DURATION_MIN}m)"
-          message_tests="📋 Test Details:"$'\n'"${summary}"
-          
-          # Add failed/flaky details if any
-          message_failed=""
-          if [ -n "$failed_flaky" ]; then
-            message_failed=$'\n'"❌ Failed/Flaky Tests:"$'\n'"${failed_flaky}"
+
+          # Build summary
+          summary=$(jq -r '
+            .suites[].suites[]?.specs[] // empty | 
+            select(.title) |
+            if .ok == true and (.tests[].results | map(.status) | all(. == "passed")) then
+              "• " + .title + " → ✅ passed"
+            elif .ok == false or (.tests[].results | map(.status) | any(. == "failed")) then
+              "• " + .title + " → ❌ failed"  
+            elif .ok == true and (.tests[].results | map(.status) | any(. == "flaky")) then
+              "• " + .title + " → ⚠️ flaky"
+            else
+              "• " + .title + " → ❓ unknown"
+            end
+          ' $RESULTS_FILE 2>/dev/null | head -15)
+
+          [ -z "$summary" ] && summary="• Tests executed - see full report for details"
+          summary=$(echo "$summary" | sed ':a;N;$!ba;s/\n/\\n/g')
+
+          failed_details=""
+          if [ "$FAILED_TESTS" -gt 0 ] || [ "$FLAKY_TESTS" -gt 0 ]; then
+            failed_details=$(jq -r '
+              .suites[].suites[]?.specs[] // empty | 
+              select(.title) |
+              select(.ok == false or 
+                     (.tests[].results | map(.status) | any(. == "failed" or . == "flaky"))) |
+              if (.tests[].results | map(.status) | any(. == "failed")) then
+                "• " + .title + " (failed)"
+              elif (.tests[].results | map(.status) | any(. == "flaky")) then
+                "• " + .title + " (flaky)"
+              else
+                "• " + .title + " (unknown issue)"
+              end
+            ' $RESULTS_FILE 2>/dev/null | head -5)
+
+            [ ! -z "$failed_details" ] && failed_details=$(echo "$failed_details" | sed ':a;N;$!ba;s/\n/\\n/g')
+            [ ! -z "$failed_details" ] && failed_details="\\n\\n**❌ Failed/Flaky Tests:**\\n$failed_details"
           fi
-          
-          message_links=$'\n'"📑 View Full Report  🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"$'\n\n'"---"$'\n'"👤 **Sent by:** Navaneetha B | 🕐 **Time:** $(TZ='Asia/Kolkata' date +'%a %b %d %Y, %I:%M:%S %p IST')"
-          
-          # Combine all parts
-          full_message="${message_header}"$'\n\n'"${message_summary}"$'\n\n'"${message_tests}${message_failed}${message_links}"
-          
-          echo "Message to send:"
-          echo "$full_message"
-          echo "---"
-          
-          # Send the message to Teams
-          if [ -z "${{ secrets.TEAMS_WEBHOOK_URL }}" ]; then
-            echo "Warning: TEAMS_WEBHOOK_URL secret not configured"
-            exit 0
-          fi
-          
-          # Escape the message for JSON and send to Teams
-          escaped_message=$(printf '%s\n' "$full_message" | jq -Rs .)
-          
-          curl -X POST -H 'Content-Type: application/json' \
-            -d "{\"text\": $escaped_message}" \
+
+          latest_url="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/$REPORT_TS/"
+
+          curl -H 'Content-Type: application/json' \
+            -d "{
+              \"text\": \"$EMOJI **Ngen Studio  Test Results**\\n\\n**$STATUS**\\n\\n📊 **Summary:**\\n• Total: $TOTAL_TESTS\\n• Passed: $PASSED_TESTS\\n• Failed: $FAILED_TESTS\\n• Flaky: $FLAKY_TESTS\\n• Skipped: $SKIPPED_TESTS\\n• Duration: ${DURATION_SEC}s (${DURATION_MIN}m)\\n\\n📋 **Test Details:**\\n$summary$failed_details\\n\\n📑 [View Full Report]($latest_url)\\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\\n\\n👤 **Sent by:** Navaneetha B | 🕐 **Time:** $(TZ='Asia/Kolkata' date +'%a %b %d %Y, %I:%M:%S %p IST')\"
+            }" \
             "${{ secrets.TEAMS_WEBHOOK_URL }}"
-          
-          echo "✅ Message sent to Teams"
