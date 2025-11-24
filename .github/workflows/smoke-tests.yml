@@ -145,7 +145,7 @@ jobs:
             message_failed=$'\n'"❌ Failed/Flaky Tests:"$'\n'"${failed_flaky}"
           fi
           
-          message_links=$'\n'"📑 View Full Report  🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+          message_links=$'\n'"📑 View Full Report  🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"$'\n\n'"---"$'\n'"👤 **Sent by:** Navaneetha B | 🕐 **Time:** $(TZ='Asia/Kolkata' date +'%a %b %d %Y, %I:%M:%S %p IST')"
           
           # Combine all parts
           full_message="${message_header}"$'\n\n'"${message_summary}"$'\n\n'"${message_tests}${message_failed}${message_links}"
