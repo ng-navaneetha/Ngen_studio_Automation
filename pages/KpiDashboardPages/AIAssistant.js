@@ -39,9 +39,10 @@ export class AIAssistantPage {
   }
 
   async waitForProcessing() {
-    await this.executingSQLText.click();
-    await this.processingText.click();
-    await this.waitText.click();
+    const maxWaitTime = 90000; // 90 seconds wait for processing to finish
+    await expect(this.executingSQLText).toBeHidden({ timeout: maxWaitTime });
+    await expect(this.processingText).toBeHidden({ timeout: maxWaitTime });
+    await expect(this.waitText).toBeHidden({ timeout: maxWaitTime });
   }
 
   async verifyResults() {

@@ -38,32 +38,33 @@ jobs:
 
       - name: Run Playwright smoke tests with HTML + JSON report
         id: tests
-        continue-on-error: true  # Continue workflow even if tests fail
+        continue-on-error: true
         run: |
           mkdir -p reports
           npx playwright test --grep @smoke
           ts=$(date +'%Y-%m-%d_%H-%M-%S')
+          echo "REPORT_TS=$ts" >> $GITHUB_ENV
+
+          # 1. Create the timestamped directory
+          mkdir -p "reports/$ts"
           
-          # Move reports and handle missing files gracefully
+          # 2. Move the HTML report if it exists
           if [ -d "playwright-report" ]; then
             mv playwright-report "reports/$ts"
-          else
-            mkdir -p "reports/$ts"
           fi
           
-          # Playwright generates results.json by default in the current directory
-          if [ -f "results.json" ]; then
-            mv results.json "reports/$ts/results.json"
+          # 3. RELIABLY Move the Playwright JSON file
+          RESULTS_SOURCE="playwright-results.json" # <--- Must match your config file
+          RESULTS_DESTINATION="reports/$ts/results.json"
+          
+          if [ -f "$RESULTS_SOURCE" ]; then
+            mv "$RESULTS_SOURCE" "$RESULTS_DESTINATION"
             echo "✅ Found and copied results.json"
           else
-            echo "⚠️ results.json not found - checking test-results directory"
-            if [ -f "test-results/results.json" ]; then
-              mkdir -p "reports/$ts"
-              cp test-results/results.json "reports/$ts/results.json"
-              echo "✅ Found results.json in test-results directory"
-            fi
+            echo "❌ ERROR: Playwright results file ($RESULTS_SOURCE) not found!"
+            # We don't exit 1 here because the test runner already exited with an error
           fi
-          
+
           echo "REPORT_TS=$ts" >> $GITHUB_ENV
 
       - name: Deploy Playwright reports to GitHub Pages
