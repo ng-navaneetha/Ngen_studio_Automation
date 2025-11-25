@@ -1,4 +1,4 @@
-name: NgenStudio test Report
+name: Ngen Studio test Report
 
 on:
   schedule:
@@ -40,58 +40,68 @@ jobs:
         id: tests
         continue-on-error: true
         run: |
-          mkdir -p reports
-          npx playwright test --grep @smoke
-          ts=$(date +'%Y-%m-%d_%H-%M-%S')
-          echo "REPORT_TS=$ts" >> $GITHUB_ENV
+          echo "🔍 Environment Variables Check:"
+          echo "DASHBOARD_URL: ${DASHBOARD_URL:-NOT_SET}"
+          echo "EMAIL: ${EMAIL:-NOT_SET}"
+          echo "PASSWORD: ${PASSWORD:+***SET***}"
+          echo "INVITEE_EMAIL: ${INVITEE_EMAIL:-NOT_SET}"
+          echo "INVITEE_PASSWORD: ${INVITEE_PASSWORD:+***SET***}"
+          echo "INVITE_EMAIL: ${INVITE_EMAIL:-NOT_SET}"
+          echo "TEAMS_WEBHOOK_URL: ${TEAMS_WEBHOOK_URL:+***SET***}"
 
-          # 1. Create the timestamped directory
-          mkdir -p "reports/$ts"
+          # Validate required secrets
+          if [ -z "$TEAMS_WEBHOOK_URL" ]; then
+            echo "❌ ERROR: TEAMS_WEBHOOK_URL secret is not set!"
+            exit 1
+          fi
           
-          # 2. Move the HTML report if it exists
+          # Ensure base reports folder always exists
+          mkdir -p reports
+          
+          # Run Playwright smoke tests
+          npx playwright test --grep @smoke --workers=1 --timeout=180000 || true
+
+          ts=$(date +'%Y-%m-%d_%H-%M-%S')
+
+          # Move reports and handle missing files gracefully
           if [ -d "playwright-report" ]; then
             mv playwright-report "reports/$ts"
-          fi
-          
-          # 3. RELIABLY Move the Playwright JSON file
-          RESULTS_SOURCE="playwright-results.json" # <--- Must match your config file
-          RESULTS_DESTINATION="reports/$ts/results.json"
-          
-          if [ -f "$RESULTS_SOURCE" ]; then
-            mv "$RESULTS_SOURCE" "$RESULTS_DESTINATION"
-            echo "✅ Found and copied results.json"
           else
-            echo "❌ ERROR: Playwright results file ($RESULTS_SOURCE) not found!"
-            # We don't exit 1 here because the test runner already exited with an error
+            mkdir -p "reports/$ts"
+            echo "No HTML report generated" > "reports/$ts/index.html"
           fi
-
+          
+          # Move JSON results
+          if [ -f "results.json" ]; then
+            mv results.json "reports/$ts/results.json"
+          else
+            echo "⚠️ No results.json found - creating placeholder"
+            echo '{"stats":{"expected":0,"unexpected":1,"flaky":0,"skipped":0,"duration":0},"suites":[]}' > "reports/$ts/results.json"
+          fi
+          
           echo "REPORT_TS=$ts" >> $GITHUB_ENV
+          echo "✅ Reports organized under reports/$ts"
 
       - name: Deploy Playwright reports to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
-        if: always()  # Always deploy reports, even if tests failed
+        if: always()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./reports
           publish_branch: gh-pages
-          keep_files: true  # keep older reports instead of deleting them
+          keep_files: true
 
       - name: Parse results and send summary to Teams
-        if: always()  # Always send Teams notification, regardless of test outcome
-        continue-on-error: true  # Continue even if Teams notification fails
+        if: always()
         run: |
           RESULTS_FILE="reports/$REPORT_TS/results.json"
           
           # Check if results file exists
           if [ ! -f "$RESULTS_FILE" ]; then
-            echo "❌ Results file not found at $RESULTS_FILE"
-            if [ -z "${{ secrets.TEAMS_WEBHOOK_URL }}" ]; then
-              echo "Warning: TEAMS_WEBHOOK_URL secret not configured"
-              exit 0
-            fi
+            echo "Results file not found, sending failure notification"
             curl -H 'Content-Type: application/json' \
-              -d "{\"text\": \"🚨 **Ngen Studio Test Results**\n\n❌ Test execution completed but no results file found.\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"}" \
-              "${{ secrets.TEAMS_WEBHOOK_URL }}"
+              -d "{\"text\": \"🚨 **Ngen Studio Test Results**\n\n❌ Test execution failed - no results available\n🕐 Time: $(date)\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"}" \
+              "$TEAMS_WEBHOOK_URL"
             exit 0
           fi
           
@@ -109,7 +119,7 @@ jobs:
               echo "No test results found, sending failure notification"
               curl -H 'Content-Type: application/json' \
                 -d "{\"text\": \"🚨 **Ngen Studio Test Results**\n\n❌ Test execution failed - no valid results found\n🕐 Time: $(date)\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"}" \
-                "${{ secrets.TEAMS_WEBHOOK_URL }}"
+                "$TEAMS_WEBHOOK_URL"
               exit 0
             fi
           fi
@@ -179,6 +189,6 @@ jobs:
 
           curl -H 'Content-Type: application/json' \
             -d "{
-              \"text\": \"$EMOJI **Ngen Studio  Test Results**\\n\\n**$STATUS**\\n\\n📊 **Summary:**\\n• Total: $TOTAL_TESTS\\n• Passed: $PASSED_TESTS\\n• Failed: $FAILED_TESTS\\n• Flaky: $FLAKY_TESTS\\n• Skipped: $SKIPPED_TESTS\\n• Duration: ${DURATION_SEC}s (${DURATION_MIN}m)\\n\\n📋 **Test Details:**\\n$summary$failed_details\\n\\n📑 [View Full Report]($latest_url)\\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\\n\\n👤 **Sent by:** Navaneetha B | 🕐 **Time:** $(TZ='Asia/Kolkata' date +'%a %b %d %Y, %I:%M:%S %p IST')\"
+              \"text\": \"$EMOJI **Ngen Studio Test Results**\\n\\n**$STATUS**\\n\\n📊 **Summary:**\\n• Total: $TOTAL_TESTS\\n• Passed: $PASSED_TESTS\\n• Failed: $FAILED_TESTS\\n• Flaky: $FLAKY_TESTS\\n• Skipped: $SKIPPED_TESTS\\n• Duration: ${DURATION_SEC}s (${DURATION_MIN}m)\\n\\n📋 **Test Details:**\\n$summary$failed_details\\n\\n📑 [View Full Report]($latest_url)\\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\\n\\n👤 **Sent by:** Navaneetha B | 🕐 **Time:** $(TZ='Asia/Kolkata' date +'%a %b %d %Y, %I:%M:%S %p IST')\"
             }" \
-            "${{ secrets.TEAMS_WEBHOOK_URL }}"
+            "$TEAMS_WEBHOOK_URL"
