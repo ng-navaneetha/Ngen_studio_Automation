@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    triggers {
+        cron('30 8 * * *')   // Daily at 8:30 AM
+    }
+
     tools {
         nodejs "node18"
     }
@@ -12,19 +16,19 @@ pipeline {
     stages {
 
         stage('Checkout Repo') {
-            steps { git branch: 'main', url: 'https://github.com/your/repo.git' }
+            steps { git branch: 'main', url: 'https://github.com/ng-navaneetha/Ngen_studio_Automation.git' }
         }
 
         stage('Install Dependencies') {
             steps {
                 sh 'npm install'
-                sh 'npx playwright install'
+                sh 'npx playwright install --with-deps'
             }
         }
 
         stage('Run Playwright Tests') {
             steps {
-                sh 'npx playwright test --reporter=json,html'
+                sh 'npx playwright test --grep @smoke --reporter=json,html'
             }
         }
 
