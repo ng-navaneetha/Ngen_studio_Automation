@@ -21,14 +21,13 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
-                sh 'npx playwright install --with-deps'
+                bat 'npm install'
             }
         }
 
         stage('Run Playwright Tests') {
             steps {
-                sh 'npx playwright test --grep @smoke --reporter=json,html'
+                bat 'npx playwright test --grep @smoke --reporter=json,html'
             }
         }
 
@@ -105,7 +104,7 @@ pipeline {
         /* ================== SEND TO TEAMS ================== */
         stage("Notify Teams Adaptive") {
             steps {
-                sh """
+                bat """
                 curl -H "Content-Type: application/json" \
                 -d '${env.ADAPTIVE_CARD.replace("'","\\'")}' \
                 ${TEAMS_WEBHOOK_URL}
