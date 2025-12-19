@@ -1,0 +1,2177 @@
+{
+  "config": {
+    "configFile": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/playwright.config.js",
+    "rootDir": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests",
+    "forbidOnly": true,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/commit/5b39f1399c70e824788bdb47cd60f61d438a79c5",
+        "commitHash": "5b39f1399c70e824788bdb47cd60f61d438a79c5",
+        "buildHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/actions/runs/20362119031"
+      },
+      "gitCommit": {
+        "shortHash": "5b39f13",
+        "hash": "5b39f1399c70e824788bdb47cd60f61d438a79c5",
+        "subject": "Add Playwright installation step in Jenkinsfile",
+        "body": "Add Playwright installation step in Jenkinsfile",
+        "author": {
+          "name": "ng-navaneetha",
+          "email": "navaneetha.b@ngenux.com",
+          "time": 1764232258000
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "time": 1764232258000
+        },
+        "branch": "main"
+      },
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ],
+      [
+        "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/node_modules/allure-playwright/dist/cjs/index.js",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/commit/5b39f1399c70e824788bdb47cd60f61d438a79c5",
+            "commitHash": "5b39f1399c70e824788bdb47cd60f61d438a79c5",
+            "buildHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/actions/runs/20362119031"
+          },
+          "gitCommit": {
+            "shortHash": "5b39f13",
+            "hash": "5b39f1399c70e824788bdb47cd60f61d438a79c5",
+            "subject": "Add Playwright installation step in Jenkinsfile",
+            "body": "Add Playwright installation step in Jenkinsfile",
+            "author": {
+              "name": "ng-navaneetha",
+              "email": "navaneetha.b@ngenux.com",
+              "time": 1764232258000
+            },
+            "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "time": 1764232258000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.53.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "call-summarization.spec.js",
+      "file": "call-summarization.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Call Summarization",
+          "file": "call-summarization.spec.js",
+          "line": 57,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke TC06: Happy flow - Summary screen - UI and content assertions",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 160000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 40092,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Creating new auth session...\n"
+                        },
+                        {
+                          "text": "Auth session saved successfully\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/summary\n"
+                        },
+                        {
+                          "text": "art_in8.mp3\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/summary\n"
+                        },
+                        {
+                          "text": "✅ Deleted Summary workspace\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-19T06:40:32.931Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b4980f566f3e0f5bf01c-f7ce690895eb82d83342",
+              "file": "call-summarization.spec.js",
+              "line": 167,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "enterprisesearch.spec.js",
+      "file": "enterprisesearch.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Enterprise Search Processing Tests",
+          "file": "enterprisesearch.spec.js",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke TC01:Enterprise Search use case - Verify workspace functionality - upload document",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 58986,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/v2/nterprise-search\n"
+                        },
+                        {
+                          "text": "Storage state expired, creating new session...\n"
+                        },
+                        {
+                          "text": "Starting direct login process...\n"
+                        },
+                        {
+                          "text": "Navigated to login URL directly\n"
+                        },
+                        {
+                          "text": "Go to Login button visible: \u001b[33mfalse\u001b[39m\n"
+                        },
+                        {
+                          "text": "Login button visible: \u001b[33mfalse\u001b[39m\n"
+                        },
+                        {
+                          "text": "Waiting for Auth0 login page...\n"
+                        },
+                        {
+                          "text": "Auth check error, continuing with current page state\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "🗑️ Attempting to delete Insights workspace: \"Tesla’s Transforming\"\n"
+                        },
+                        {
+                          "text": "⚠️ Error deleting Insights workspace: page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Delete Workspace\")') to be visible\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "🗑️ Attempting to delete Query workspace: \"acme_chatbot\"\n"
+                        },
+                        {
+                          "text": "⚠️ Error deleting Query workspace: page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Delete Workspace\")') to be visible\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "✅ Cleanup completed\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "Direct login failed: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2025-12-19T06:41:33.154Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "62f9178d886387b97391-8b1bf19c156f2ffea827",
+              "file": "enterprisesearch.spec.js",
+              "line": 56,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Extract.spec.js",
+      "file": "Extract.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login and Navigation Tests",
+          "file": "Extract.spec.js",
+          "line": 18,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "OCR Document Processing Tests",
+              "file": "Extract.spec.js",
+              "line": 20,
+              "column": 8,
+              "specs": [
+                {
+                  "title": " @smoke TC01:Verify File content Extracted successfully",
+                  "ok": true,
+                  "tags": [
+                    "smoke"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 28754,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/extract\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-12-19T06:43:03.361Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fb8171f0e1175ce3cf80-69e3ce5856e7b7419288",
+                  "file": "Extract.spec.js",
+                  "line": 37,
+                  "column": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "insights.spec.js",
+      "file": "insights.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Insights Feature Tests",
+          "file": "insights.spec.js",
+          "line": 14,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke TC02: Create workspace with Insights use case",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6667,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-19T06:43:32.131Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-09d63cee25eed692936f",
+              "file": "insights.spec.js",
+              "line": 65,
+              "column": 3
+            },
+            {
+              "title": "@smoke TC03: Create workspace with Query use case and database connection",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 15797,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Create workspace with Query use case",
+                          "duration": 12178,
+                          "steps": [
+                            {
+                              "title": "Select database type",
+                              "duration": 299
+                            },
+                            {
+                              "title": "Fill connection details",
+                              "duration": 83
+                            }
+                          ]
+                        }
+                      ],
+                      "startTime": "2025-12-19T06:43:38.804Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-5afec9d704ebdd0f1c01",
+              "file": "insights.spec.js",
+              "line": 82,
+              "column": 3
+            },
+            {
+              "title": "@smoke TC04: Create workspace with Pulse use case",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6689,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-19T06:43:54.607Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-0d9c4b9dff0bc0bf63a8",
+              "file": "insights.spec.js",
+              "line": 112,
+              "column": 3
+            },
+            {
+              "title": " @smoke TC05: Create workspace with Summary use case",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6650,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-19T06:44:01.302Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-fb39e33265828ec04128",
+              "file": "insights.spec.js",
+              "line": 130,
+              "column": 3
+            },
+            {
+              "title": "@smoke TC06:Insights use case - Verify workspace functionality - upload document",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11800,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-19T06:44:07.959Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-f1cba1fb11f2116b06b2",
+              "file": "insights.spec.js",
+              "line": 148,
+              "column": 3
+            },
+            {
+              "title": "@smoke TC15: Verify file upload, chat, and new chat flow",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 240000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 240010,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 240000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 240000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 240000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/insights.spec.js",
+                            "column": 61,
+                            "line": 515
+                          },
+                          "message": "Error: locator.waitFor: Target page, context or browser has been closed\n\n  513 |     for (let i = 0; i < 3; i++) {\n  514 |       try {\n> 515 |         await page.getByText(Response[1], { exact: false }).waitFor({ timeout: 150000 }); // Retry with a timeout of 60 seconds\n      |                                                             ^\n  516 |         break; // Exit loop if successful\n  517 |       } catch (error) {\n  518 |         console.error(`Retry ${i + 1} failed:`, error);\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/insights.spec.js:515:61"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "Retry 1 failed: locator.waitFor: Timeout 150000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Based on the provided context, the invoice number is 161126.') to be visible\u001b[22m\n\n    at \u001b[90m/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/\u001b[39mtests/insights.spec.js:515:61 {\n  name: \u001b[32m'TimeoutError'\u001b[39m,\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@39'\u001b[39m,\n    location: {\n      file: \u001b[32m'/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/insights.spec.js'\u001b[39m,\n      line: \u001b[33m515\u001b[39m,\n      column: \u001b[33m61\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m\"Wait for selector getByText('Based on the provided context, the invoice number is 161126.')\"\u001b[39m,\n    apiName: \u001b[32m'locator.waitFor'\u001b[39m,\n    params: {\n      selector: \u001b[32m'internal:text=\"Based on the provided context, the invoice number is 161126.\"i'\u001b[39m,\n      strict: \u001b[33mtrue\u001b[39m,\n      omitReturnValue: \u001b[33mtrue\u001b[39m,\n      timeout: \u001b[33m150000\u001b[39m\n    },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    attachmentIndices: [],\n    info: TestStepInfoImpl {\n      annotations: [],\n      _testInfo: \u001b[36m[TestInfoImpl]\u001b[39m,\n      _stepId: \u001b[32m'pw:api@39'\u001b[39m\n    },\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1766126826236\u001b[39m,\n    error: {\n      message: \u001b[32m'TimeoutError: locator.waitFor: Timeout 150000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m\"\\x1B[2m  - waiting for getByText('Based on the provided context, the invoice number is 161126.') to be visible\\x1B[22m\\n\"\u001b[39m,\n      stack: \u001b[32m'TimeoutError: locator.waitFor: Timeout 150000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m\"\\x1B[2m  - waiting for getByText('Based on the provided context, the invoice number is 161126.') to be visible\\x1B[22m\\n\"\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/insights.spec.js:515:61'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                        },
+                        {
+                          "text": "Retry 2 failed: locator.waitFor: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByText('Based on the provided context, the invoice number is 161126.') to be visible\u001b[22m\n\n    at \u001b[90m/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/\u001b[39mtests/insights.spec.js:515:61 {\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@40'\u001b[39m,\n    location: {\n      file: \u001b[32m'/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/insights.spec.js'\u001b[39m,\n      line: \u001b[33m515\u001b[39m,\n      column: \u001b[33m61\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m\"Wait for selector getByText('Based on the provided context, the invoice number is 161126.')\"\u001b[39m,\n    apiName: \u001b[32m'locator.waitFor'\u001b[39m,\n    params: {\n      selector: \u001b[32m'internal:text=\"Based on the provided context, the invoice number is 161126.\"i'\u001b[39m,\n      strict: \u001b[33mtrue\u001b[39m,\n      omitReturnValue: \u001b[33mtrue\u001b[39m,\n      timeout: \u001b[33m150000\u001b[39m\n    },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    attachmentIndices: [],\n    info: TestStepInfoImpl {\n      annotations: [],\n      _testInfo: \u001b[36m[TestInfoImpl]\u001b[39m,\n      _stepId: \u001b[32m'pw:api@40'\u001b[39m\n    },\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1766126899773\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: locator.waitFor: Target page, context or browser has been closed\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m\"\\x1B[2m  - waiting for getByText('Based on the provided context, the invoice number is 161126.') to be visible\\x1B[22m\\n\"\u001b[39m,\n      stack: \u001b[32m'Error: locator.waitFor: Target page, context or browser has been closed\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m\"\\x1B[2m  - waiting for getByText('Based on the provided context, the invoice number is 161126.') to be visible\\x1B[22m\\n\"\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/insights.spec.js:515:61'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                        },
+                        {
+                          "text": "Retry 3 failed: locator.waitFor: Target page, context or browser has been closed\n    at \u001b[90m/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/\u001b[39mtests/insights.spec.js:515:61 {\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@44'\u001b[39m,\n    location: {\n      file: \u001b[32m'/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/insights.spec.js'\u001b[39m,\n      line: \u001b[33m515\u001b[39m,\n      column: \u001b[33m61\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m\"Wait for selector getByText('Based on the provided context, the invoice number is 161126.')\"\u001b[39m,\n    apiName: \u001b[32m'locator.waitFor'\u001b[39m,\n    params: {\n      selector: \u001b[32m'internal:text=\"Based on the provided context, the invoice number is 161126.\"i'\u001b[39m,\n      strict: \u001b[33mtrue\u001b[39m,\n      omitReturnValue: \u001b[33mtrue\u001b[39m,\n      timeout: \u001b[33m150000\u001b[39m\n    },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    attachmentIndices: [],\n    info: TestStepInfoImpl {\n      annotations: [],\n      _testInfo: \u001b[36m[TestInfoImpl]\u001b[39m,\n      _stepId: \u001b[32m'pw:api@44'\u001b[39m\n    },\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1766126899776\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: locator.waitFor: Target page, context or browser has been closed'\u001b[39m,\n      stack: \u001b[32m'Error: locator.waitFor: Target page, context or browser has been closed\\n'\u001b[39m +\n        \u001b[32m'    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/insights.spec.js:515:61'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2025-12-19T06:44:19.766Z",
+                      "annotations": [],
+                      "attachments": []
+                    },
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 52794,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Using existing auth session...\n"
+                        },
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-12-19T06:48:20.458Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/insights-Insights-Feature--7ab7a-load-chat-and-new-chat-flow-chromium-retry1/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "flaky"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-1c4bd017dc4499f272ae",
+              "file": "insights.spec.js",
+              "line": 461,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "KPIdashboard/AIAssistant.spec.js",
+      "file": "KPIdashboard/AIAssistant.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "AI Assistant Text_Bot Tests",
+          "file": "KPIdashboard/AIAssistant.spec.js",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke Ask a question and verify results",
+              "ok": false,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 240000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30359,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AIAssistantPage.navigateToDashboard (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:25:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:10:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                          "column": 21,
+                          "line": 25
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/AIAssistant.js:25\n\n\u001b[0m \u001b[90m 23 |\u001b[39m\n \u001b[90m 24 |\u001b[39m   \u001b[36masync\u001b[39m navigateToDashboard() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://nsight-dev.ngenux.app/project/ai-dashboard\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m   }\n \u001b[90m 27 |\u001b[39m\n \u001b[90m 28 |\u001b[39m   \u001b[36masync\u001b[39m toggleAssistant() {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                            "column": 21,
+                            "line": 25
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/AIAssistant.js:25\n\n  23 |\n  24 |   async navigateToDashboard() {\n> 25 |     await this.page.goto(\"https://nsight-dev.ngenux.app/project/ai-dashboard\");\n     |                     ^\n  26 |   }\n  27 |\n  28 |   async toggleAssistant() {\n    at AIAssistantPage.navigateToDashboard (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:25:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:10:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-19T06:49:14.145Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                        "column": 21,
+                        "line": 25
+                      }
+                    },
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30353,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AIAssistantPage.navigateToDashboard (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:25:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:10:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                          "column": 21,
+                          "line": 25
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/AIAssistant.js:25\n\n\u001b[0m \u001b[90m 23 |\u001b[39m\n \u001b[90m 24 |\u001b[39m   \u001b[36masync\u001b[39m navigateToDashboard() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://nsight-dev.ngenux.app/project/ai-dashboard\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m   }\n \u001b[90m 27 |\u001b[39m\n \u001b[90m 28 |\u001b[39m   \u001b[36masync\u001b[39m toggleAssistant() {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                            "column": 21,
+                            "line": 25
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/AIAssistant.js:25\n\n  23 |\n  24 |   async navigateToDashboard() {\n> 25 |     await this.page.goto(\"https://nsight-dev.ngenux.app/project/ai-dashboard\");\n     |                     ^\n  26 |   }\n  27 |\n  28 |   async toggleAssistant() {\n    at AIAssistantPage.navigateToDashboard (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:25:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:10:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-12-19T06:49:45.162Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-AIAssistant-A-94170-question-and-verify-results-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                        "column": 21,
+                        "line": 25
+                      }
+                    },
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30305,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AIAssistantPage.navigateToDashboard (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:25:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:10:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                          "column": 21,
+                          "line": 25
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/AIAssistant.js:25\n\n\u001b[0m \u001b[90m 23 |\u001b[39m\n \u001b[90m 24 |\u001b[39m   \u001b[36masync\u001b[39m navigateToDashboard() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://nsight-dev.ngenux.app/project/ai-dashboard\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m   }\n \u001b[90m 27 |\u001b[39m\n \u001b[90m 28 |\u001b[39m   \u001b[36masync\u001b[39m toggleAssistant() {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                            "column": 21,
+                            "line": 25
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/AIAssistant.js:25\n\n  23 |\n  24 |   async navigateToDashboard() {\n> 25 |     await this.page.goto(\"https://nsight-dev.ngenux.app/project/ai-dashboard\");\n     |                     ^\n  26 |   }\n  27 |\n  28 |   async toggleAssistant() {\n    at AIAssistantPage.navigateToDashboard (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:25:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:10:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 2,
+                      "startTime": "2025-12-19T06:50:16.253Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                        "column": 21,
+                        "line": 25
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a6ff67ba357b9c52e637-efd1ed18f6703ad8829c",
+              "file": "KPIdashboard/AIAssistant.spec.js",
+              "line": 17,
+              "column": 3
+            },
+            {
+              "title": "@smoke Start a new chat and verify results",
+              "ok": false,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 240000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30302,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AIAssistantPage.navigateToDashboard (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:25:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:10:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                          "column": 21,
+                          "line": 25
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/AIAssistant.js:25\n\n\u001b[0m \u001b[90m 23 |\u001b[39m\n \u001b[90m 24 |\u001b[39m   \u001b[36masync\u001b[39m navigateToDashboard() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://nsight-dev.ngenux.app/project/ai-dashboard\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m   }\n \u001b[90m 27 |\u001b[39m\n \u001b[90m 28 |\u001b[39m   \u001b[36masync\u001b[39m toggleAssistant() {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                            "column": 21,
+                            "line": 25
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/AIAssistant.js:25\n\n  23 |\n  24 |   async navigateToDashboard() {\n> 25 |     await this.page.goto(\"https://nsight-dev.ngenux.app/project/ai-dashboard\");\n     |                     ^\n  26 |   }\n  27 |\n  28 |   async toggleAssistant() {\n    at AIAssistantPage.navigateToDashboard (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:25:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:10:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-19T06:50:47.269Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                        "column": 21,
+                        "line": 25
+                      }
+                    },
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30351,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AIAssistantPage.navigateToDashboard (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:25:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:10:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                          "column": 21,
+                          "line": 25
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/AIAssistant.js:25\n\n\u001b[0m \u001b[90m 23 |\u001b[39m\n \u001b[90m 24 |\u001b[39m   \u001b[36masync\u001b[39m navigateToDashboard() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://nsight-dev.ngenux.app/project/ai-dashboard\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m   }\n \u001b[90m 27 |\u001b[39m\n \u001b[90m 28 |\u001b[39m   \u001b[36masync\u001b[39m toggleAssistant() {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                            "column": 21,
+                            "line": 25
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/AIAssistant.js:25\n\n  23 |\n  24 |   async navigateToDashboard() {\n> 25 |     await this.page.goto(\"https://nsight-dev.ngenux.app/project/ai-dashboard\");\n     |                     ^\n  26 |   }\n  27 |\n  28 |   async toggleAssistant() {\n    at AIAssistantPage.navigateToDashboard (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:25:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:10:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-12-19T06:51:18.279Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-AIAssistant-A-a0b47-new-chat-and-verify-results-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                        "column": 21,
+                        "line": 25
+                      }
+                    },
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30308,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AIAssistantPage.navigateToDashboard (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:25:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:10:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                          "column": 21,
+                          "line": 25
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/AIAssistant.js:25\n\n\u001b[0m \u001b[90m 23 |\u001b[39m\n \u001b[90m 24 |\u001b[39m   \u001b[36masync\u001b[39m navigateToDashboard() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://nsight-dev.ngenux.app/project/ai-dashboard\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m   }\n \u001b[90m 27 |\u001b[39m\n \u001b[90m 28 |\u001b[39m   \u001b[36masync\u001b[39m toggleAssistant() {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                            "column": 21,
+                            "line": 25
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/AIAssistant.js:25\n\n  23 |\n  24 |   async navigateToDashboard() {\n> 25 |     await this.page.goto(\"https://nsight-dev.ngenux.app/project/ai-dashboard\");\n     |                     ^\n  26 |   }\n  27 |\n  28 |   async toggleAssistant() {\n    at AIAssistantPage.navigateToDashboard (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:25:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:10:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 2,
+                      "startTime": "2025-12-19T06:51:49.354Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                        "column": 21,
+                        "line": 25
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a6ff67ba357b9c52e637-146cf818e41cb2806083",
+              "file": "KPIdashboard/AIAssistant.spec.js",
+              "line": 31,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "KPIdashboard/aiDashboard.spec.js",
+      "file": "KPIdashboard/aiDashboard.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": " AI Dashboard KPI Flow",
+          "file": "KPIdashboard/aiDashboard.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke  Verify Supply Chain metrics availability",
+              "ok": false,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 600000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30313,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                          "column": 21,
+                          "line": 15
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mkpiHeading)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 21,
+                            "line": 15
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n  13 |\n  14 |   async goto() {\n> 15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n     |                     ^\n  16 |     await expect(this.kpiHeading).toBeVisible();\n  17 |   }\n  18 |\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-19T06:52:20.385Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                        "column": 21,
+                        "line": 15
+                      }
+                    },
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30369,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                          "column": 21,
+                          "line": 15
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mkpiHeading)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 21,
+                            "line": 15
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n  13 |\n  14 |   async goto() {\n> 15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n     |                     ^\n  16 |     await expect(this.kpiHeading).toBeVisible();\n  17 |   }\n  18 |\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-12-19T06:52:51.447Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-aiDashboard---62f61--Chain-metrics-availability-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                        "column": 21,
+                        "line": 15
+                      }
+                    },
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30323,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                          "column": 21,
+                          "line": 15
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mkpiHeading)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 21,
+                            "line": 15
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n  13 |\n  14 |   async goto() {\n> 15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n     |                     ^\n  16 |     await expect(this.kpiHeading).toBeVisible();\n  17 |   }\n  18 |\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 2,
+                      "startTime": "2025-12-19T06:53:22.574Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                        "column": 21,
+                        "line": 15
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "e1d7752688fb686de41b-34d5b28d91ec7db19a55",
+              "file": "KPIdashboard/aiDashboard.spec.js",
+              "line": 63,
+              "column": 3
+            },
+            {
+              "title": "@smoke  Verify Sales Head metrics availability",
+              "ok": false,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 600000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30315,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                          "column": 21,
+                          "line": 15
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mkpiHeading)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 21,
+                            "line": 15
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n  13 |\n  14 |   async goto() {\n> 15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n     |                     ^\n  16 |     await expect(this.kpiHeading).toBeVisible();\n  17 |   }\n  18 |\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-19T06:53:53.637Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                        "column": 21,
+                        "line": 15
+                      }
+                    },
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30467,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                          "column": 21,
+                          "line": 15
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mkpiHeading)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 21,
+                            "line": 15
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n  13 |\n  14 |   async goto() {\n> 15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n     |                     ^\n  16 |     await expect(this.kpiHeading).toBeVisible();\n  17 |   }\n  18 |\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-12-19T06:54:24.703Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-aiDashboard---6e505-s-Head-metrics-availability-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                        "column": 21,
+                        "line": 15
+                      }
+                    },
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30317,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                          "column": 21,
+                          "line": 15
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mkpiHeading)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 21,
+                            "line": 15
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n  13 |\n  14 |   async goto() {\n> 15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n     |                     ^\n  16 |     await expect(this.kpiHeading).toBeVisible();\n  17 |   }\n  18 |\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 2,
+                      "startTime": "2025-12-19T06:54:55.921Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                        "column": 21,
+                        "line": 15
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "e1d7752688fb686de41b-cac23156e73c9a756ccf",
+              "file": "KPIdashboard/aiDashboard.spec.js",
+              "line": 141,
+              "column": 3
+            },
+            {
+              "title": "@smoke  Verify Operations Head metrics availability",
+              "ok": false,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 600000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30315,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                          "column": 21,
+                          "line": 15
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mkpiHeading)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 21,
+                            "line": 15
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n  13 |\n  14 |   async goto() {\n> 15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n     |                     ^\n  16 |     await expect(this.kpiHeading).toBeVisible();\n  17 |   }\n  18 |\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-19T06:55:26.974Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                        "column": 21,
+                        "line": 15
+                      }
+                    },
+                    {
+                      "workerIndex": 14,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30367,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                          "column": 21,
+                          "line": 15
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mkpiHeading)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 21,
+                            "line": 15
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n  13 |\n  14 |   async goto() {\n> 15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n     |                     ^\n  16 |     await expect(this.kpiHeading).toBeVisible();\n  17 |   }\n  18 |\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-12-19T06:55:58.012Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-aiDashboard---15218-s-Head-metrics-availability-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                        "column": 21,
+                        "line": 15
+                      }
+                    },
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30317,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                          "column": 21,
+                          "line": 15
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mkpiHeading)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 21,
+                            "line": 15
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n  13 |\n  14 |   async goto() {\n> 15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n     |                     ^\n  16 |     await expect(this.kpiHeading).toBeVisible();\n  17 |   }\n  18 |\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 2,
+                      "startTime": "2025-12-19T06:56:29.133Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                        "column": 21,
+                        "line": 15
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "e1d7752688fb686de41b-38f48723b59e75514315",
+              "file": "KPIdashboard/aiDashboard.spec.js",
+              "line": 219,
+              "column": 3
+            },
+            {
+              "title": "@smoke OTIF metrics chart operations",
+              "ok": false,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 600000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 16,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30315,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                          "column": 21,
+                          "line": 15
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mkpiHeading)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 21,
+                            "line": 15
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n  13 |\n  14 |   async goto() {\n> 15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n     |                     ^\n  16 |     await expect(this.kpiHeading).toBeVisible();\n  17 |   }\n  18 |\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-19T06:57:00.185Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                        "column": 21,
+                        "line": 15
+                      }
+                    },
+                    {
+                      "workerIndex": 17,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30379,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                          "column": 21,
+                          "line": 15
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mkpiHeading)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 21,
+                            "line": 15
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n  13 |\n  14 |   async goto() {\n> 15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n     |                     ^\n  16 |     await expect(this.kpiHeading).toBeVisible();\n  17 |   }\n  18 |\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-12-19T06:57:31.231Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-aiDashboard---cb308-IF-metrics-chart-operations-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                        "column": 21,
+                        "line": 15
+                      }
+                    },
+                    {
+                      "workerIndex": 18,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30316,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                          "column": 21,
+                          "line": 15
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mkpiHeading)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 21,
+                            "line": 15
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n  13 |\n  14 |   async goto() {\n> 15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n     |                     ^\n  16 |     await expect(this.kpiHeading).toBeVisible();\n  17 |   }\n  18 |\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 2,
+                      "startTime": "2025-12-19T06:58:02.328Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                        "column": 21,
+                        "line": 15
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "e1d7752688fb686de41b-08cedae2eb16f377aa2a",
+              "file": "KPIdashboard/aiDashboard.spec.js",
+              "line": 297,
+              "column": 3
+            },
+            {
+              "title": "@smoke Dashboard data export functionality",
+              "ok": false,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 600000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 19,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30314,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                          "column": 21,
+                          "line": 15
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mkpiHeading)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 21,
+                            "line": 15
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n  13 |\n  14 |   async goto() {\n> 15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n     |                     ^\n  16 |     await expect(this.kpiHeading).toBeVisible();\n  17 |   }\n  18 |\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-19T06:58:33.340Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                        "column": 21,
+                        "line": 15
+                      }
+                    },
+                    {
+                      "workerIndex": 20,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30364,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                          "column": 21,
+                          "line": 15
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mkpiHeading)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 21,
+                            "line": 15
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n  13 |\n  14 |   async goto() {\n> 15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n     |                     ^\n  16 |     await expect(this.kpiHeading).toBeVisible();\n  17 |   }\n  18 |\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-12-19T06:59:04.369Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-aiDashboard---06c2d-d-data-export-functionality-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                        "column": 21,
+                        "line": 15
+                      }
+                    },
+                    {
+                      "workerIndex": 21,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30398,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                          "column": 21,
+                          "line": 15
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mkpiHeading)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 21,
+                            "line": 15
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n  13 |\n  14 |   async goto() {\n> 15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n     |                     ^\n  16 |     await expect(this.kpiHeading).toBeVisible();\n  17 |   }\n  18 |\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 2,
+                      "startTime": "2025-12-19T06:59:35.457Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                        "column": 21,
+                        "line": 15
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "e1d7752688fb686de41b-d2be71590c1ced393c72",
+              "file": "KPIdashboard/aiDashboard.spec.js",
+              "line": 427,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "KPIdashboard/generateAIInsights.spec.js",
+      "file": "KPIdashboard/generateAIInsights.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Generate AI Insights Tests",
+          "file": "KPIdashboard/generateAIInsights.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke Generate AI Insights and verify results",
+              "ok": false,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 600000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 22,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30356,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:15:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                          "column": 21,
+                          "line": 15
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mkpiHeading)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 21,
+                            "line": 15
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n  13 |\n  14 |   async goto() {\n> 15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n     |                     ^\n  16 |     await expect(this.kpiHeading).toBeVisible();\n  17 |   }\n  18 |\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-19T07:00:06.550Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                        "column": 21,
+                        "line": 15
+                      }
+                    },
+                    {
+                      "workerIndex": 23,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30392,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:15:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                          "column": 21,
+                          "line": 15
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mkpiHeading)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 21,
+                            "line": 15
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n  13 |\n  14 |   async goto() {\n> 15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n     |                     ^\n  16 |     await expect(this.kpiHeading).toBeVisible();\n  17 |   }\n  18 |\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-12-19T07:00:37.594Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-generateAIIns-74c60-Insights-and-verify-results-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                        "column": 21,
+                        "line": 15
+                      }
+                    },
+                    {
+                      "workerIndex": 24,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30353,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:15:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                          "column": 21,
+                          "line": 15
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mkpiHeading)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   }\n \u001b[90m 18 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 21,
+                            "line": 15
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n  13 |\n  14 |   async goto() {\n> 15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n     |                     ^\n  16 |     await expect(this.kpiHeading).toBeVisible();\n  17 |   }\n  18 |\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 2,
+                      "startTime": "2025-12-19T07:01:08.696Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                        "column": 21,
+                        "line": 15
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4c71a8a457cfce231c08-704598a99641e284e988",
+              "file": "KPIdashboard/generateAIInsights.spec.js",
+              "line": 18,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "pulse.spec.js",
+      "file": "pulse.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Pulse sentiment analysis – functional flow",
+          "file": "pulse.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": " @smoke TC001_generateSentimentFromText",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 25,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8804,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Using existing auth session...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-19T07:01:39.771Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4199f64b3242841a2ce2-673f3ab904ef3d7ae7eb",
+              "file": "pulse.spec.js",
+              "line": 52,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "quality-check.spec.js",
+      "file": "quality-check.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Quality Check Feature Tests",
+          "file": "quality-check.spec.js",
+          "line": 14,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke TC04: Image comparison shows results with similarity score and visual difference",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 25,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 16296,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/quality-check\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-19T07:02:00.954Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "094a1e5d42dc18e53fae-8f79fc4223e8fb49e670",
+              "file": "quality-check.spec.js",
+              "line": 74,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "query.spec.js",
+      "file": "query.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Query feature – functional tests",
+          "file": "query.spec.js",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": " @smoke TC01_validQueryDisplaysResults",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 25,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 42410,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-19T07:02:17.306Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e81f4f68ea27254567d8-282d117fc0d24988b51f",
+              "file": "query.spec.js",
+              "line": 43,
+              "column": 3
+            },
+            {
+              "title": "@smoke TC03_longQueryHandled",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 25,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 45949,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-19T07:03:06.721Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e81f4f68ea27254567d8-aa345018465156b707ee",
+              "file": "query.spec.js",
+              "line": 68,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-12-19T06:40:31.763Z",
+    "duration": 1405255.436,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 8,
+    "flaky": 1
+  }
+}
