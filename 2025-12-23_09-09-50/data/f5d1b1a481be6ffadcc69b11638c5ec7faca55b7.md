@@ -1,0 +1,58 @@
+# Page snapshot
+
+```yaml
+- main:
+  - text: nSight You
+  - main:
+    - button "← Back"
+    - heading "OTIF (On-Time In-Full) Dashboard - Supply Chain Visibility" [level=1]
+    - button "Generate AI Insights":
+      - img
+      - text: Generate AI Insights
+    - text: "Date Range:"
+    - combobox: Last 6 Months
+    - button "Filters":
+      - img
+      - text: Filters
+    - button "Export":
+      - img
+      - text: Export
+    - paragraph: Failed to generate insights
+    - button "Collapse insights": ▴
+    - button "Performance Metrics":
+      - heading "Performance Metrics" [level=2]
+      - img
+    - button [disabled]:
+      - img
+    - text: Order Qty 338,768
+    - paragraph: Current value
+    - text: Fill Rate 95.07%
+    - paragraph: 95.07% of total
+    - text: Otif Percentage 35.61%
+    - paragraph: 35.61% of total
+    - text: Otif Loss 64.39
+    - paragraph: Current value
+    - text: In Full Loss 5.07
+    - paragraph: Current value
+    - text: In Full Percentage 94.93%
+    - paragraph: 94.93% of total
+    - button:
+      - img
+    - combobox:
+      - img
+      - text: Line Chart
+    - figure "chart, 1 series":
+      - text: OTIF Loss Trend
+      - img "interactive chart"
+      - text: Value Date
+    - combobox:
+      - img
+      - text: Line Chart
+    - figure "chart, 1 series":
+      - text: In Full Loss Trend
+      - img "interactive chart"
+      - text: Value Date
+  - button "Toggle AI Assistant": i
+  - region "Notifications alt+T"
+- alert: nGen Studio - Your AI Workspace
+```
