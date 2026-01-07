@@ -1,0 +1,2864 @@
+{
+  "config": {
+    "configFile": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/playwright.config.js",
+    "rootDir": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests",
+    "forbidOnly": true,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/commit/b1b9366b1ed42a356eb2ace074f1a9e288994783",
+        "commitHash": "b1b9366b1ed42a356eb2ace074f1a9e288994783",
+        "buildHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/actions/runs/20770564567"
+      },
+      "gitCommit": {
+        "shortHash": "b1b9366",
+        "hash": "b1b9366b1ed42a356eb2ace074f1a9e288994783",
+        "subject": "Update Playwright configuration and enhance pulse sentiment tests",
+        "body": "Update Playwright configuration and enhance pulse sentiment tests\n\n- Adjusted retry logic in Playwright config for local testing.\n- Improved test steps for clarity and added more sentiment analysis cases in pulse.spec.js.\n- Enhanced error handling and verification steps for file uploads and sentiment generation.\n",
+        "author": {
+          "name": "ng-navaneetha",
+          "email": "navaneetha.b@ngenux.com",
+          "time": 1766127202000
+        },
+        "committer": {
+          "name": "ng-navaneetha",
+          "email": "navaneetha.b@ngenux.com",
+          "time": 1766127202000
+        },
+        "branch": "main"
+      },
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ],
+      [
+        "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/node_modules/allure-playwright/dist/cjs/index.js",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/commit/b1b9366b1ed42a356eb2ace074f1a9e288994783",
+            "commitHash": "b1b9366b1ed42a356eb2ace074f1a9e288994783",
+            "buildHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/actions/runs/20770564567"
+          },
+          "gitCommit": {
+            "shortHash": "b1b9366",
+            "hash": "b1b9366b1ed42a356eb2ace074f1a9e288994783",
+            "subject": "Update Playwright configuration and enhance pulse sentiment tests",
+            "body": "Update Playwright configuration and enhance pulse sentiment tests\n\n- Adjusted retry logic in Playwright config for local testing.\n- Improved test steps for clarity and added more sentiment analysis cases in pulse.spec.js.\n- Enhanced error handling and verification steps for file uploads and sentiment generation.\n",
+            "author": {
+              "name": "ng-navaneetha",
+              "email": "navaneetha.b@ngenux.com",
+              "time": 1766127202000
+            },
+            "committer": {
+              "name": "ng-navaneetha",
+              "email": "navaneetha.b@ngenux.com",
+              "time": 1766127202000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.53.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "call-summarization.spec.js",
+      "file": "call-summarization.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Call Summarization",
+          "file": "call-summarization.spec.js",
+          "line": 57,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke TC06: Happy flow - Summary screen - UI and content assertions",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 160000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 36596,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Creating new auth session...\n"
+                        },
+                        {
+                          "text": "Auth session saved successfully\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/summary\n"
+                        },
+                        {
+                          "text": "art_in8.mp3\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/summary\n"
+                        },
+                        {
+                          "text": "✅ Deleted Summary workspace\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T04:26:02.428Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b4980f566f3e0f5bf01c-f7ce690895eb82d83342",
+              "file": "call-summarization.spec.js",
+              "line": 167,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "enterprisesearch.spec.js",
+      "file": "enterprisesearch.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Enterprise Search Processing Tests",
+          "file": "enterprisesearch.spec.js",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke TC01:Enterprise Search use case - Verify workspace functionality - upload document",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 76606,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/v2/nterprise-search\n"
+                        },
+                        {
+                          "text": "Storage state expired, creating new session...\n"
+                        },
+                        {
+                          "text": "Starting direct login process...\n"
+                        },
+                        {
+                          "text": "Navigated to login URL directly\n"
+                        },
+                        {
+                          "text": "Go to Login button visible: \u001b[33mfalse\u001b[39m\n"
+                        },
+                        {
+                          "text": "Login button visible: \u001b[33mfalse\u001b[39m\n"
+                        },
+                        {
+                          "text": "Waiting for Auth0 login page...\n"
+                        },
+                        {
+                          "text": "Auth check error, continuing with current page state\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "🗑️ Attempting to delete Insights workspace: \"Tesla’s Transforming\"\n"
+                        },
+                        {
+                          "text": "⚠️ Error deleting Insights workspace: page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Delete Workspace\")') to be visible\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "🗑️ Attempting to delete Query workspace: \"acme_chatbot\"\n"
+                        },
+                        {
+                          "text": "⚠️ Error deleting Query workspace: page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Delete Workspace\")') to be visible\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "✅ Cleanup completed\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "Direct login failed: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2026-01-07T04:26:59.462Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "62f9178d886387b97391-8b1bf19c156f2ffea827",
+              "file": "enterprisesearch.spec.js",
+              "line": 56,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Extract.spec.js",
+      "file": "Extract.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login and Navigation Tests",
+          "file": "Extract.spec.js",
+          "line": 18,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "OCR Document Processing Tests",
+              "file": "Extract.spec.js",
+              "line": 20,
+              "column": 8,
+              "specs": [
+                {
+                  "title": " @smoke TC01:Verify File content Extracted successfully",
+                  "ok": true,
+                  "tags": [
+                    "smoke"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 31672,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/extract\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-01-07T04:28:47.869Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fb8171f0e1175ce3cf80-69e3ce5856e7b7419288",
+                  "file": "Extract.spec.js",
+                  "line": 37,
+                  "column": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "insights.spec.js",
+      "file": "insights.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Insights Feature Tests",
+          "file": "insights.spec.js",
+          "line": 14,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke TC02: Create workspace with Insights use case",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6802,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T04:29:19.560Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-09d63cee25eed692936f",
+              "file": "insights.spec.js",
+              "line": 65,
+              "column": 3
+            },
+            {
+              "title": "@smoke TC03: Create workspace with Query use case and database connection",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 14388,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Create workspace with Query use case",
+                          "duration": 10694,
+                          "steps": [
+                            {
+                              "title": "Select database type",
+                              "duration": 335
+                            },
+                            {
+                              "title": "Fill connection details",
+                              "duration": 200
+                            }
+                          ]
+                        }
+                      ],
+                      "startTime": "2026-01-07T04:29:26.368Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-5afec9d704ebdd0f1c01",
+              "file": "insights.spec.js",
+              "line": 82,
+              "column": 3
+            },
+            {
+              "title": "@smoke TC04: Create workspace with Pulse use case",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6883,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T04:29:40.764Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-0d9c4b9dff0bc0bf63a8",
+              "file": "insights.spec.js",
+              "line": 112,
+              "column": 3
+            },
+            {
+              "title": " @smoke TC05: Create workspace with Summary use case",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6813,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T04:29:47.655Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-fb39e33265828ec04128",
+              "file": "insights.spec.js",
+              "line": 130,
+              "column": 3
+            },
+            {
+              "title": "@smoke TC06:Insights use case - Verify workspace functionality - upload document",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11611,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T04:29:54.474Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-f1cba1fb11f2116b06b2",
+              "file": "insights.spec.js",
+              "line": 148,
+              "column": 3
+            },
+            {
+              "title": "@smoke TC15: Verify file upload, chat, and new chat flow",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 240000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 48366,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T04:30:06.092Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-1c4bd017dc4499f272ae",
+              "file": "insights.spec.js",
+              "line": 461,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "KPIdashboard/AIAssistant.spec.js",
+      "file": "KPIdashboard/AIAssistant.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "AI Assistant Text_Bot Tests",
+          "file": "KPIdashboard/AIAssistant.spec.js",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke Ask a question and verify results",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 240000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 249602,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 240000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 240000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 240000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                            "column": 42,
+                            "line": 97
+                          },
+                          "message": "Error: locator.textContent: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('div.text-center.p-4.text-muted-foreground')\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/AIAssistant.js:97\n\n   95 |       \"div.text-center.p-4.text-muted-foreground\"\n   96 |     );\n>  97 |     const textContent = await noDataText.textContent();\n      |                                          ^\n   98 |\n   99 |     if (textContent === \"No data available\") {\n  100 |       // Verify the \"No data available\" text is visible\n    at AIAssistantPage.verifyTabsAndNoData (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:97:42)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:27:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:24:5"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Matching elements for \"Executing SQL query\": 0\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Toggle AI Assistant and ask a question",
+                          "duration": 799
+                        },
+                        {
+                          "title": "Wait for processing and verify results",
+                          "duration": 236588,
+                          "error": {
+                            "message": "Error: locator.textContent: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('div.text-center.p-4.text-muted-foreground')\u001b[22m\n",
+                            "stack": "Error: locator.textContent: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('div.text-center.p-4.text-muted-foreground')\u001b[22m\n\n    at AIAssistantPage.verifyTabsAndNoData (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:97:42)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:27:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:24:5",
+                            "location": {
+                              "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                              "column": 42,
+                              "line": 97
+                            },
+                            "snippet": "   at ../pages/KpiDashboardPages/AIAssistant.js:97\n\n\u001b[0m \u001b[90m  95 |\u001b[39m       \u001b[32m\"div.text-center.p-4.text-muted-foreground\"\u001b[39m\n \u001b[90m  96 |\u001b[39m     )\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  97 |\u001b[39m     \u001b[36mconst\u001b[39m textContent \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m noDataText\u001b[33m.\u001b[39mtextContent()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  98 |\u001b[39m\n \u001b[90m  99 |\u001b[39m     \u001b[36mif\u001b[39m (textContent \u001b[33m===\u001b[39m \u001b[32m\"No data available\"\u001b[39m) {\n \u001b[90m 100 |\u001b[39m       \u001b[90m// Verify the \"No data available\" text is visible\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-01-07T04:30:54.472Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-AIAssistant-A-94170-question-and-verify-results-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-AIAssistant-A-94170-question-and-verify-results-chromium/video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-AIAssistant-A-94170-question-and-verify-results-chromium/trace.zip"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 41315,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Matching elements for \"Executing SQL query\": 0\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "steps": [
+                        {
+                          "title": "Toggle AI Assistant and ask a question",
+                          "duration": 822
+                        },
+                        {
+                          "title": "Wait for processing and verify results",
+                          "duration": 37671
+                        }
+                      ],
+                      "startTime": "2026-01-07T04:35:05.474Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "flaky"
+                }
+              ],
+              "id": "a6ff67ba357b9c52e637-efd1ed18f6703ad8829c",
+              "file": "KPIdashboard/AIAssistant.spec.js",
+              "line": 17,
+              "column": 3
+            },
+            {
+              "title": "@smoke Start a new chat and verify results",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 240000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 41455,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Matching elements for \"Executing SQL query\": 0\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Start a new chat and ask a question",
+                          "duration": 38084
+                        },
+                        {
+                          "title": "Verify results in the new chat",
+                          "duration": 129
+                        }
+                      ],
+                      "startTime": "2026-01-07T04:35:46.865Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a6ff67ba357b9c52e637-146cf818e41cb2806083",
+              "file": "KPIdashboard/AIAssistant.spec.js",
+              "line": 31,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "KPIdashboard/aiDashboard.spec.js",
+      "file": "KPIdashboard/aiDashboard.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": " AI Dashboard KPI Flow",
+          "file": "KPIdashboard/aiDashboard.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke  Verify Supply Chain metrics availability",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 600000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5563,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ Switched to Supply Chain Head role\n"
+                        },
+                        {
+                          "text": "✅ Verified Supply Chain metric: OTIF (On-Time In-Full) is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Supply Chain metric: DOH (Days on Hand) is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Supply Chain metric: Inventory Turnover Ratio is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Supply Chain metric: Forecast Accuracy is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Supply Chain metric: Supplier Lead Time is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Supply Chain metric: SLA Adherence (Vendor) is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Supply Chain metric: Backorder Rate is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Supply Chain metric: Logistics Cost per Unit is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Supply Chain metric: Order Cycle Time is available\n"
+                        },
+                        {
+                          "text": "✅ Completed verification of 9 Supply Chain metrics\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Switch to Supply Chain Head role",
+                          "duration": 76
+                        },
+                        {
+                          "title": "Verify all Supply Chain metrics are available",
+                          "duration": 2080
+                        }
+                      ],
+                      "startTime": "2026-01-07T04:36:28.346Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e1d7752688fb686de41b-34d5b28d91ec7db19a55",
+              "file": "KPIdashboard/aiDashboard.spec.js",
+              "line": 63,
+              "column": 3
+            },
+            {
+              "title": "@smoke  Verify Sales Head metrics availability",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 600000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5292,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ Switched to Sales Head role\n"
+                        },
+                        {
+                          "text": "✅ Verified Sales Head metric: Sales Volume by SKU / Region is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Sales Head metric: Revenue Growth Rate is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Sales Head metric: Quote-to-Close Ratio is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Sales Head metric: Average Deal Size is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Sales Head metric: Win Rate is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Sales Head metric: Sales Cycle Length is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Sales Head metric: Customer Retention Rate is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Sales Head metric: New vs. Repeat Business Ratio is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Sales Head metric: Contribution Margin by Customer/Product is available\n"
+                        },
+                        {
+                          "text": "✅ Completed verification of 9 Sales Head metrics\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Switch to Sales Head role",
+                          "duration": 112
+                        },
+                        {
+                          "title": "Verify all Sales Head metrics are available",
+                          "duration": 2007
+                        }
+                      ],
+                      "startTime": "2026-01-07T04:36:33.916Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e1d7752688fb686de41b-cac23156e73c9a756ccf",
+              "file": "KPIdashboard/aiDashboard.spec.js",
+              "line": 141,
+              "column": 3
+            },
+            {
+              "title": "@smoke  Verify Operations Head metrics availability",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 600000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5397,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ Switched to Operations Head role\n"
+                        },
+                        {
+                          "text": "✅ Verified Operations Head metric: OEE (Overall Equipment Efficiency) is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Operations Head metric: Yield is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Operations Head metric: First Pass Yield is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Operations Head metric: Downtime Hours is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Operations Head metric: Throughput Time is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Operations Head metric: Scrap Rate is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Operations Head metric: Energy Consumption per Unit is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Operations Head metric: Batch Cycle Time is available\n"
+                        },
+                        {
+                          "text": "✅ Verified Operations Head metric: CAPEX/OPEX Ratio is available\n"
+                        },
+                        {
+                          "text": "✅ Completed verification of 9 Operations Head metrics\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Switch to Operations Head role",
+                          "duration": 103
+                        },
+                        {
+                          "title": "Verify all Operations Head metrics are available",
+                          "duration": 2052
+                        }
+                      ],
+                      "startTime": "2026-01-07T04:36:39.215Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e1d7752688fb686de41b-38f48723b59e75514315",
+              "file": "KPIdashboard/aiDashboard.spec.js",
+              "line": 219,
+              "column": 3
+            },
+            {
+              "title": "@smoke OTIF metrics chart operations",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 600000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 30370,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ Page is ready\n"
+                        },
+                        {
+                          "text": "🎯 Attempting to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "🔄 Trying strategy 1 to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "✅ Successfully opened metric: OTIF (On-Time In-Full) using strategy 1 (1 indicators verified, URL changed: true)\n"
+                        },
+                        {
+                          "text": "🔍 Verifying correct metric opened: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "✅ Confirmed correct metric opened: OTIF (On-Time In-Full) (3/4 verifications passed, URL match: true)\n"
+                        },
+                        {
+                          "text": "✅ Opened OTIF metrics view\n"
+                        },
+                        {
+                          "text": "📊 Captured initial chart state\n"
+                        },
+                        {
+                          "text": "🔄 Testing chart type: Bar Chart\n"
+                        },
+                        {
+                          "text": "🔄 Changing chart type to: Bar Chart\n"
+                        },
+                        {
+                          "text": "✅ Changed chart type to: Bar Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart rendering verified for Bar Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart visually changed to: Bar Chart\n"
+                        },
+                        {
+                          "text": "🔄 Testing chart type: Line Chart\n"
+                        },
+                        {
+                          "text": "🔄 Changing chart type to: Line Chart\n"
+                        },
+                        {
+                          "text": "✅ Changed chart type to: Line Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart rendering verified for Line Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart visually changed to: Line Chart\n"
+                        },
+                        {
+                          "text": "🔄 Testing chart type: Area Chart\n"
+                        },
+                        {
+                          "text": "🔄 Changing chart type to: Area Chart\n"
+                        },
+                        {
+                          "text": "✅ Changed chart type to: Area Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart rendering verified for Area Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart visually changed to: Area Chart\n"
+                        },
+                        {
+                          "text": "🔄 Testing chart type: Pie Chart\n"
+                        },
+                        {
+                          "text": "🔄 Changing chart type to: Pie Chart\n"
+                        },
+                        {
+                          "text": "✅ Changed chart type to: Pie Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart rendering verified for Pie Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart visually changed to: Pie Chart\n"
+                        },
+                        {
+                          "text": "🔄 Testing chart type: Gauge Chart\n"
+                        },
+                        {
+                          "text": "🔄 Changing chart type to: Gauge Chart\n"
+                        },
+                        {
+                          "text": "✅ Changed chart type to: Gauge Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart rendering verified for Gauge Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart visually changed to: Gauge Chart\n"
+                        },
+                        {
+                          "text": "✅ All chart type changes tested and verified\n"
+                        },
+                        {
+                          "text": "✅ Returned to main dashboard\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Navigate to Supply Chain Head and open OTIF metrics",
+                          "duration": 7717
+                        },
+                        {
+                          "title": "Test different chart types with visual verification",
+                          "duration": 19186
+                        },
+                        {
+                          "title": "Return to main dashboard",
+                          "duration": 267
+                        }
+                      ],
+                      "startTime": "2026-01-07T04:36:44.620Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e1d7752688fb686de41b-08cedae2eb16f377aa2a",
+              "file": "KPIdashboard/aiDashboard.spec.js",
+              "line": 297,
+              "column": 3
+            },
+            {
+              "title": "@smoke Dashboard data export functionality",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 600000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 25234,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🎯 Attempting to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "🔄 Trying strategy 1 to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "✅ Successfully opened metric: OTIF (On-Time In-Full) using strategy 1 (1 indicators verified, URL changed: true)\n"
+                        },
+                        {
+                          "text": "✅ Switched to Supply Chain Head for export test\n"
+                        },
+                        {
+                          "text": "otif-on-time-in-full--2025-07-07_to_2026-01-07.csv\n"
+                        },
+                        {
+                          "text": "✅ Successfully exported dashboard data\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Navigate to Supply Chain Head role",
+                          "duration": 6060
+                        },
+                        {
+                          "title": "Export dashboard data",
+                          "duration": 15639
+                        }
+                      ],
+                      "startTime": "2026-01-07T04:37:14.998Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e1d7752688fb686de41b-d2be71590c1ced393c72",
+              "file": "KPIdashboard/aiDashboard.spec.js",
+              "line": 427,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "KPIdashboard/generateAIInsights.spec.js",
+      "file": "KPIdashboard/generateAIInsights.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Generate AI Insights Tests",
+          "file": "KPIdashboard/generateAIInsights.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke Generate AI Insights and verify results",
+              "ok": false,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 600000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 18070,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m\n    at GenerateAIInsightsPage.verifyResultsContent (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js:26:45)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:41:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:39:5",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                          "column": 45,
+                          "line": 26
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/generateAIInsights.js:26\n\n\u001b[0m \u001b[90m 24 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`🔍 Verifying results content: ${content}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m    \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(content\u001b[33m.\u001b[39msplit(\u001b[32m' '\u001b[39m)\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m30\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m   }\n \u001b[90m 28 |\u001b[39m }\n \u001b[90m 29 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                            "column": 45,
+                            "line": 26
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m\n\n   at ../pages/KpiDashboardPages/generateAIInsights.js:26\n\n  24 |     console.log(`🔍 Verifying results content: ${content}`);\n  25 |    \n> 26 |     await expect(content.split(' ').length).toBeGreaterThan(30);\n     |                                             ^\n  27 |   }\n  28 | }\n  29 |\n    at GenerateAIInsightsPage.verifyResultsContent (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js:26:45)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:41:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:39:5"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\n🎯 COMPREHENSIVE TIME PERIOD METRIC TEST - OTIF\n"
+                        },
+                        {
+                          "text": "✅ Page is ready\n"
+                        },
+                        {
+                          "text": "🎯 Attempting to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "🔄 Trying strategy 1 to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "✅ Successfully opened metric: OTIF (On-Time In-Full) using strategy 1 (1 indicators verified, URL changed: true)\n"
+                        },
+                        {
+                          "text": "🔍 Verifying correct metric opened: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "✅ Confirmed correct metric opened: OTIF (On-Time In-Full) (3/4 verifications passed, URL match: true)\n"
+                        },
+                        {
+                          "text": "\u001b[33mtrue\u001b[39m\n"
+                        },
+                        {
+                          "text": "✅ Successfully opened OTIF metric detail view\n"
+                        },
+                        {
+                          "text": "🔍 Verifying results content: Failed to generate insights▴\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Navigate to Supply Chain Head and open OTIF metrics",
+                          "duration": 11758
+                        },
+                        {
+                          "title": "Click Generate AI Insights button",
+                          "duration": 85
+                        },
+                        {
+                          "title": "Wait for loading and verify results",
+                          "duration": 2372,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m\n    at GenerateAIInsightsPage.verifyResultsContent (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js:26:45)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:41:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:39:5",
+                            "location": {
+                              "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                              "column": 45,
+                              "line": 26
+                            },
+                            "snippet": "   at ../pages/KpiDashboardPages/generateAIInsights.js:26\n\n\u001b[0m \u001b[90m 24 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`🔍 Verifying results content: ${content}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m    \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(content\u001b[33m.\u001b[39msplit(\u001b[32m' '\u001b[39m)\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m30\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m   }\n \u001b[90m 28 |\u001b[39m }\n \u001b[90m 29 |\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-01-07T04:37:40.248Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-generateAIIns-74c60-Insights-and-verify-results-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-generateAIIns-74c60-Insights-and-verify-results-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-generateAIIns-74c60-Insights-and-verify-results-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-generateAIIns-74c60-Insights-and-verify-results-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                        "column": 45,
+                        "line": 26
+                      }
+                    },
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 54737,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m\n    at GenerateAIInsightsPage.verifyResultsContent (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js:26:45)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:41:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:39:5",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                          "column": 45,
+                          "line": 26
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/generateAIInsights.js:26\n\n\u001b[0m \u001b[90m 24 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`🔍 Verifying results content: ${content}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m    \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(content\u001b[33m.\u001b[39msplit(\u001b[32m' '\u001b[39m)\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m30\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m   }\n \u001b[90m 28 |\u001b[39m }\n \u001b[90m 29 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                            "column": 45,
+                            "line": 26
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m\n\n   at ../pages/KpiDashboardPages/generateAIInsights.js:26\n\n  24 |     console.log(`🔍 Verifying results content: ${content}`);\n  25 |    \n> 26 |     await expect(content.split(' ').length).toBeGreaterThan(30);\n     |                                             ^\n  27 |   }\n  28 | }\n  29 |\n    at GenerateAIInsightsPage.verifyResultsContent (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js:26:45)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:41:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:39:5"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\n🎯 COMPREHENSIVE TIME PERIOD METRIC TEST - OTIF\n"
+                        },
+                        {
+                          "text": "✅ Page is ready\n"
+                        },
+                        {
+                          "text": "🎯 Attempting to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "🔄 Trying strategy 1 to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "✅ Successfully opened metric: OTIF (On-Time In-Full) using strategy 1 (1 indicators verified, URL changed: true)\n"
+                        },
+                        {
+                          "text": "🔍 Verifying correct metric opened: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "✅ Confirmed correct metric opened: OTIF (On-Time In-Full) (3/4 verifications passed, URL match: true)\n"
+                        },
+                        {
+                          "text": "\u001b[33mtrue\u001b[39m\n"
+                        },
+                        {
+                          "text": "✅ Successfully opened OTIF metric detail view\n"
+                        },
+                        {
+                          "text": "🔍 Verifying results content: Failed to generate insights▴\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "steps": [
+                        {
+                          "title": "Navigate to Supply Chain Head and open OTIF metrics",
+                          "duration": 8580
+                        },
+                        {
+                          "title": "Click Generate AI Insights button",
+                          "duration": 102
+                        },
+                        {
+                          "title": "Wait for loading and verify results",
+                          "duration": 42128,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m\n    at GenerateAIInsightsPage.verifyResultsContent (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js:26:45)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:41:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:39:5",
+                            "location": {
+                              "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                              "column": 45,
+                              "line": 26
+                            },
+                            "snippet": "   at ../pages/KpiDashboardPages/generateAIInsights.js:26\n\n\u001b[0m \u001b[90m 24 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`🔍 Verifying results content: ${content}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m    \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(content\u001b[33m.\u001b[39msplit(\u001b[32m' '\u001b[39m)\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m30\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m   }\n \u001b[90m 28 |\u001b[39m }\n \u001b[90m 29 |\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-01-07T04:37:59.254Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-generateAIIns-74c60-Insights-and-verify-results-chromium-retry1/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-generateAIIns-74c60-Insights-and-verify-results-chromium-retry1/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-generateAIIns-74c60-Insights-and-verify-results-chromium-retry1/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-generateAIIns-74c60-Insights-and-verify-results-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                        "column": 45,
+                        "line": 26
+                      }
+                    },
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 15137,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m\n    at GenerateAIInsightsPage.verifyResultsContent (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js:26:45)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:41:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:39:5",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                          "column": 45,
+                          "line": 26
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/generateAIInsights.js:26\n\n\u001b[0m \u001b[90m 24 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`🔍 Verifying results content: ${content}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m    \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(content\u001b[33m.\u001b[39msplit(\u001b[32m' '\u001b[39m)\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m30\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m   }\n \u001b[90m 28 |\u001b[39m }\n \u001b[90m 29 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                            "column": 45,
+                            "line": 26
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m\n\n   at ../pages/KpiDashboardPages/generateAIInsights.js:26\n\n  24 |     console.log(`🔍 Verifying results content: ${content}`);\n  25 |    \n> 26 |     await expect(content.split(' ').length).toBeGreaterThan(30);\n     |                                             ^\n  27 |   }\n  28 | }\n  29 |\n    at GenerateAIInsightsPage.verifyResultsContent (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js:26:45)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:41:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:39:5"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\n🎯 COMPREHENSIVE TIME PERIOD METRIC TEST - OTIF\n"
+                        },
+                        {
+                          "text": "✅ Page is ready\n"
+                        },
+                        {
+                          "text": "🎯 Attempting to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "🔄 Trying strategy 1 to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "✅ Successfully opened metric: OTIF (On-Time In-Full) using strategy 1 (1 indicators verified, URL changed: true)\n"
+                        },
+                        {
+                          "text": "🔍 Verifying correct metric opened: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "✅ Confirmed correct metric opened: OTIF (On-Time In-Full) (3/4 verifications passed, URL match: true)\n"
+                        },
+                        {
+                          "text": "\u001b[33mtrue\u001b[39m\n"
+                        },
+                        {
+                          "text": "✅ Successfully opened OTIF metric detail view\n"
+                        },
+                        {
+                          "text": "🔍 Verifying results content: Failed to generate insights▴\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 2,
+                      "steps": [
+                        {
+                          "title": "Navigate to Supply Chain Head and open OTIF metrics",
+                          "duration": 8969
+                        },
+                        {
+                          "title": "Click Generate AI Insights button",
+                          "duration": 88
+                        },
+                        {
+                          "title": "Wait for loading and verify results",
+                          "duration": 2385,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m\n    at GenerateAIInsightsPage.verifyResultsContent (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js:26:45)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:41:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:39:5",
+                            "location": {
+                              "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                              "column": 45,
+                              "line": 26
+                            },
+                            "snippet": "   at ../pages/KpiDashboardPages/generateAIInsights.js:26\n\n\u001b[0m \u001b[90m 24 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`🔍 Verifying results content: ${content}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m    \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(content\u001b[33m.\u001b[39msplit(\u001b[32m' '\u001b[39m)\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m30\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m   }\n \u001b[90m 28 |\u001b[39m }\n \u001b[90m 29 |\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-01-07T04:38:55.289Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-generateAIIns-74c60-Insights-and-verify-results-chromium-retry2/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-generateAIIns-74c60-Insights-and-verify-results-chromium-retry2/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-generateAIIns-74c60-Insights-and-verify-results-chromium-retry2/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-generateAIIns-74c60-Insights-and-verify-results-chromium-retry2/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                        "column": 45,
+                        "line": 26
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4c71a8a457cfce231c08-704598a99641e284e988",
+              "file": "KPIdashboard/generateAIInsights.spec.js",
+              "line": 18,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "pulse.spec.js",
+      "file": "pulse.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "@smoke TC007_resetClearsState",
+          "ok": false,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 182,
+                  "error": {
+                    "message": "ReferenceError: data is not defined",
+                    "stack": "ReferenceError: data is not defined\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:225:29\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:224:16",
+                    "location": {
+                      "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                      "column": 29,
+                      "line": 225
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 223 |\u001b[39m     \n \u001b[90m 224 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m'Open pulse workspace'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 225 |\u001b[39m       \u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mopenPulse(data\u001b[33m.\u001b[39mname)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 226 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 227 |\u001b[39m\n \u001b[90m 228 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m'Generate sentiment analysis'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 29,
+                        "line": 225
+                      },
+                      "message": "ReferenceError: data is not defined\n\n  223 |     \n  224 |     await test.step('Open pulse workspace', async () => {\n> 225 |       await pulse.openPulse(data.name);\n      |                             ^\n  226 |     });\n  227 |\n  228 |     await test.step('Generate sentiment analysis', async () => {\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:225:29\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:224:16"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 8,
+                        "line": 283
+                      },
+                      "message": "\u001b[31m\"afterAll\" hook timeout of 180000ms exceeded.\u001b[39m\n\n  281 |   });\n  282 |\n> 283 |   test.afterAll(async ({ page }) => {\n      |        ^\n  284 |     await test.step('Navigate to pulse page', async () => {\n  285 |       await page.goto(`${loginUrl}/project/pulse`);\n  286 |     });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:283:8"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 76,
+                        "line": 295
+                      },
+                      "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Delete Workspace' }).first()\u001b[22m\n\n\n  293 |\n  294 |       // Click delete workspace option\n> 295 |       await page.getByRole(\"button\", { name: \"Delete Workspace\" }).first().click();\n      |                                                                            ^\n  296 |\n  297 |       // Confirm deletion\n  298 |       await page.getByRole(\"button\", { name: \"Delete\" }).click();\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:295:76\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:288:5"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "Using existing auth session...\n"
+                    },
+                    {
+                      "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Open pulse workspace",
+                      "duration": 1,
+                      "error": {
+                        "message": "ReferenceError: data is not defined",
+                        "stack": "ReferenceError: data is not defined\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:225:29\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:224:16",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                          "column": 29,
+                          "line": 225
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 223 |\u001b[39m     \n \u001b[90m 224 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m'Open pulse workspace'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 225 |\u001b[39m       \u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mopenPulse(data\u001b[33m.\u001b[39mname)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 226 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 227 |\u001b[39m\n \u001b[90m 228 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m'Generate sentiment analysis'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-01-07T04:49:05.242Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC007-resetClearsState-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC007-resetClearsState-chromium/test-failed-2.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC007-resetClearsState-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC007-resetClearsState-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                    "column": 29,
+                    "line": 225
+                  }
+                },
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 193,
+                  "error": {
+                    "message": "ReferenceError: data is not defined",
+                    "stack": "ReferenceError: data is not defined\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:225:29\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:224:16",
+                    "location": {
+                      "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                      "column": 29,
+                      "line": 225
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 223 |\u001b[39m     \n \u001b[90m 224 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m'Open pulse workspace'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 225 |\u001b[39m       \u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mopenPulse(data\u001b[33m.\u001b[39mname)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 226 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 227 |\u001b[39m\n \u001b[90m 228 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m'Generate sentiment analysis'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 29,
+                        "line": 225
+                      },
+                      "message": "ReferenceError: data is not defined\n\n  223 |     \n  224 |     await test.step('Open pulse workspace', async () => {\n> 225 |       await pulse.openPulse(data.name);\n      |                             ^\n  226 |     });\n  227 |\n  228 |     await test.step('Generate sentiment analysis', async () => {\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:225:29\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:224:16"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 8,
+                        "line": 283
+                      },
+                      "message": "\u001b[31m\"afterAll\" hook timeout of 180000ms exceeded.\u001b[39m\n\n  281 |   });\n  282 |\n> 283 |   test.afterAll(async ({ page }) => {\n      |        ^\n  284 |     await test.step('Navigate to pulse page', async () => {\n  285 |       await page.goto(`${loginUrl}/project/pulse`);\n  286 |     });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:283:8"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 76,
+                        "line": 295
+                      },
+                      "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Delete Workspace' }).first()\u001b[22m\n\n\n  293 |\n  294 |       // Click delete workspace option\n> 295 |       await page.getByRole(\"button\", { name: \"Delete Workspace\" }).first().click();\n      |                                                                            ^\n  296 |\n  297 |       // Confirm deletion\n  298 |       await page.getByRole(\"button\", { name: \"Delete\" }).click();\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:295:76\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:288:5"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "Using existing auth session...\n"
+                    },
+                    {
+                      "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "steps": [
+                    {
+                      "title": "Open pulse workspace",
+                      "duration": 0,
+                      "error": {
+                        "message": "ReferenceError: data is not defined",
+                        "stack": "ReferenceError: data is not defined\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:225:29\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:224:16",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                          "column": 29,
+                          "line": 225
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 223 |\u001b[39m     \n \u001b[90m 224 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m'Open pulse workspace'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 225 |\u001b[39m       \u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mopenPulse(data\u001b[33m.\u001b[39mname)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 226 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 227 |\u001b[39m\n \u001b[90m 228 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m'Generate sentiment analysis'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-01-07T04:52:06.527Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC007-resetClearsState-chromium-retry1/test-failed-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC007-resetClearsState-chromium-retry1/test-failed-2.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC007-resetClearsState-chromium-retry1/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC007-resetClearsState-chromium-retry1/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                    "column": 29,
+                    "line": 225
+                  }
+                },
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 181,
+                  "error": {
+                    "message": "ReferenceError: data is not defined",
+                    "stack": "ReferenceError: data is not defined\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:225:29\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:224:16",
+                    "location": {
+                      "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                      "column": 29,
+                      "line": 225
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 223 |\u001b[39m     \n \u001b[90m 224 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m'Open pulse workspace'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 225 |\u001b[39m       \u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mopenPulse(data\u001b[33m.\u001b[39mname)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 226 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 227 |\u001b[39m\n \u001b[90m 228 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m'Generate sentiment analysis'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 29,
+                        "line": 225
+                      },
+                      "message": "ReferenceError: data is not defined\n\n  223 |     \n  224 |     await test.step('Open pulse workspace', async () => {\n> 225 |       await pulse.openPulse(data.name);\n      |                             ^\n  226 |     });\n  227 |\n  228 |     await test.step('Generate sentiment analysis', async () => {\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:225:29\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:224:16"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 8,
+                        "line": 283
+                      },
+                      "message": "\u001b[31m\"afterAll\" hook timeout of 180000ms exceeded.\u001b[39m\n\n  281 |   });\n  282 |\n> 283 |   test.afterAll(async ({ page }) => {\n      |        ^\n  284 |     await test.step('Navigate to pulse page', async () => {\n  285 |       await page.goto(`${loginUrl}/project/pulse`);\n  286 |     });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:283:8"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 76,
+                        "line": 295
+                      },
+                      "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Delete Workspace' }).first()\u001b[22m\n\n\n  293 |\n  294 |       // Click delete workspace option\n> 295 |       await page.getByRole(\"button\", { name: \"Delete Workspace\" }).first().click();\n      |                                                                            ^\n  296 |\n  297 |       // Confirm deletion\n  298 |       await page.getByRole(\"button\", { name: \"Delete\" }).click();\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:295:76\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:288:5"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "Using existing auth session...\n"
+                    },
+                    {
+                      "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 2,
+                  "steps": [
+                    {
+                      "title": "Open pulse workspace",
+                      "duration": 1,
+                      "error": {
+                        "message": "ReferenceError: data is not defined",
+                        "stack": "ReferenceError: data is not defined\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:225:29\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:224:16",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                          "column": 29,
+                          "line": 225
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 223 |\u001b[39m     \n \u001b[90m 224 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m'Open pulse workspace'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 225 |\u001b[39m       \u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mopenPulse(data\u001b[33m.\u001b[39mname)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 226 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 227 |\u001b[39m\n \u001b[90m 228 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m'Generate sentiment analysis'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-01-07T04:55:07.848Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC007-resetClearsState-chromium-retry2/test-failed-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC007-resetClearsState-chromium-retry2/test-failed-2.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC007-resetClearsState-chromium-retry2/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC007-resetClearsState-chromium-retry2/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                    "column": 29,
+                    "line": 225
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "4199f64b3242841a2ce2-60610fa511afca53223e",
+          "file": "pulse.spec.js",
+          "line": 221,
+          "column": 3
+        },
+        {
+          "title": "@smoke TC008_validateSentimentModelAccuracy",
+          "ok": false,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 170,
+                  "error": {
+                    "message": "ReferenceError: dataset is not defined",
+                    "stack": "ReferenceError: dataset is not defined\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:243:17",
+                    "location": {
+                      "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                      "column": 17,
+                      "line": 243
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 241 |\u001b[39m   test(\u001b[32m\"@smoke TC008_validateSentimentModelAccuracy\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 242 |\u001b[39m     \u001b[36mlet\u001b[39m correct \u001b[33m=\u001b[39m \u001b[35m0\u001b[39m\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 243 |\u001b[39m     \u001b[36mlet\u001b[39m total \u001b[33m=\u001b[39m dataset\u001b[33m.\u001b[39mlength\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 244 |\u001b[39m     \u001b[36mconst\u001b[39m pulse \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mPulsePage\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 245 |\u001b[39m     \n \u001b[90m 246 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m'Open pulse workspace'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 17,
+                        "line": 243
+                      },
+                      "message": "ReferenceError: dataset is not defined\n\n  241 |   test(\"@smoke TC008_validateSentimentModelAccuracy\", async ({ page }) => {\n  242 |     let correct = 0;\n> 243 |     let total = dataset.length;\n      |                 ^\n  244 |     const pulse = new PulsePage(page);\n  245 |     \n  246 |     await test.step('Open pulse workspace', async () => {\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:243:17"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 8,
+                        "line": 283
+                      },
+                      "message": "\u001b[31m\"afterAll\" hook timeout of 180000ms exceeded.\u001b[39m\n\n  281 |   });\n  282 |\n> 283 |   test.afterAll(async ({ page }) => {\n      |        ^\n  284 |     await test.step('Navigate to pulse page', async () => {\n  285 |       await page.goto(`${loginUrl}/project/pulse`);\n  286 |     });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:283:8"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 76,
+                        "line": 295
+                      },
+                      "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Delete Workspace' }).first()\u001b[22m\n\n\n  293 |\n  294 |       // Click delete workspace option\n> 295 |       await page.getByRole(\"button\", { name: \"Delete Workspace\" }).first().click();\n      |                                                                            ^\n  296 |\n  297 |       // Confirm deletion\n  298 |       await page.getByRole(\"button\", { name: \"Delete\" }).click();\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:295:76\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:288:5"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "Using existing auth session...\n"
+                    },
+                    {
+                      "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-01-07T04:58:09.132Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC008-validateSentimentModelAccuracy-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC008-validateSentimentModelAccuracy-chromium/test-failed-2.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC008-validateSentimentModelAccuracy-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC008-validateSentimentModelAccuracy-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                    "column": 17,
+                    "line": 243
+                  }
+                },
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 175,
+                  "error": {
+                    "message": "ReferenceError: dataset is not defined",
+                    "stack": "ReferenceError: dataset is not defined\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:243:17",
+                    "location": {
+                      "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                      "column": 17,
+                      "line": 243
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 241 |\u001b[39m   test(\u001b[32m\"@smoke TC008_validateSentimentModelAccuracy\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 242 |\u001b[39m     \u001b[36mlet\u001b[39m correct \u001b[33m=\u001b[39m \u001b[35m0\u001b[39m\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 243 |\u001b[39m     \u001b[36mlet\u001b[39m total \u001b[33m=\u001b[39m dataset\u001b[33m.\u001b[39mlength\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 244 |\u001b[39m     \u001b[36mconst\u001b[39m pulse \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mPulsePage\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 245 |\u001b[39m     \n \u001b[90m 246 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m'Open pulse workspace'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 17,
+                        "line": 243
+                      },
+                      "message": "ReferenceError: dataset is not defined\n\n  241 |   test(\"@smoke TC008_validateSentimentModelAccuracy\", async ({ page }) => {\n  242 |     let correct = 0;\n> 243 |     let total = dataset.length;\n      |                 ^\n  244 |     const pulse = new PulsePage(page);\n  245 |     \n  246 |     await test.step('Open pulse workspace', async () => {\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:243:17"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 8,
+                        "line": 283
+                      },
+                      "message": "\u001b[31m\"afterAll\" hook timeout of 180000ms exceeded.\u001b[39m\n\n  281 |   });\n  282 |\n> 283 |   test.afterAll(async ({ page }) => {\n      |        ^\n  284 |     await test.step('Navigate to pulse page', async () => {\n  285 |       await page.goto(`${loginUrl}/project/pulse`);\n  286 |     });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:283:8"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 76,
+                        "line": 295
+                      },
+                      "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Delete Workspace' }).first()\u001b[22m\n\n\n  293 |\n  294 |       // Click delete workspace option\n> 295 |       await page.getByRole(\"button\", { name: \"Delete Workspace\" }).first().click();\n      |                                                                            ^\n  296 |\n  297 |       // Confirm deletion\n  298 |       await page.getByRole(\"button\", { name: \"Delete\" }).click();\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:295:76\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:288:5"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "Using existing auth session...\n"
+                    },
+                    {
+                      "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-01-07T05:01:10.423Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC008-validateSentimentModelAccuracy-chromium-retry1/test-failed-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC008-validateSentimentModelAccuracy-chromium-retry1/test-failed-2.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC008-validateSentimentModelAccuracy-chromium-retry1/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC008-validateSentimentModelAccuracy-chromium-retry1/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                    "column": 17,
+                    "line": 243
+                  }
+                },
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 177,
+                  "error": {
+                    "message": "ReferenceError: dataset is not defined",
+                    "stack": "ReferenceError: dataset is not defined\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:243:17",
+                    "location": {
+                      "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                      "column": 17,
+                      "line": 243
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 241 |\u001b[39m   test(\u001b[32m\"@smoke TC008_validateSentimentModelAccuracy\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 242 |\u001b[39m     \u001b[36mlet\u001b[39m correct \u001b[33m=\u001b[39m \u001b[35m0\u001b[39m\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 243 |\u001b[39m     \u001b[36mlet\u001b[39m total \u001b[33m=\u001b[39m dataset\u001b[33m.\u001b[39mlength\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 244 |\u001b[39m     \u001b[36mconst\u001b[39m pulse \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mPulsePage\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 245 |\u001b[39m     \n \u001b[90m 246 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m'Open pulse workspace'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 17,
+                        "line": 243
+                      },
+                      "message": "ReferenceError: dataset is not defined\n\n  241 |   test(\"@smoke TC008_validateSentimentModelAccuracy\", async ({ page }) => {\n  242 |     let correct = 0;\n> 243 |     let total = dataset.length;\n      |                 ^\n  244 |     const pulse = new PulsePage(page);\n  245 |     \n  246 |     await test.step('Open pulse workspace', async () => {\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:243:17"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 8,
+                        "line": 283
+                      },
+                      "message": "\u001b[31m\"afterAll\" hook timeout of 180000ms exceeded.\u001b[39m\n\n  281 |   });\n  282 |\n> 283 |   test.afterAll(async ({ page }) => {\n      |        ^\n  284 |     await test.step('Navigate to pulse page', async () => {\n  285 |       await page.goto(`${loginUrl}/project/pulse`);\n  286 |     });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:283:8"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 76,
+                        "line": 295
+                      },
+                      "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Delete Workspace' }).first()\u001b[22m\n\n\n  293 |\n  294 |       // Click delete workspace option\n> 295 |       await page.getByRole(\"button\", { name: \"Delete Workspace\" }).first().click();\n      |                                                                            ^\n  296 |\n  297 |       // Confirm deletion\n  298 |       await page.getByRole(\"button\", { name: \"Delete\" }).click();\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:295:76\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:288:5"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "Using existing auth session...\n"
+                    },
+                    {
+                      "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2026-01-07T05:04:11.666Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC008-validateSentimentModelAccuracy-chromium-retry2/test-failed-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC008-validateSentimentModelAccuracy-chromium-retry2/test-failed-2.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC008-validateSentimentModelAccuracy-chromium-retry2/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse--smoke-TC008-validateSentimentModelAccuracy-chromium-retry2/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                    "column": 17,
+                    "line": 243
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "4199f64b3242841a2ce2-4b3335b3e1a1da6d939e",
+          "file": "pulse.spec.js",
+          "line": 241,
+          "column": 3
+        }
+      ],
+      "suites": [
+        {
+          "title": "Pulse sentiment analysis – functional flow",
+          "file": "pulse.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke TC001_generateSentimentFromText",
+              "ok": false,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 9042,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                          "column": 28,
+                          "line": 106
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 104 |\u001b[39m       \n \u001b[90m 105 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mgetSentimentValue())\u001b[33m.\u001b[39mtoLowerCase()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 106 |\u001b[39m       \u001b[36mawait\u001b[39m expect(result)\u001b[33m.\u001b[39mtoBe(dataset[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mexpected)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 107 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Correct: \"${dataset[0].text}\" → ${result}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 109 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 28,
+                            "line": 106
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n\n  104 |       \n  105 |       const result = (await pulse.getSentimentValue()).toLowerCase();\n> 106 |       await expect(result).toBe(dataset[0].expected);\n      |                            ^\n  107 |       console.log(`✅ Correct: \"${dataset[0].text}\" → ${result}`);\n  108 |     });\n  109 |   });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 8,
+                            "line": 283
+                          },
+                          "message": "\u001b[31m\"afterAll\" hook timeout of 180000ms exceeded.\u001b[39m\n\n  281 |   });\n  282 |\n> 283 |   test.afterAll(async ({ page }) => {\n      |        ^\n  284 |     await test.step('Navigate to pulse page', async () => {\n  285 |       await page.goto(`${loginUrl}/project/pulse`);\n  286 |     });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:283:8"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 76,
+                            "line": 295
+                          },
+                          "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Delete Workspace' }).first()\u001b[22m\n\n\n  293 |\n  294 |       // Click delete workspace option\n> 295 |       await page.getByRole(\"button\", { name: \"Delete Workspace\" }).first().click();\n      |                                                                            ^\n  296 |\n  297 |       // Confirm deletion\n  298 |       await page.getByRole(\"button\", { name: \"Delete\" }).click();\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:295:76\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:288:5"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Using existing auth session...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Open pulse workspace",
+                          "duration": 62
+                        },
+                        {
+                          "title": "Analyze text and verify sentiment",
+                          "duration": 5219,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5",
+                            "location": {
+                              "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                              "column": 28,
+                              "line": 106
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 104 |\u001b[39m       \n \u001b[90m 105 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mgetSentimentValue())\u001b[33m.\u001b[39mtoLowerCase()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 106 |\u001b[39m       \u001b[36mawait\u001b[39m expect(result)\u001b[33m.\u001b[39mtoBe(dataset[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mexpected)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 107 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Correct: \"${dataset[0].text}\" → ${result}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 109 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-01-07T04:39:11.395Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse-Pulse-sentiment-anal-35a5b-1-generateSentimentFromText-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse-Pulse-sentiment-anal-35a5b-1-generateSentimentFromText-chromium/test-failed-2.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse-Pulse-sentiment-anal-35a5b-1-generateSentimentFromText-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse-Pulse-sentiment-anal-35a5b-1-generateSentimentFromText-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 28,
+                        "line": 106
+                      }
+                    },
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 9045,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                          "column": 28,
+                          "line": 106
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 104 |\u001b[39m       \n \u001b[90m 105 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mgetSentimentValue())\u001b[33m.\u001b[39mtoLowerCase()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 106 |\u001b[39m       \u001b[36mawait\u001b[39m expect(result)\u001b[33m.\u001b[39mtoBe(dataset[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mexpected)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 107 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Correct: \"${dataset[0].text}\" → ${result}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 109 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 28,
+                            "line": 106
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n\n  104 |       \n  105 |       const result = (await pulse.getSentimentValue()).toLowerCase();\n> 106 |       await expect(result).toBe(dataset[0].expected);\n      |                            ^\n  107 |       console.log(`✅ Correct: \"${dataset[0].text}\" → ${result}`);\n  108 |     });\n  109 |   });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 8,
+                            "line": 283
+                          },
+                          "message": "\u001b[31m\"afterAll\" hook timeout of 180000ms exceeded.\u001b[39m\n\n  281 |   });\n  282 |\n> 283 |   test.afterAll(async ({ page }) => {\n      |        ^\n  284 |     await test.step('Navigate to pulse page', async () => {\n  285 |       await page.goto(`${loginUrl}/project/pulse`);\n  286 |     });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:283:8"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 76,
+                            "line": 295
+                          },
+                          "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Delete Workspace' }).first()\u001b[22m\n\n\n  293 |\n  294 |       // Click delete workspace option\n> 295 |       await page.getByRole(\"button\", { name: \"Delete Workspace\" }).first().click();\n      |                                                                            ^\n  296 |\n  297 |       // Confirm deletion\n  298 |       await page.getByRole(\"button\", { name: \"Delete\" }).click();\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:295:76\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:288:5"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Using existing auth session...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "steps": [
+                        {
+                          "title": "Open pulse workspace",
+                          "duration": 60
+                        },
+                        {
+                          "title": "Analyze text and verify sentiment",
+                          "duration": 5221,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5",
+                            "location": {
+                              "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                              "column": 28,
+                              "line": 106
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 104 |\u001b[39m       \n \u001b[90m 105 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mgetSentimentValue())\u001b[33m.\u001b[39mtoLowerCase()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 106 |\u001b[39m       \u001b[36mawait\u001b[39m expect(result)\u001b[33m.\u001b[39mtoBe(dataset[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mexpected)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 107 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Correct: \"${dataset[0].text}\" → ${result}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 109 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-01-07T04:42:30.356Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse-Pulse-sentiment-anal-35a5b-1-generateSentimentFromText-chromium-retry1/test-failed-1.png"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse-Pulse-sentiment-anal-35a5b-1-generateSentimentFromText-chromium-retry1/test-failed-2.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse-Pulse-sentiment-anal-35a5b-1-generateSentimentFromText-chromium-retry1/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse-Pulse-sentiment-anal-35a5b-1-generateSentimentFromText-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 28,
+                        "line": 106
+                      }
+                    },
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 9040,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                          "column": 28,
+                          "line": 106
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 104 |\u001b[39m       \n \u001b[90m 105 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mgetSentimentValue())\u001b[33m.\u001b[39mtoLowerCase()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 106 |\u001b[39m       \u001b[36mawait\u001b[39m expect(result)\u001b[33m.\u001b[39mtoBe(dataset[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mexpected)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 107 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Correct: \"${dataset[0].text}\" → ${result}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 109 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 28,
+                            "line": 106
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n\n  104 |       \n  105 |       const result = (await pulse.getSentimentValue()).toLowerCase();\n> 106 |       await expect(result).toBe(dataset[0].expected);\n      |                            ^\n  107 |       console.log(`✅ Correct: \"${dataset[0].text}\" → ${result}`);\n  108 |     });\n  109 |   });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 8,
+                            "line": 283
+                          },
+                          "message": "\u001b[31m\"afterAll\" hook timeout of 180000ms exceeded.\u001b[39m\n\n  281 |   });\n  282 |\n> 283 |   test.afterAll(async ({ page }) => {\n      |        ^\n  284 |     await test.step('Navigate to pulse page', async () => {\n  285 |       await page.goto(`${loginUrl}/project/pulse`);\n  286 |     });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:283:8"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 76,
+                            "line": 295
+                          },
+                          "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Delete Workspace' }).first()\u001b[22m\n\n\n  293 |\n  294 |       // Click delete workspace option\n> 295 |       await page.getByRole(\"button\", { name: \"Delete Workspace\" }).first().click();\n      |                                                                            ^\n  296 |\n  297 |       // Confirm deletion\n  298 |       await page.getByRole(\"button\", { name: \"Delete\" }).click();\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:295:76\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:288:5"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Using existing auth session...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 2,
+                      "steps": [
+                        {
+                          "title": "Open pulse workspace",
+                          "duration": 71
+                        },
+                        {
+                          "title": "Analyze text and verify sentiment",
+                          "duration": 5229,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5",
+                            "location": {
+                              "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                              "column": 28,
+                              "line": 106
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 104 |\u001b[39m       \n \u001b[90m 105 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mgetSentimentValue())\u001b[33m.\u001b[39mtoLowerCase()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 106 |\u001b[39m       \u001b[36mawait\u001b[39m expect(result)\u001b[33m.\u001b[39mtoBe(dataset[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mexpected)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 107 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Correct: \"${dataset[0].text}\" → ${result}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 109 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-01-07T04:45:47.898Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse-Pulse-sentiment-anal-35a5b-1-generateSentimentFromText-chromium-retry2/test-failed-1.png"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse-Pulse-sentiment-anal-35a5b-1-generateSentimentFromText-chromium-retry2/test-failed-2.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse-Pulse-sentiment-anal-35a5b-1-generateSentimentFromText-chromium-retry2/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse-Pulse-sentiment-anal-35a5b-1-generateSentimentFromText-chromium-retry2/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 28,
+                        "line": 106
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4199f64b3242841a2ce2-17e301806279bfe1be10",
+              "file": "pulse.spec.js",
+              "line": 93,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "quality-check.spec.js",
+      "file": "quality-check.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Quality Check Feature Tests",
+          "file": "quality-check.spec.js",
+          "line": 14,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke TC04: Image comparison shows results with similarity score and visual difference",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 15991,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Using existing auth session...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/quality-check\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T05:07:12.918Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "094a1e5d42dc18e53fae-8f79fc4223e8fb49e670",
+              "file": "quality-check.spec.js",
+              "line": 74,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "query.spec.js",
+      "file": "query.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Query feature – functional tests",
+          "file": "query.spec.js",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": " @smoke TC01_validQueryDisplaysResults",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 48579,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T05:07:29.049Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e81f4f68ea27254567d8-282d117fc0d24988b51f",
+              "file": "query.spec.js",
+              "line": 43,
+              "column": 3
+            },
+            {
+              "title": "@smoke TC03_longQueryHandled",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 48640,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T05:08:25.044Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e81f4f68ea27254567d8-aa345018465156b707ee",
+              "file": "query.spec.js",
+              "line": 68,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-01-07T04:26:01.330Z",
+    "duration": 2598557.083,
+    "expected": 18,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 1
+  }
+}
