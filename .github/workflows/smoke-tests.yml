@@ -3,9 +3,125 @@ name: Ngen Studio test Report
 on:
   schedule:
     - cron: "30 3 * * 1-5"   # 9:00 AM IST, Monday–Friday
+    - cron: "30 18 * * 5"    # 12:00 AM IST Saturday (Friday night), weekly
   workflow_dispatch:
 
 jobs:
+  delete-workspace:
+    runs-on: ubuntu-latest
+    if: github.event.schedule == '30 18 * * 5'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-playwright-
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Install additional tools
+        run: sudo apt-get update && sudo apt-get install -y bc jq
+
+      - name: Run Delete Workspace Test
+        id: tests
+        continue-on-error: true
+        run: |
+          echo "🗑️ Running Delete Workspace Test"
+          echo "DASHBOARD_URL: ${DASHBOARD_URL:-NOT_SET}"
+          echo "EMAIL: ${EMAIL:-NOT_SET}"
+          echo "PASSWORD: ${PASSWORD:+***SET***}"
+
+          # Ensure base reports folder exists
+          mkdir -p reports
+          
+          # Run delete workspace test
+          npx playwright test tests/delteworkspace.spec.js --workers=1 --timeout=180000 || true
+
+          ts=$(date +'%Y-%m-%d_%H-%M-%S')
+
+          # Move reports
+          if [ -d "playwright-report" ]; then
+            mv playwright-report "reports/$ts"
+          else
+            mkdir -p "reports/$ts"
+            echo "No HTML report generated" > "reports/$ts/index.html"
+          fi
+          
+          # Move JSON results
+          if [ -f "results.json" ]; then
+            mv results.json "reports/$ts/results.json"
+          else
+            echo "⚠️ No results.json found - creating placeholder"
+            echo '{"stats":{"expected":0,"unexpected":1,"flaky":0,"skipped":0,"duration":0},"suites":[]}' > "reports/$ts/results.json"
+          fi
+          
+          echo "REPORT_TS=$ts" >> $GITHUB_ENV
+          echo "✅ Reports organized under reports/$ts"
+        env:
+          DASHBOARD_URL: ${{ secrets.DASHBOARD_URL }}
+          EMAIL: ${{ secrets.EMAIL }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+
+      - name: Deploy reports to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./reports
+          publish_branch: gh-pages
+          keep_files: true
+
+      - name: Send notification to Teams
+        if: always()
+        run: |
+          RESULTS_FILE="reports/$REPORT_TS/results.json"
+          
+          if [ ! -f "$RESULTS_FILE" ]; then
+            echo "Results file not found, sending failure notification"
+            curl -H 'Content-Type: application/json' \
+              -d "{\"text\": \"🚨 **Delete Workspace Test**\n\n❌ Test execution failed - no results available\n🕐 Time: $(date)\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"}" \
+              "${{ secrets.TEAMS_WEBHOOK_URL }}"
+            exit 0
+          fi
+
+          # Extract stats
+          TOTAL_TESTS=$(jq -r '.stats.expected + .stats.unexpected + .stats.flaky + .stats.skipped' $RESULTS_FILE)
+          PASSED_TESTS=$(jq -r '.stats.expected // 0' $RESULTS_FILE)
+          FAILED_TESTS=$(jq -r '.stats.unexpected // 0' $RESULTS_FILE)
+          DURATION_SEC=$(jq -r "(.stats.duration // 0) / 1000 * 10 | floor / 10" $RESULTS_FILE)
+
+          if [ "$FAILED_TESTS" -eq 0 ]; then
+            STATUS="✅ Delete Workspace Test Passed"
+            EMOJI="🎉"
+          else
+            STATUS="❌ Delete Workspace Test Failed"
+            EMOJI="🚨"
+          fi
+
+          latest_url="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/$REPORT_TS/"
+
+          curl -H 'Content-Type: application/json' \
+            -d "{
+              \"text\": \"$EMOJI **Delete Workspace Test Results**\\n\\n**$STATUS**\\n\\n📊 **Summary:**\\n• Total: $TOTAL_TESTS\\n• Passed: $PASSED_TESTS\\n• Failed: $FAILED_TESTS\\n• Duration: ${DURATION_SEC}s\\n\\n📑 [View Full Report]($latest_url)\\n🔗 [View Workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\\n\\n👤 **Sent by:** Navaneetha B | 🕐 **Time:** $(TZ='Asia/Kolkata' date +'%a %b %d %Y, %I:%M:%S %p IST')\"
+            }" \
+            "${{ secrets.TEAMS_WEBHOOK_URL }}"
+
   smoke:
     runs-on: ubuntu-latest
 
