@@ -1,0 +1,452 @@
+{
+  "config": {
+    "configFile": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/playwright.config.js",
+    "rootDir": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests",
+    "forbidOnly": true,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/commit/b302069398a388e66243cfe35a482d11ed599df4",
+        "commitHash": "b302069398a388e66243cfe35a482d11ed599df4",
+        "buildHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/actions/runs/21297674178"
+      },
+      "gitCommit": {
+        "shortHash": "b302069",
+        "hash": "b302069398a388e66243cfe35a482d11ed599df4",
+        "subject": "Add delete workspace test and update smoke tests workflow",
+        "body": "Add delete workspace test and update smoke tests workflow\n",
+        "author": {
+          "name": "ng-navaneetha",
+          "email": "navaneetha.b@ngenux.com",
+          "time": 1768199430000
+        },
+        "committer": {
+          "name": "ng-navaneetha",
+          "email": "navaneetha.b@ngenux.com",
+          "time": 1768199430000
+        },
+        "branch": "main"
+      },
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ],
+      [
+        "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/node_modules/allure-playwright/dist/cjs/index.js",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/commit/b302069398a388e66243cfe35a482d11ed599df4",
+            "commitHash": "b302069398a388e66243cfe35a482d11ed599df4",
+            "buildHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/actions/runs/21297674178"
+          },
+          "gitCommit": {
+            "shortHash": "b302069",
+            "hash": "b302069398a388e66243cfe35a482d11ed599df4",
+            "subject": "Add delete workspace test and update smoke tests workflow",
+            "body": "Add delete workspace test and update smoke tests workflow\n",
+            "author": {
+              "name": "ng-navaneetha",
+              "email": "navaneetha.b@ngenux.com",
+              "time": 1768199430000
+            },
+            "committer": {
+              "name": "ng-navaneetha",
+              "email": "navaneetha.b@ngenux.com",
+              "time": 1768199430000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.53.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "delteworkspace.spec.js",
+      "file": "delteworkspace.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Workspace Cleanup",
+          "file": "delteworkspace.spec.js",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Delete all workspaces matching project names",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 2400000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 99016,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Creating new auth session...\n"
+                        },
+                        {
+                          "text": "Auth session saved successfully\n"
+                        },
+                        {
+                          "text": "🧹 Starting comprehensive workspace cleanup...\n"
+                        },
+                        {
+                          "text": "🔍 Checking insights Project page for workspaces named: \"Tesla’s Transforming\"\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "🗑️ Found 4 workspace(s) with name \"Tesla’s Transforming\" on insights Project page\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 1/4: \"Tesla’s Transforming\" from insights Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Tesla’s Transforming\" from insights Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 2/4: \"Tesla’s Transforming\" from insights Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Tesla’s Transforming\" from insights Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 3/4: \"Tesla’s Transforming\" from insights Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Tesla’s Transforming\" from insights Project\n"
+                        },
+                        {
+                          "text": "⚠️ Warning: 1 workspace(s) with name \"Tesla’s Transforming\" still remain on insights Project\n"
+                        },
+                        {
+                          "text": "🔍 Checking insights Project page for workspaces named: \"Insights Workspace\"\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "🗑️ Found 4 workspace(s) with name \"Insights Workspace\" on insights Project page\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 1/4: \"Insights Workspace\" from insights Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Insights Workspace\" from insights Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 2/4: \"Insights Workspace\" from insights Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Insights Workspace\" from insights Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 3/4: \"Insights Workspace\" from insights Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Insights Workspace\" from insights Project\n"
+                        },
+                        {
+                          "text": "⚠️ Warning: 1 workspace(s) with name \"Insights Workspace\" still remain on insights Project\n"
+                        },
+                        {
+                          "text": "🔍 Checking insights Project page for workspaces named: \"Upload Test Workspace\"\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "🗑️ Found 4 workspace(s) with name \"Upload Test Workspace\" on insights Project page\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 1/4: \"Upload Test Workspace\" from insights Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Upload Test Workspace\" from insights Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 2/4: \"Upload Test Workspace\" from insights Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Upload Test Workspace\" from insights Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 3/4: \"Upload Test Workspace\" from insights Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Upload Test Workspace\" from insights Project\n"
+                        },
+                        {
+                          "text": "⚠️ Warning: 1 workspace(s) with name \"Upload Test Workspace\" still remain on insights Project\n"
+                        },
+                        {
+                          "text": "🔍 Checking query Project page for workspaces named: \"acme_chatbot\"\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "🗑️ Found 4 workspace(s) with name \"acme_chatbot\" on query Project page\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 1/4: \"acme_chatbot\" from query Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"acme_chatbot\" from query Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 2/4: \"acme_chatbot\" from query Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"acme_chatbot\" from query Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 3/4: \"acme_chatbot\" from query Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"acme_chatbot\" from query Project\n"
+                        },
+                        {
+                          "text": "⚠️ Warning: 1 workspace(s) with name \"acme_chatbot\" still remain on query Project\n"
+                        },
+                        {
+                          "text": "🔍 Checking query Project page for workspaces named: \"Neon Query Database Workspace\"\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "🗑️ Found 4 workspace(s) with name \"Neon Query Database Workspace\" on query Project page\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 1/4: \"Neon Query Database Workspace\" from query Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Neon Query Database Workspace\" from query Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 2/4: \"Neon Query Database Workspace\" from query Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Neon Query Database Workspace\" from query Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 3/4: \"Neon Query Database Workspace\" from query Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Neon Query Database Workspace\" from query Project\n"
+                        },
+                        {
+                          "text": "⚠️ Warning: 1 workspace(s) with name \"Neon Query Database Workspace\" still remain on query Project\n"
+                        },
+                        {
+                          "text": "🔍 Checking summary Project page for workspaces named: \"Summary Workspace\"\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/summary\n"
+                        },
+                        {
+                          "text": "🗑️ Found 5 workspace(s) with name \"Summary Workspace\" on summary Project page\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 1/5: \"Summary Workspace\" from summary Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Summary Workspace\" from summary Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 2/5: \"Summary Workspace\" from summary Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Summary Workspace\" from summary Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 3/5: \"Summary Workspace\" from summary Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Summary Workspace\" from summary Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 4/5: \"Summary Workspace\" from summary Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Summary Workspace\" from summary Project\n"
+                        },
+                        {
+                          "text": "⚠️ Warning: 1 workspace(s) with name \"Summary Workspace\" still remain on summary Project\n"
+                        },
+                        {
+                          "text": "🔍 Checking pulse Project page for workspaces named: \"Pulse Workspace\"\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        },
+                        {
+                          "text": "🗑️ Found 13 workspace(s) with name \"Pulse Workspace\" on pulse Project page\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 1/13: \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 2/13: \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 3/13: \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 4/13: \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 5/13: \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 6/13: \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 7/13: \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 8/13: \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 9/13: \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 10/13: \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 11/13: \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "🗑️ Deleting workspace 12/13: \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "✅ Successfully deleted workspace \"Pulse Workspace\" from pulse Project\n"
+                        },
+                        {
+                          "text": "⚠️ Warning: 1 workspace(s) with name \"Pulse Workspace\" still remain on pulse Project\n"
+                        },
+                        {
+                          "text": "🎉 Comprehensive workspace cleanup completed!\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-23T18:58:54.738Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "aa13c4e902b3dc35f104-fe98e89700708112a0ed",
+              "file": "delteworkspace.spec.js",
+              "line": 8,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-01-23T18:58:53.982Z",
+    "duration": 99946.258,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
