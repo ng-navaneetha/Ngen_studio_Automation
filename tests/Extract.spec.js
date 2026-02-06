@@ -34,7 +34,7 @@ test.describe("Login and Navigation Tests", () => {
         .waitFor({ state: "visible" });
     });
 
-    test(" @smoke TC01:Verify File content Extracted successfully", async ({
+    test("@smoke @e2e @integration TC01:Verify File content Extracted successfully", async ({
       page,
     }) => {
       await verifyOcrTabs(page);

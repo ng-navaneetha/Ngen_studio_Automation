@@ -62,7 +62,7 @@ test.describe("Insights Feature Tests", () => {
     await expect(insightsPage.createButton).toBeVisible();
   });
 
-  test("@smoke TC02: Create workspace with Insights use case", async ({
+  test("@smoke @e2e @integration TC02: Create workspace with Insights use case", async ({
     page,
   }) => {
     // Create workspace with Insights use case
@@ -79,7 +79,7 @@ test.describe("Insights Feature Tests", () => {
     await expect(page.getByText(data.name)).toBeVisible();
   });
 
-  test("@smoke TC03: Create workspace with Query use case and database connection", async ({
+  test("@e2e @integration TC03: Create workspace with Query use case and database connection", async ({
     page,
   }) => {
     await test.step("Create workspace with Query use case", async () => {
@@ -109,7 +109,7 @@ test.describe("Insights Feature Tests", () => {
     });
   });
 
-  test("@smoke TC04: Create workspace with Pulse use case", async ({
+  test("@e2e @integration TC04: Create workspace with Pulse use case", async ({
     page,
   }) => {
     // Create workspace with Pulse use case
@@ -127,7 +127,7 @@ test.describe("Insights Feature Tests", () => {
     await expect(insightsPage.getWorkspaceByName(data.name)).toBeVisible();
   });
 
-  test(" @smoke TC05: Create workspace with Summary use case", async ({
+  test("@e2e @integration TC05: Create workspace with Summary use case", async ({
     page,
   }) => {
     // Create workspace with Summary use case
@@ -145,7 +145,7 @@ test.describe("Insights Feature Tests", () => {
     await expect(insightsPage.getWorkspaceByName(data.name)).toBeVisible();
   });
 
-  test("@smoke TC06:Insights use case - Verify workspace functionality - upload document", async ({
+  test("@smoke @e2e @integration TC06:Insights use case - Verify workspace functionality - upload document", async ({
     page,
   }) => {
     // Create a workspace first
@@ -458,7 +458,7 @@ test.describe("Insights Feature Tests", () => {
     await expect(insightsPage.getWorkspaceByName(data.name)).not.toBeVisible();
   });
 
-  test("@smoke TC15: Verify file upload, chat, and new chat flow", async ({
+  test("@e2e @integration TC15: Verify file upload, chat, and new chat flow", async ({
     page,
   }) => {
     test.setTimeout(240000); // Set the timeout for this test

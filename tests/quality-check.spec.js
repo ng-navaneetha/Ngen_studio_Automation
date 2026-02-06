@@ -71,7 +71,7 @@ test.describe("Quality Check Feature Tests", () => {
     await expect(qualityCheckPage.compareButton).toBeEnabled();
   });
 
-  test("@smoke TC04: Image comparison shows results with similarity score and visual difference", async ({
+  test("@smoke @e2e @integration TC04: Image comparison shows results with similarity score and visual difference", async ({
     page,
   }) => {
     // Prepare mock file paths (using relative paths for testing)

@@ -90,7 +90,7 @@ test.describe("Pulse sentiment analysis – functional flow", () => {
     await page.goto(`${loginUrl}/project/pulse`);
   });
 
-  test("@smoke TC001_generateSentimentFromText", async ({ page }) => {
+  test("@smoke @e2e @integration TC001_generateSentimentFromText", async ({ page }) => {
     const pulse = new PulsePage(page);
 
     await test.step('Open pulse workspace', async () => {
@@ -218,7 +218,7 @@ test.describe("Pulse sentiment analysis – functional flow", () => {
     });
   });
 
-  test("@smoke TC007_resetClearsState", async ({ page }) => {
+  test("@e2e TC007_resetClearsState", async ({ page }) => {
     const pulse = new PulsePage(page);
     
     await test.step('Open pulse workspace', async () => {
@@ -238,7 +238,7 @@ test.describe("Pulse sentiment analysis – functional flow", () => {
     });
   });
 
-  test("@smoke TC008_validateSentimentModelAccuracy", async ({ page }) => {
+  test("@e2e @integration TC008_validateSentimentModelAccuracy", async ({ page }) => {
     let correct = 0;
     let total = dataset.length;
     const pulse = new PulsePage(page);

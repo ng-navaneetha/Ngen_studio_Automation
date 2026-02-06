@@ -60,7 +60,7 @@ test.describe(" AI Dashboard KPI Flow", () => {
     });
   });
 
-  test("@smoke  Verify Supply Chain metrics availability", async ({ page }) => {
+  test("@e2e  Verify Supply Chain metrics availability", async ({ page }) => {
     await test.step("Switch to Supply Chain Head role", async () => {
       await aiDashboard.switchRole("Supply Chain Head");
       console.log("✅ Switched to Supply Chain Head role");
@@ -138,7 +138,7 @@ test.describe(" AI Dashboard KPI Flow", () => {
     });
   });
 
-  test("@smoke  Verify Sales Head metrics availability", async ({ page }) => {
+  test("@e2e  Verify Sales Head metrics availability", async ({ page }) => {
     await test.step("Switch to Sales Head role", async () => {
       await aiDashboard.switchRole("Sales Head");
       console.log("✅ Switched to Sales Head role");
@@ -216,7 +216,7 @@ test.describe(" AI Dashboard KPI Flow", () => {
     });
   });
 
-  test("@smoke  Verify Operations Head metrics availability", async ({ page }) => {
+  test("@e2e  Verify Operations Head metrics availability", async ({ page }) => {
     await test.step("Switch to Operations Head role", async () => {
       await aiDashboard.switchRole("Operations Head");
       console.log("✅ Switched to Operations Head role");
@@ -294,7 +294,7 @@ test.describe(" AI Dashboard KPI Flow", () => {
     });
   });
 
-  test("@smoke OTIF metrics chart operations", async ({ page }) => {
+  test("@smoke @e2e @integration OTIF metrics chart operations", async ({ page }) => {
     await test.step("Navigate to Supply Chain Head and open OTIF metrics", async () => {
       await aiDashboard.switchRole("Supply Chain Head");
 
@@ -424,7 +424,7 @@ test.describe(" AI Dashboard KPI Flow", () => {
     });
   });
 
-  test("@smoke Dashboard data export functionality", async ({ page }) => {
+  test("@e2e @integration Dashboard data export functionality", async ({ page }) => {
     await test.step("Navigate to Supply Chain Head role", async () => {
       await aiDashboard.switchRole("Supply Chain Head");
       await aiDashboard.openMetric("OTIF (On-Time In-Full)");

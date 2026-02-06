@@ -15,7 +15,7 @@ test.describe("Generate AI Insights Tests", () => {
     await aiDashboard.goto(URL_OF_YOUR_KPI_DASHBOARD);
   });
 
-  test("@smoke Generate AI Insights and verify results", async () => {
+  test("@smoke @e2e @integration Generate AI Insights and verify results", async () => {
     await test.step("Navigate to Supply Chain Head and open OTIF metrics", async () => {
       console.log("\n🎯 COMPREHENSIVE TIME PERIOD METRIC TEST - OTIF");
 

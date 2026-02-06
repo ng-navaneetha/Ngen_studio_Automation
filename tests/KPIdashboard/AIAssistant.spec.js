@@ -14,7 +14,7 @@ test.describe("AI Assistant Text_Bot Tests", () => {
     await page.close();
   });
 
-  test("@smoke Ask a question and verify results", async () => {
+  test("@smoke @e2e @integration Ask a question and verify results", async () => {
     await test.step("Toggle AI Assistant and ask a question", async () => {
       await aiAssistant.toggleAssistant();
       await aiAssistant.askQuestion("provide top 5 products");
@@ -28,7 +28,7 @@ test.describe("AI Assistant Text_Bot Tests", () => {
     });
   });
 
-  test("@smoke Start a new chat and verify results", async () => {
+  test("@smoke @e2e @integration Start a new chat and verify results", async () => {
     await test.step("Start a new chat and ask a question", async () => {
       await aiAssistant.toggleAssistant();
 
