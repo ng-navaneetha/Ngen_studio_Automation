@@ -202,14 +202,6 @@ jobs:
           echo "REPORT_TS=$ts" >> $GITHUB_ENV
           echo "✅ Reports organized under reports/$ts"
 
-      - name: Upload test results artifact
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-results-${{ matrix.shard }}
-          path: reports/
-          retention-days: 7
-
       - name: Deploy Playwright reports to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: always() && matrix.shard == 1
