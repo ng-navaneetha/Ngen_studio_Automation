@@ -51,7 +51,7 @@ jobs:
           mkdir -p reports
           
           # Run delete workspace test
-          npx playwright test tests/delteworkspace.spec.js --workers=1 --timeout=180000 || true
+          npx playwright test tests/delteworkspace.spec.js --workers=2 --timeout=90000 || true
 
           ts=$(date +'%Y-%m-%d_%H-%M-%S')
 
@@ -124,6 +124,10 @@ jobs:
 
   smoke:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3]
 
     steps:
       - name: Checkout code
@@ -174,10 +178,10 @@ jobs:
           # Ensure base reports folder always exists
           mkdir -p reports
           
-          # Run Playwright smoke tests
-          npx playwright test --grep @smoke --workers=1 --timeout=180000 || true
+          # Run Playwright smoke tests with sharding
+          npx playwright test --grep @smoke --shard=${{ matrix.shard }}/3 --workers=3 --timeout=90000 || true
 
-          ts=$(date +'%Y-%m-%d_%H-%M-%S')
+          ts=$(date +'%Y-%m-%d_%H-%M-%S')-shard-${{ matrix.shard }}
 
           # Move reports and handle missing files gracefully
           if [ -d "playwright-report" ]; then
@@ -198,9 +202,17 @@ jobs:
           echo "REPORT_TS=$ts" >> $GITHUB_ENV
           echo "✅ Reports organized under reports/$ts"
 
+      - name: Upload test results artifact
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results-${{ matrix.shard }}
+          path: reports/
+          retention-days: 7
+
       - name: Deploy Playwright reports to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
-        if: always()
+        if: always() && matrix.shard == 1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./reports
