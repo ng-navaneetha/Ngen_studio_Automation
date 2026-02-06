@@ -1,0 +1,1898 @@
+{
+  "config": {
+    "configFile": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/playwright.config.js",
+    "rootDir": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests",
+    "forbidOnly": true,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/commit/b1d3520b05f4dbfe708f00b3cb946a5c36e16f2c",
+        "commitHash": "b1d3520b05f4dbfe708f00b3cb946a5c36e16f2c",
+        "buildHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/actions/runs/21762717423"
+      },
+      "gitCommit": {
+        "shortHash": "b1d3520",
+        "hash": "b1d3520b05f4dbfe708f00b3cb946a5c36e16f2c",
+        "subject": "Consolidate smoke tests: run all in one job with single report",
+        "body": "Consolidate smoke tests: run all in one job with single report\n",
+        "author": {
+          "name": "ng-navaneetha",
+          "email": "navaneetha.b@ngenux.com",
+          "time": 1770362477000
+        },
+        "committer": {
+          "name": "ng-navaneetha",
+          "email": "navaneetha.b@ngenux.com",
+          "time": 1770362477000
+        },
+        "branch": "main"
+      },
+      "actualWorkers": 3
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ],
+      [
+        "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/node_modules/allure-playwright/dist/cjs/index.js",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/commit/b1d3520b05f4dbfe708f00b3cb946a5c36e16f2c",
+            "commitHash": "b1d3520b05f4dbfe708f00b3cb946a5c36e16f2c",
+            "buildHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/actions/runs/21762717423"
+          },
+          "gitCommit": {
+            "shortHash": "b1d3520",
+            "hash": "b1d3520b05f4dbfe708f00b3cb946a5c36e16f2c",
+            "subject": "Consolidate smoke tests: run all in one job with single report",
+            "body": "Consolidate smoke tests: run all in one job with single report\n",
+            "author": {
+              "name": "ng-navaneetha",
+              "email": "navaneetha.b@ngenux.com",
+              "time": 1770362477000
+            },
+            "committer": {
+              "name": "ng-navaneetha",
+              "email": "navaneetha.b@ngenux.com",
+              "time": 1770362477000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 3
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.53.1",
+    "workers": 3,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "call-summarization.spec.js",
+      "file": "call-summarization.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Call Summarization",
+          "file": "call-summarization.spec.js",
+          "line": 57,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke @e2e @integration TC06: Happy flow - Summary screen - UI and content assertions",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "e2e",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 160000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 53628,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Creating new auth session...\n"
+                        },
+                        {
+                          "text": "Auth session saved successfully\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/summary\n"
+                        },
+                        {
+                          "text": "art_in8.mp3\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/summary\n"
+                        },
+                        {
+                          "text": "✅ Deleted Summary workspace\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-06T19:13:47.041Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b4980f566f3e0f5bf01c-fb75e5365ab1995cd33d",
+              "file": "call-summarization.spec.js",
+              "line": 167,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "enterprisesearch.spec.js",
+      "file": "enterprisesearch.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Enterprise Search Processing Tests",
+          "file": "enterprisesearch.spec.js",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke @e2e @integration TC01:Enterprise Search use case - Verify workspace functionality - upload document",
+              "ok": false,
+              "tags": [
+                "smoke",
+                "e2e",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "timedOut",
+                      "duration": 120009,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/enterprisesearch.spec.js",
+                            "column": 20,
+                            "line": 78
+                          },
+                          "message": "Error: page.waitForSelector: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('table') to be visible\u001b[22m\n\n\n  76 |       // verify table is visible for 1st question\n  77 |       if (question.includes(\"OTIF\")) {\n> 78 |         await page.waitForSelector(\"table\", { timeout: 120000 });\n     |                    ^\n  79 |         await expect(page.locator(\"table\")).toBeVisible();\n  80 |       }\n  81 |\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/enterprisesearch.spec.js:78:20"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Creating new auth session...\n"
+                        },
+                        {
+                          "text": "Auth session saved successfully\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/v2/nterprise-search\n"
+                        },
+                        {
+                          "text": "Storage state expired, creating new session...\n"
+                        },
+                        {
+                          "text": "Starting direct login process...\n"
+                        },
+                        {
+                          "text": "Navigated to login URL directly\n"
+                        },
+                        {
+                          "text": "Go to Login button visible: \u001b[33mfalse\u001b[39m\n"
+                        },
+                        {
+                          "text": "Login button visible: \u001b[33mfalse\u001b[39m\n"
+                        },
+                        {
+                          "text": "Waiting for Auth0 login page...\n"
+                        },
+                        {
+                          "text": "Auth check error, continuing with current page state\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "🗑️ Attempting to delete Insights workspace: \"Tesla’s Transforming\"\n"
+                        },
+                        {
+                          "text": "⚠️ Error deleting Insights workspace: page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Delete Workspace\")') to be visible\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "🗑️ Attempting to delete Query workspace: \"acme_chatbot\"\n"
+                        },
+                        {
+                          "text": "⚠️ Error deleting Query workspace: page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Delete Workspace\")') to be visible\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "✅ Cleanup completed\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "Direct login failed: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2026-02-06T19:13:46.993Z",
+                      "annotations": [],
+                      "attachments": []
+                    },
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "timedOut",
+                      "duration": 120007,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/enterprisesearch.spec.js",
+                            "column": 20,
+                            "line": 78
+                          },
+                          "message": "Error: page.waitForSelector: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('table') to be visible\u001b[22m\n\n\n  76 |       // verify table is visible for 1st question\n  77 |       if (question.includes(\"OTIF\")) {\n> 78 |         await page.waitForSelector(\"table\", { timeout: 120000 });\n     |                    ^\n  79 |         await expect(page.locator(\"table\")).toBeVisible();\n  80 |       }\n  81 |\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/enterprisesearch.spec.js:78:20"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Using existing auth session...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/v2/nterprise-search\n"
+                        },
+                        {
+                          "text": "Storage state expired, creating new session...\n"
+                        },
+                        {
+                          "text": "Starting direct login process...\n"
+                        },
+                        {
+                          "text": "Navigated to login URL directly\n"
+                        },
+                        {
+                          "text": "Go to Login button visible: \u001b[33mfalse\u001b[39m\n"
+                        },
+                        {
+                          "text": "Login button visible: \u001b[33mfalse\u001b[39m\n"
+                        },
+                        {
+                          "text": "Waiting for Auth0 login page...\n"
+                        },
+                        {
+                          "text": "Auth check error, continuing with current page state\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "🗑️ Attempting to delete Insights workspace: \"Tesla’s Transforming\"\n"
+                        },
+                        {
+                          "text": "⚠️ Error deleting Insights workspace: page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Delete Workspace\")') to be visible\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "🗑️ Attempting to delete Query workspace: \"acme_chatbot\"\n"
+                        },
+                        {
+                          "text": "⚠️ Error deleting Query workspace: page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Delete Workspace\")') to be visible\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "✅ Cleanup completed\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "Direct login failed: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n"
+                        }
+                      ],
+                      "retry": 1,
+                      "startTime": "2026-02-06T19:16:28.658Z",
+                      "annotations": [],
+                      "attachments": []
+                    },
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 1,
+                      "status": "timedOut",
+                      "duration": 120008,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/enterprisesearch.spec.js",
+                            "column": 20,
+                            "line": 78
+                          },
+                          "message": "Error: page.waitForSelector: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('table') to be visible\u001b[22m\n\n\n  76 |       // verify table is visible for 1st question\n  77 |       if (question.includes(\"OTIF\")) {\n> 78 |         await page.waitForSelector(\"table\", { timeout: 120000 });\n     |                    ^\n  79 |         await expect(page.locator(\"table\")).toBeVisible();\n  80 |       }\n  81 |\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/enterprisesearch.spec.js:78:20"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Using existing auth session...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/v2/nterprise-search\n"
+                        },
+                        {
+                          "text": "Storage state expired, creating new session...\n"
+                        },
+                        {
+                          "text": "Starting direct login process...\n"
+                        },
+                        {
+                          "text": "Navigated to login URL directly\n"
+                        },
+                        {
+                          "text": "Go to Login button visible: \u001b[33mfalse\u001b[39m\n"
+                        },
+                        {
+                          "text": "Login button visible: \u001b[33mfalse\u001b[39m\n"
+                        },
+                        {
+                          "text": "Waiting for Auth0 login page...\n"
+                        },
+                        {
+                          "text": "Auth check error, continuing with current page state\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "🗑️ Attempting to delete Insights workspace: \"Tesla’s Transforming\"\n"
+                        },
+                        {
+                          "text": "⚠️ Error deleting Insights workspace: page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Delete Workspace\")') to be visible\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "🗑️ Attempting to delete Query workspace: \"acme_chatbot\"\n"
+                        },
+                        {
+                          "text": "⚠️ Error deleting Query workspace: page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Delete Workspace\")') to be visible\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "✅ Cleanup completed\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "Direct login failed: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n"
+                        }
+                      ],
+                      "retry": 2,
+                      "startTime": "2026-02-06T19:19:00.061Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "62f9178d886387b97391-14bae53fd51f0537c25b",
+              "file": "enterprisesearch.spec.js",
+              "line": 56,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Extract.spec.js",
+      "file": "Extract.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login and Navigation Tests",
+          "file": "Extract.spec.js",
+          "line": 18,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "OCR Document Processing Tests",
+              "file": "Extract.spec.js",
+              "line": 20,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "@smoke @e2e @integration TC01:Verify File content Extracted successfully",
+                  "ok": true,
+                  "tags": [
+                    "smoke",
+                    "e2e",
+                    "integration"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "parallelIndex": 2,
+                          "status": "passed",
+                          "duration": 43068,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "Creating new auth session...\n"
+                            },
+                            {
+                              "text": "Auth session saved successfully\n"
+                            },
+                            {
+                              "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/extract\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-06T19:13:47.022Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fb8171f0e1175ce3cf80-68aacaa146fbd464b5ec",
+                  "file": "Extract.spec.js",
+                  "line": 37,
+                  "column": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "insights.spec.js",
+      "file": "insights.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Insights Feature Tests",
+          "file": "insights.spec.js",
+          "line": 14,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke @e2e @integration TC02: Create workspace with Insights use case",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "e2e",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 6598,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-06T19:14:30.264Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-1c63accefecc48dc6616",
+              "file": "insights.spec.js",
+              "line": 65,
+              "column": 3
+            },
+            {
+              "title": "@smoke @e2e @integration TC06:Insights use case - Verify workspace functionality - upload document",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "e2e",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 11327,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-06T19:14:36.869Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-accd187e60cc142bc42c",
+              "file": "insights.spec.js",
+              "line": 148,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "KPIdashboard/AIAssistant.spec.js",
+      "file": "KPIdashboard/AIAssistant.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "AI Assistant Text_Bot Tests",
+          "file": "KPIdashboard/AIAssistant.spec.js",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke @e2e @integration Ask a question and verify results",
+              "ok": false,
+              "tags": [
+                "smoke",
+                "e2e",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 240000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "timedOut",
+                      "duration": 240007,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 240000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 240000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:8:8",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js",
+                          "column": 8,
+                          "line": 8
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  6 |\u001b[39m   \u001b[36mlet\u001b[39m aiAssistant\u001b[33m;\u001b[39m\n \u001b[90m  7 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m     aiAssistant \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mAIAssistantPage\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m aiAssistant\u001b[33m.\u001b[39mnavigateToDashboard()\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js",
+                            "column": 8,
+                            "line": 8
+                          },
+                          "message": "\u001b[31mTest timeout of 240000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n   6 |   let aiAssistant;\n   7 |\n>  8 |   test.beforeEach(async ({ page }) => {\n     |        ^\n   9 |     aiAssistant = new AIAssistantPage(page);\n  10 |     await aiAssistant.navigateToDashboard();\n  11 |   });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:8:8"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                            "column": 21,
+                            "line": 25
+                          },
+                          "message": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/AIAssistant.js:25\n\n  23 |\n  24 |   async navigateToDashboard() {\n> 25 |     await this.page.goto(\"https://nsight-dev.ngenux.app/project/ai-dashboard\");\n     |                     ^\n  26 |   }\n  27 |\n  28 |   async toggleAssistant() {\n    at AIAssistantPage.navigateToDashboard (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:25:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:10:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-06T19:14:48.209Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js",
+                        "column": 8,
+                        "line": 8
+                      }
+                    },
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 2,
+                      "status": "timedOut",
+                      "duration": 240018,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 240000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 240000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:8:8",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js",
+                          "column": 8,
+                          "line": 8
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  6 |\u001b[39m   \u001b[36mlet\u001b[39m aiAssistant\u001b[33m;\u001b[39m\n \u001b[90m  7 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m     aiAssistant \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mAIAssistantPage\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m aiAssistant\u001b[33m.\u001b[39mnavigateToDashboard()\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js",
+                            "column": 8,
+                            "line": 8
+                          },
+                          "message": "\u001b[31mTest timeout of 240000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n   6 |   let aiAssistant;\n   7 |\n>  8 |   test.beforeEach(async ({ page }) => {\n     |        ^\n   9 |     aiAssistant = new AIAssistantPage(page);\n  10 |     await aiAssistant.navigateToDashboard();\n  11 |   });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:8:8"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                            "column": 21,
+                            "line": 25
+                          },
+                          "message": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/AIAssistant.js:25\n\n  23 |\n  24 |   async navigateToDashboard() {\n> 25 |     await this.page.goto(\"https://nsight-dev.ngenux.app/project/ai-dashboard\");\n     |                     ^\n  26 |   }\n  27 |\n  28 |   async toggleAssistant() {\n    at AIAssistantPage.navigateToDashboard (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:25:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:10:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-02-06T19:18:48.824Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js",
+                        "column": 8,
+                        "line": 8
+                      }
+                    },
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 2,
+                      "status": "timedOut",
+                      "duration": 240016,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 240000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 240000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:8:8",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js",
+                          "column": 8,
+                          "line": 8
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  6 |\u001b[39m   \u001b[36mlet\u001b[39m aiAssistant\u001b[33m;\u001b[39m\n \u001b[90m  7 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m     aiAssistant \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mAIAssistantPage\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m aiAssistant\u001b[33m.\u001b[39mnavigateToDashboard()\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js",
+                            "column": 8,
+                            "line": 8
+                          },
+                          "message": "\u001b[31mTest timeout of 240000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n   6 |   let aiAssistant;\n   7 |\n>  8 |   test.beforeEach(async ({ page }) => {\n     |        ^\n   9 |     aiAssistant = new AIAssistantPage(page);\n  10 |     await aiAssistant.navigateToDashboard();\n  11 |   });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:8:8"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                            "column": 21,
+                            "line": 25
+                          },
+                          "message": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/AIAssistant.js:25\n\n  23 |\n  24 |   async navigateToDashboard() {\n> 25 |     await this.page.goto(\"https://nsight-dev.ngenux.app/project/ai-dashboard\");\n     |                     ^\n  26 |   }\n  27 |\n  28 |   async toggleAssistant() {\n    at AIAssistantPage.navigateToDashboard (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:25:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:10:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 2,
+                      "startTime": "2026-02-06T19:22:49.514Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js",
+                        "column": 8,
+                        "line": 8
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a6ff67ba357b9c52e637-26295399957cd0908042",
+              "file": "KPIdashboard/AIAssistant.spec.js",
+              "line": 17,
+              "column": 3
+            },
+            {
+              "title": "@smoke @e2e @integration Start a new chat and verify results",
+              "ok": false,
+              "tags": [
+                "smoke",
+                "e2e",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 240000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 240010,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 240000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 240000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:8:8",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js",
+                          "column": 8,
+                          "line": 8
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  6 |\u001b[39m   \u001b[36mlet\u001b[39m aiAssistant\u001b[33m;\u001b[39m\n \u001b[90m  7 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m     aiAssistant \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mAIAssistantPage\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m aiAssistant\u001b[33m.\u001b[39mnavigateToDashboard()\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js",
+                            "column": 8,
+                            "line": 8
+                          },
+                          "message": "\u001b[31mTest timeout of 240000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n   6 |   let aiAssistant;\n   7 |\n>  8 |   test.beforeEach(async ({ page }) => {\n     |        ^\n   9 |     aiAssistant = new AIAssistantPage(page);\n  10 |     await aiAssistant.navigateToDashboard();\n  11 |   });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:8:8"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                            "column": 21,
+                            "line": 25
+                          },
+                          "message": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/AIAssistant.js:25\n\n  23 |\n  24 |   async navigateToDashboard() {\n> 25 |     await this.page.goto(\"https://nsight-dev.ngenux.app/project/ai-dashboard\");\n     |                     ^\n  26 |   }\n  27 |\n  28 |   async toggleAssistant() {\n    at AIAssistantPage.navigateToDashboard (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:25:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:10:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-06T19:15:01.131Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js",
+                        "column": 8,
+                        "line": 8
+                      }
+                    },
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 240016,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 240000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 240000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:8:8",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js",
+                          "column": 8,
+                          "line": 8
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  6 |\u001b[39m   \u001b[36mlet\u001b[39m aiAssistant\u001b[33m;\u001b[39m\n \u001b[90m  7 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m     aiAssistant \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mAIAssistantPage\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m aiAssistant\u001b[33m.\u001b[39mnavigateToDashboard()\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js",
+                            "column": 8,
+                            "line": 8
+                          },
+                          "message": "\u001b[31mTest timeout of 240000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n   6 |   let aiAssistant;\n   7 |\n>  8 |   test.beforeEach(async ({ page }) => {\n     |        ^\n   9 |     aiAssistant = new AIAssistantPage(page);\n  10 |     await aiAssistant.navigateToDashboard();\n  11 |   });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:8:8"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                            "column": 21,
+                            "line": 25
+                          },
+                          "message": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/AIAssistant.js:25\n\n  23 |\n  24 |   async navigateToDashboard() {\n> 25 |     await this.page.goto(\"https://nsight-dev.ngenux.app/project/ai-dashboard\");\n     |                     ^\n  26 |   }\n  27 |\n  28 |   async toggleAssistant() {\n    at AIAssistantPage.navigateToDashboard (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:25:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:10:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-02-06T19:19:01.767Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js",
+                        "column": 8,
+                        "line": 8
+                      }
+                    },
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 240017,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 240000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 240000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:8:8",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js",
+                          "column": 8,
+                          "line": 8
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  6 |\u001b[39m   \u001b[36mlet\u001b[39m aiAssistant\u001b[33m;\u001b[39m\n \u001b[90m  7 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m     aiAssistant \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mAIAssistantPage\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m aiAssistant\u001b[33m.\u001b[39mnavigateToDashboard()\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js",
+                            "column": 8,
+                            "line": 8
+                          },
+                          "message": "\u001b[31mTest timeout of 240000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n   6 |   let aiAssistant;\n   7 |\n>  8 |   test.beforeEach(async ({ page }) => {\n     |        ^\n   9 |     aiAssistant = new AIAssistantPage(page);\n  10 |     await aiAssistant.navigateToDashboard();\n  11 |   });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:8:8"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                            "column": 21,
+                            "line": 25
+                          },
+                          "message": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/AIAssistant.js:25\n\n  23 |\n  24 |   async navigateToDashboard() {\n> 25 |     await this.page.goto(\"https://nsight-dev.ngenux.app/project/ai-dashboard\");\n     |                     ^\n  26 |   }\n  27 |\n  28 |   async toggleAssistant() {\n    at AIAssistantPage.navigateToDashboard (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:25:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:10:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 2,
+                      "startTime": "2026-02-06T19:23:02.455Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js",
+                        "column": 8,
+                        "line": 8
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a6ff67ba357b9c52e637-639e1c9348080df9f2bd",
+              "file": "KPIdashboard/AIAssistant.spec.js",
+              "line": 31,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "KPIdashboard/aiDashboard.spec.js",
+      "file": "KPIdashboard/aiDashboard.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": " AI Dashboard KPI Flow",
+          "file": "KPIdashboard/aiDashboard.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke @e2e @integration OTIF metrics chart operations",
+              "ok": false,
+              "tags": [
+                "smoke",
+                "e2e",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 600000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 1,
+                      "status": "timedOut",
+                      "duration": 600018,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 600000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 600000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:12:8",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js",
+                          "column": 8,
+                          "line": 12
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 10 |\u001b[39m   \u001b[36mlet\u001b[39m generateAIInsights\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 12 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 13 |\u001b[39m     aiDashboard \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mAiDashboardPage\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m     generateAIInsights \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mGenerateAIInsightsPage\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m aiDashboard\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js",
+                            "column": 8,
+                            "line": 12
+                          },
+                          "message": "\u001b[31mTest timeout of 600000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n  10 |   let generateAIInsights;\n  11 |\n> 12 |   test.beforeEach(async ({ page }) => {\n     |        ^\n  13 |     aiDashboard = new AiDashboardPage(page);\n  14 |     generateAIInsights = new GenerateAIInsightsPage(page);\n  15 |     await aiDashboard.goto(URL_OF_YOUR_KPI_DASHBOARD);\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:12:8"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 21,
+                            "line": 15
+                          },
+                          "message": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n  13 |\n  14 |   async goto() {\n> 15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n     |                     ^\n  16 |     await expect(this.kpiHeading).toBeVisible();\n  17 |   }\n  18 |\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-06T19:21:33.440Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js",
+                        "column": 8,
+                        "line": 12
+                      }
+                    },
+                    {
+                      "workerIndex": 14,
+                      "parallelIndex": 1,
+                      "status": "timedOut",
+                      "duration": 600019,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 600000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 600000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:12:8",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js",
+                          "column": 8,
+                          "line": 12
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 10 |\u001b[39m   \u001b[36mlet\u001b[39m generateAIInsights\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 12 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 13 |\u001b[39m     aiDashboard \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mAiDashboardPage\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m     generateAIInsights \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mGenerateAIInsightsPage\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m aiDashboard\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js",
+                            "column": 8,
+                            "line": 12
+                          },
+                          "message": "\u001b[31mTest timeout of 600000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n  10 |   let generateAIInsights;\n  11 |\n> 12 |   test.beforeEach(async ({ page }) => {\n     |        ^\n  13 |     aiDashboard = new AiDashboardPage(page);\n  14 |     generateAIInsights = new GenerateAIInsightsPage(page);\n  15 |     await aiDashboard.goto(URL_OF_YOUR_KPI_DASHBOARD);\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:12:8"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 21,
+                            "line": 15
+                          },
+                          "message": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n  13 |\n  14 |   async goto() {\n> 15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n     |                     ^\n  16 |     await expect(this.kpiHeading).toBeVisible();\n  17 |   }\n  18 |\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-02-06T19:31:34.156Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js",
+                        "column": 8,
+                        "line": 12
+                      }
+                    },
+                    {
+                      "workerIndex": 17,
+                      "parallelIndex": 1,
+                      "status": "timedOut",
+                      "duration": 600028,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 600000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 600000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:12:8",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js",
+                          "column": 8,
+                          "line": 12
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 10 |\u001b[39m   \u001b[36mlet\u001b[39m generateAIInsights\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 12 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 13 |\u001b[39m     aiDashboard \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mAiDashboardPage\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m     generateAIInsights \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mGenerateAIInsightsPage\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m aiDashboard\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js",
+                            "column": 8,
+                            "line": 12
+                          },
+                          "message": "\u001b[31mTest timeout of 600000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n  10 |   let generateAIInsights;\n  11 |\n> 12 |   test.beforeEach(async ({ page }) => {\n     |        ^\n  13 |     aiDashboard = new AiDashboardPage(page);\n  14 |     generateAIInsights = new GenerateAIInsightsPage(page);\n  15 |     await aiDashboard.goto(URL_OF_YOUR_KPI_DASHBOARD);\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:12:8"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 21,
+                            "line": 15
+                          },
+                          "message": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n  13 |\n  14 |   async goto() {\n> 15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n     |                     ^\n  16 |     await expect(this.kpiHeading).toBeVisible();\n  17 |   }\n  18 |\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 2,
+                      "startTime": "2026-02-06T19:41:34.873Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/aiDashboard.spec.js",
+                        "column": 8,
+                        "line": 12
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "e1d7752688fb686de41b-bf2052b32cb1112b817a",
+              "file": "KPIdashboard/aiDashboard.spec.js",
+              "line": 297,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "KPIdashboard/generateAIInsights.spec.js",
+      "file": "KPIdashboard/generateAIInsights.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Generate AI Insights Tests",
+          "file": "KPIdashboard/generateAIInsights.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke @e2e @integration Generate AI Insights and verify results",
+              "ok": false,
+              "tags": [
+                "smoke",
+                "e2e",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 600000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 2,
+                      "status": "timedOut",
+                      "duration": 601601,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 600000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 600000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:12:8",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js",
+                          "column": 8,
+                          "line": 12
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 10 |\u001b[39m   \u001b[36mlet\u001b[39m aiDashboard\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 12 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 13 |\u001b[39m     generateAIInsights \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mGenerateAIInsightsPage\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m     aiDashboard \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mAiDashboardPage\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m aiDashboard\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js",
+                            "column": 8,
+                            "line": 12
+                          },
+                          "message": "\u001b[31mTest timeout of 600000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n  10 |   let aiDashboard;\n  11 |\n> 12 |   test.beforeEach(async ({ page }) => {\n     |        ^\n  13 |     generateAIInsights = new GenerateAIInsightsPage(page);\n  14 |     aiDashboard = new AiDashboardPage(page);\n  15 |     await aiDashboard.goto(URL_OF_YOUR_KPI_DASHBOARD);\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:12:8"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 35,
+                            "line": 16
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByRole('heading', { name: 'KPI Dashboard' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'KPI Dashboard' })\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:16\n\n  14 |   async goto() {\n  15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n> 16 |     await expect(this.kpiHeading).toBeVisible();\n     |                                   ^\n  17 |   }\n  18 |\n  19 |   async switchRole(roleName) {\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:16:35)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:15:5"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-06T19:26:50.207Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-generateAIIns-eb19c-Insights-and-verify-results-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js",
+                        "column": 8,
+                        "line": 12
+                      }
+                    },
+                    {
+                      "workerIndex": 16,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 600934,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 600000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 600000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:12:8",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js",
+                          "column": 8,
+                          "line": 12
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 10 |\u001b[39m   \u001b[36mlet\u001b[39m aiDashboard\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 12 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 13 |\u001b[39m     generateAIInsights \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mGenerateAIInsightsPage\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m     aiDashboard \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mAiDashboardPage\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m aiDashboard\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js",
+                            "column": 8,
+                            "line": 12
+                          },
+                          "message": "\u001b[31mTest timeout of 600000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n  10 |   let aiDashboard;\n  11 |\n> 12 |   test.beforeEach(async ({ page }) => {\n     |        ^\n  13 |     generateAIInsights = new GenerateAIInsightsPage(page);\n  14 |     aiDashboard = new AiDashboardPage(page);\n  15 |     await aiDashboard.goto(URL_OF_YOUR_KPI_DASHBOARD);\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:12:8"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 35,
+                            "line": 16
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByRole('heading', { name: 'KPI Dashboard' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'KPI Dashboard' })\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:16\n\n  14 |   async goto() {\n  15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n> 16 |     await expect(this.kpiHeading).toBeVisible();\n     |                                   ^\n  17 |   }\n  18 |\n  19 |   async switchRole(roleName) {\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:16:35)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:15:5"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-02-06T19:36:52.500Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-generateAIIns-eb19c-Insights-and-verify-results-chromium-retry1/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js",
+                        "column": 8,
+                        "line": 12
+                      }
+                    },
+                    {
+                      "workerIndex": 18,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 605013,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 600000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 600000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:12:8",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js",
+                          "column": 8,
+                          "line": 12
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 10 |\u001b[39m   \u001b[36mlet\u001b[39m aiDashboard\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 12 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 13 |\u001b[39m     generateAIInsights \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mGenerateAIInsightsPage\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m     aiDashboard \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mAiDashboardPage\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m aiDashboard\u001b[33m.\u001b[39mgoto(\u001b[33mURL_OF_YOUR_KPI_DASHBOARD\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js",
+                            "column": 8,
+                            "line": 12
+                          },
+                          "message": "\u001b[31mTest timeout of 600000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n  10 |   let aiDashboard;\n  11 |\n> 12 |   test.beforeEach(async ({ page }) => {\n     |        ^\n  13 |     generateAIInsights = new GenerateAIInsightsPage(page);\n  14 |     aiDashboard = new AiDashboardPage(page);\n  15 |     await aiDashboard.goto(URL_OF_YOUR_KPI_DASHBOARD);\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:12:8"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js",
+                            "column": 21,
+                            "line": 15
+                          },
+                          "message": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/aiDashboard.js:15\n\n  13 |\n  14 |   async goto() {\n> 15 |     await this.page.goto(URL_OF_YOUR_KPI_DASHBOARD);\n     |                     ^\n  16 |     await expect(this.kpiHeading).toBeVisible();\n  17 |   }\n  18 |\n    at AiDashboardPage.goto (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/aiDashboard.js:15:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:15:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 2,
+                      "startTime": "2026-02-06T19:46:54.124Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js",
+                        "column": 8,
+                        "line": 12
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4c71a8a457cfce231c08-8bd795abc0836152191b",
+              "file": "KPIdashboard/generateAIInsights.spec.js",
+              "line": 18,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "pulse.spec.js",
+      "file": "pulse.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Pulse sentiment analysis – functional flow",
+          "file": "pulse.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke @e2e @integration TC001_generateSentimentFromText",
+              "ok": false,
+              "tags": [
+                "smoke",
+                "e2e",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 8772,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                          "column": 28,
+                          "line": 106
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 104 |\u001b[39m       \n \u001b[90m 105 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mgetSentimentValue())\u001b[33m.\u001b[39mtoLowerCase()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 106 |\u001b[39m       \u001b[36mawait\u001b[39m expect(result)\u001b[33m.\u001b[39mtoBe(dataset[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mexpected)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 107 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Correct: \"${dataset[0].text}\" → ${result}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 109 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 28,
+                            "line": 106
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n\n  104 |       \n  105 |       const result = (await pulse.getSentimentValue()).toLowerCase();\n> 106 |       await expect(result).toBe(dataset[0].expected);\n      |                            ^\n  107 |       console.log(`✅ Correct: \"${dataset[0].text}\" → ${result}`);\n  108 |     });\n  109 |   });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 8,
+                            "line": 283
+                          },
+                          "message": "\u001b[31m\"afterAll\" hook timeout of 90000ms exceeded.\u001b[39m\n\n  281 |   });\n  282 |\n> 283 |   test.afterAll(async ({ page }) => {\n      |        ^\n  284 |     await test.step('Navigate to pulse page', async () => {\n  285 |       await page.goto(`${loginUrl}/project/pulse`);\n  286 |     });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:283:8"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 76,
+                            "line": 295
+                          },
+                          "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Delete Workspace' }).first()\u001b[22m\n\n\n  293 |\n  294 |       // Click delete workspace option\n> 295 |       await page.getByRole(\"button\", { name: \"Delete Workspace\" }).first().click();\n      |                                                                            ^\n  296 |\n  297 |       // Confirm deletion\n  298 |       await page.getByRole(\"button\", { name: \"Delete\" }).click();\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:295:76\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:288:5"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Using existing auth session...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Open pulse workspace",
+                          "duration": 32
+                        },
+                        {
+                          "title": "Analyze text and verify sentiment",
+                          "duration": 5166,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5",
+                            "location": {
+                              "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                              "column": 28,
+                              "line": 106
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 104 |\u001b[39m       \n \u001b[90m 105 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mgetSentimentValue())\u001b[33m.\u001b[39mtoLowerCase()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 106 |\u001b[39m       \u001b[36mawait\u001b[39m expect(result)\u001b[33m.\u001b[39mtoBe(dataset[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mexpected)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 107 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Correct: \"${dataset[0].text}\" → ${result}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 109 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-02-06T19:27:03.162Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse-Pulse-sentiment-anal-4d4d4-1-generateSentimentFromText-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 28,
+                        "line": 106
+                      }
+                    },
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 8738,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                          "column": 28,
+                          "line": 106
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 104 |\u001b[39m       \n \u001b[90m 105 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mgetSentimentValue())\u001b[33m.\u001b[39mtoLowerCase()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 106 |\u001b[39m       \u001b[36mawait\u001b[39m expect(result)\u001b[33m.\u001b[39mtoBe(dataset[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mexpected)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 107 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Correct: \"${dataset[0].text}\" → ${result}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 109 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 28,
+                            "line": 106
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n\n  104 |       \n  105 |       const result = (await pulse.getSentimentValue()).toLowerCase();\n> 106 |       await expect(result).toBe(dataset[0].expected);\n      |                            ^\n  107 |       console.log(`✅ Correct: \"${dataset[0].text}\" → ${result}`);\n  108 |     });\n  109 |   });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 8,
+                            "line": 283
+                          },
+                          "message": "\u001b[31m\"afterAll\" hook timeout of 90000ms exceeded.\u001b[39m\n\n  281 |   });\n  282 |\n> 283 |   test.afterAll(async ({ page }) => {\n      |        ^\n  284 |     await test.step('Navigate to pulse page', async () => {\n  285 |       await page.goto(`${loginUrl}/project/pulse`);\n  286 |     });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:283:8"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 76,
+                            "line": 295
+                          },
+                          "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Delete Workspace' }).first()\u001b[22m\n\n\n  293 |\n  294 |       // Click delete workspace option\n> 295 |       await page.getByRole(\"button\", { name: \"Delete Workspace\" }).first().click();\n      |                                                                            ^\n  296 |\n  297 |       // Confirm deletion\n  298 |       await page.getByRole(\"button\", { name: \"Delete\" }).click();\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:295:76\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:288:5"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Using existing auth session...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "steps": [
+                        {
+                          "title": "Open pulse workspace",
+                          "duration": 21
+                        },
+                        {
+                          "title": "Analyze text and verify sentiment",
+                          "duration": 5165,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5",
+                            "location": {
+                              "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                              "column": 28,
+                              "line": 106
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 104 |\u001b[39m       \n \u001b[90m 105 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mgetSentimentValue())\u001b[33m.\u001b[39mtoLowerCase()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 106 |\u001b[39m       \u001b[36mawait\u001b[39m expect(result)\u001b[33m.\u001b[39mtoBe(dataset[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mexpected)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 107 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Correct: \"${dataset[0].text}\" → ${result}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 109 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-02-06T19:28:50.731Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse-Pulse-sentiment-anal-4d4d4-1-generateSentimentFromText-chromium-retry1/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 28,
+                        "line": 106
+                      }
+                    },
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 8856,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                          "column": 28,
+                          "line": 106
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 104 |\u001b[39m       \n \u001b[90m 105 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mgetSentimentValue())\u001b[33m.\u001b[39mtoLowerCase()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 106 |\u001b[39m       \u001b[36mawait\u001b[39m expect(result)\u001b[33m.\u001b[39mtoBe(dataset[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mexpected)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 107 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Correct: \"${dataset[0].text}\" → ${result}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 109 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 28,
+                            "line": 106
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n\n  104 |       \n  105 |       const result = (await pulse.getSentimentValue()).toLowerCase();\n> 106 |       await expect(result).toBe(dataset[0].expected);\n      |                            ^\n  107 |       console.log(`✅ Correct: \"${dataset[0].text}\" → ${result}`);\n  108 |     });\n  109 |   });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 8,
+                            "line": 283
+                          },
+                          "message": "\u001b[31m\"afterAll\" hook timeout of 90000ms exceeded.\u001b[39m\n\n  281 |   });\n  282 |\n> 283 |   test.afterAll(async ({ page }) => {\n      |        ^\n  284 |     await test.step('Navigate to pulse page', async () => {\n  285 |       await page.goto(`${loginUrl}/project/pulse`);\n  286 |     });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:283:8"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 76,
+                            "line": 295
+                          },
+                          "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Delete Workspace' }).first()\u001b[22m\n\n\n  293 |\n  294 |       // Click delete workspace option\n> 295 |       await page.getByRole(\"button\", { name: \"Delete Workspace\" }).first().click();\n      |                                                                            ^\n  296 |\n  297 |       // Confirm deletion\n  298 |       await page.getByRole(\"button\", { name: \"Delete\" }).click();\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:295:76\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:288:5"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Using existing auth session...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 2,
+                      "steps": [
+                        {
+                          "title": "Open pulse workspace",
+                          "duration": 32
+                        },
+                        {
+                          "title": "Analyze text and verify sentiment",
+                          "duration": 5151,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5",
+                            "location": {
+                              "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                              "column": 28,
+                              "line": 106
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 104 |\u001b[39m       \n \u001b[90m 105 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mgetSentimentValue())\u001b[33m.\u001b[39mtoLowerCase()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 106 |\u001b[39m       \u001b[36mawait\u001b[39m expect(result)\u001b[33m.\u001b[39mtoBe(dataset[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mexpected)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 107 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Correct: \"${dataset[0].text}\" → ${result}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 109 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-02-06T19:30:36.839Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse-Pulse-sentiment-anal-4d4d4-1-generateSentimentFromText-chromium-retry2/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 28,
+                        "line": 106
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4199f64b3242841a2ce2-4ed47870f417f2dc6092",
+              "file": "pulse.spec.js",
+              "line": 93,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "quality-check.spec.js",
+      "file": "quality-check.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Quality Check Feature Tests",
+          "file": "quality-check.spec.js",
+          "line": 14,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke @e2e @integration TC04: Image comparison shows results with similarity score and visual difference",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "e2e",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 18121,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Using existing auth session...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/quality-check\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-06T19:32:23.032Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "094a1e5d42dc18e53fae-87b71c0f2c118256ab06",
+              "file": "quality-check.spec.js",
+              "line": 74,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "query.spec.js",
+      "file": "query.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Query feature – functional tests",
+          "file": "query.spec.js",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": " @smoke TC01_validQueryDisplaysResults",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 49005,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-06T19:32:41.286Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e81f4f68ea27254567d8-282d117fc0d24988b51f",
+              "file": "query.spec.js",
+              "line": 43,
+              "column": 3
+            },
+            {
+              "title": "@smoke TC03_longQueryHandled",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 48325,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-06T19:33:44.289Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e81f4f68ea27254567d8-aa345018465156b707ee",
+              "file": "query.spec.js",
+              "line": 68,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-02-06T19:13:45.638Z",
+    "duration": 2593609.5670000003,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 6,
+    "flaky": 0
+  }
+}
