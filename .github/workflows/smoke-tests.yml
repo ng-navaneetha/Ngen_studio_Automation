@@ -124,10 +124,6 @@ jobs:
 
   smoke:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        shard: [1, 2, 3]
 
     steps:
       - name: Checkout code
@@ -159,6 +155,14 @@ jobs:
       - name: Run Playwright smoke tests with HTML + JSON report
         id: tests
         continue-on-error: true
+        env:
+          DASHBOARD_URL: ${{ secrets.DASHBOARD_URL }}
+          EMAIL: ${{ secrets.EMAIL }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          INVITEE_EMAIL: ${{ secrets.INVITEE_EMAIL }}
+          INVITEE_PASSWORD: ${{ secrets.INVITEE_PASSWORD }}
+          INVITE_EMAIL: ${{ secrets.INVITE_EMAIL }}
+          TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
         run: |
           echo "🔍 Environment Variables Check:"
           echo "DASHBOARD_URL: ${DASHBOARD_URL:-NOT_SET}"
@@ -178,10 +182,10 @@ jobs:
           # Ensure base reports folder always exists
           mkdir -p reports
           
-          # Run Playwright smoke tests with sharding
-          npx playwright test --grep @smoke --shard=${{ matrix.shard }}/3 --workers=3 --timeout=90000 || true
+          # Run Playwright smoke tests
+          npx playwright test --grep @smoke --workers=3 --timeout=90000 || true
 
-          ts=$(date +'%Y-%m-%d_%H-%M-%S')-shard-${{ matrix.shard }}
+          ts=$(date +'%Y-%m-%d_%H-%M-%S')
 
           # Move reports and handle missing files gracefully
           if [ -d "playwright-report" ]; then
@@ -202,9 +206,9 @@ jobs:
           echo "REPORT_TS=$ts" >> $GITHUB_ENV
           echo "✅ Reports organized under reports/$ts"
 
-      - name: Deploy Playwright reports to GitHub Pages
+      - name: Deploy reports to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
-        if: always() && matrix.shard == 1
+        if: always()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./reports
