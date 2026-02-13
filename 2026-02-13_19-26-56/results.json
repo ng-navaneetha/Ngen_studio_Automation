@@ -1,0 +1,1984 @@
+{
+  "config": {
+    "configFile": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/playwright.config.js",
+    "rootDir": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests",
+    "forbidOnly": true,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/commit/b1d3520b05f4dbfe708f00b3cb946a5c36e16f2c",
+        "commitHash": "b1d3520b05f4dbfe708f00b3cb946a5c36e16f2c",
+        "buildHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/actions/runs/21999550509"
+      },
+      "gitCommit": {
+        "shortHash": "b1d3520",
+        "hash": "b1d3520b05f4dbfe708f00b3cb946a5c36e16f2c",
+        "subject": "Consolidate smoke tests: run all in one job with single report",
+        "body": "Consolidate smoke tests: run all in one job with single report\n",
+        "author": {
+          "name": "ng-navaneetha",
+          "email": "navaneetha.b@ngenux.com",
+          "time": 1770362477000
+        },
+        "committer": {
+          "name": "ng-navaneetha",
+          "email": "navaneetha.b@ngenux.com",
+          "time": 1770362477000
+        },
+        "branch": "main"
+      },
+      "actualWorkers": 3
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ],
+      [
+        "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/node_modules/allure-playwright/dist/cjs/index.js",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/commit/b1d3520b05f4dbfe708f00b3cb946a5c36e16f2c",
+            "commitHash": "b1d3520b05f4dbfe708f00b3cb946a5c36e16f2c",
+            "buildHref": "https://github.com/ng-navaneetha/Ngen_studio_Automation/actions/runs/21999550509"
+          },
+          "gitCommit": {
+            "shortHash": "b1d3520",
+            "hash": "b1d3520b05f4dbfe708f00b3cb946a5c36e16f2c",
+            "subject": "Consolidate smoke tests: run all in one job with single report",
+            "body": "Consolidate smoke tests: run all in one job with single report\n",
+            "author": {
+              "name": "ng-navaneetha",
+              "email": "navaneetha.b@ngenux.com",
+              "time": 1770362477000
+            },
+            "committer": {
+              "name": "ng-navaneetha",
+              "email": "navaneetha.b@ngenux.com",
+              "time": 1770362477000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 3
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.53.1",
+    "workers": 3,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "call-summarization.spec.js",
+      "file": "call-summarization.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Call Summarization",
+          "file": "call-summarization.spec.js",
+          "line": 57,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke @e2e @integration TC06: Happy flow - Summary screen - UI and content assertions",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "e2e",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 160000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 41658,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Creating new auth session...\n"
+                        },
+                        {
+                          "text": "Auth session saved successfully\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/summary\n"
+                        },
+                        {
+                          "text": "art_in8.mp3\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/summary\n"
+                        },
+                        {
+                          "text": "✅ Deleted Summary workspace\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-13T19:15:50.610Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b4980f566f3e0f5bf01c-fb75e5365ab1995cd33d",
+              "file": "call-summarization.spec.js",
+              "line": 167,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "enterprisesearch.spec.js",
+      "file": "enterprisesearch.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Enterprise Search Processing Tests",
+          "file": "enterprisesearch.spec.js",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke @e2e @integration TC01:Enterprise Search use case - Verify workspace functionality - upload document",
+              "ok": false,
+              "tags": [
+                "smoke",
+                "e2e",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "timedOut",
+                      "duration": 120014,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/enterprisesearch.spec.js",
+                            "column": 20,
+                            "line": 78
+                          },
+                          "message": "Error: page.waitForSelector: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('table') to be visible\u001b[22m\n\n\n  76 |       // verify table is visible for 1st question\n  77 |       if (question.includes(\"OTIF\")) {\n> 78 |         await page.waitForSelector(\"table\", { timeout: 120000 });\n     |                    ^\n  79 |         await expect(page.locator(\"table\")).toBeVisible();\n  80 |       }\n  81 |\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/enterprisesearch.spec.js:78:20"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Creating new auth session...\n"
+                        },
+                        {
+                          "text": "Auth session saved successfully\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/v2/nterprise-search\n"
+                        },
+                        {
+                          "text": "Storage state expired, creating new session...\n"
+                        },
+                        {
+                          "text": "Starting direct login process...\n"
+                        },
+                        {
+                          "text": "Navigated to login URL directly\n"
+                        },
+                        {
+                          "text": "Go to Login button visible: \u001b[33mfalse\u001b[39m\n"
+                        },
+                        {
+                          "text": "Login button visible: \u001b[33mfalse\u001b[39m\n"
+                        },
+                        {
+                          "text": "Waiting for Auth0 login page...\n"
+                        },
+                        {
+                          "text": "Auth check error, continuing with current page state\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "🗑️ Attempting to delete Insights workspace: \"Tesla’s Transforming\"\n"
+                        },
+                        {
+                          "text": "⚠️ Error deleting Insights workspace: page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Delete Workspace\")') to be visible\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "🗑️ Attempting to delete Query workspace: \"acme_chatbot\"\n"
+                        },
+                        {
+                          "text": "⚠️ Error deleting Query workspace: page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Delete Workspace\")') to be visible\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "✅ Cleanup completed\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "Direct login failed: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2026-02-13T19:15:50.580Z",
+                      "annotations": [],
+                      "attachments": []
+                    },
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 1,
+                      "status": "timedOut",
+                      "duration": 120011,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/enterprisesearch.spec.js",
+                            "column": 20,
+                            "line": 78
+                          },
+                          "message": "Error: page.waitForSelector: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('table') to be visible\u001b[22m\n\n\n  76 |       // verify table is visible for 1st question\n  77 |       if (question.includes(\"OTIF\")) {\n> 78 |         await page.waitForSelector(\"table\", { timeout: 120000 });\n     |                    ^\n  79 |         await expect(page.locator(\"table\")).toBeVisible();\n  80 |       }\n  81 |\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/enterprisesearch.spec.js:78:20"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Using existing auth session...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/v2/nterprise-search\n"
+                        },
+                        {
+                          "text": "Storage state expired, creating new session...\n"
+                        },
+                        {
+                          "text": "Starting direct login process...\n"
+                        },
+                        {
+                          "text": "Navigated to login URL directly\n"
+                        },
+                        {
+                          "text": "Go to Login button visible: \u001b[33mfalse\u001b[39m\n"
+                        },
+                        {
+                          "text": "Login button visible: \u001b[33mfalse\u001b[39m\n"
+                        },
+                        {
+                          "text": "Waiting for Auth0 login page...\n"
+                        },
+                        {
+                          "text": "Auth check error, continuing with current page state\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "🗑️ Attempting to delete Insights workspace: \"Tesla’s Transforming\"\n"
+                        },
+                        {
+                          "text": "⚠️ Error deleting Insights workspace: page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Delete Workspace\")') to be visible\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "🗑️ Attempting to delete Query workspace: \"acme_chatbot\"\n"
+                        },
+                        {
+                          "text": "⚠️ Error deleting Query workspace: page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Delete Workspace\")') to be visible\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "✅ Cleanup completed\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "Direct login failed: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n"
+                        }
+                      ],
+                      "retry": 1,
+                      "startTime": "2026-02-13T19:18:32.788Z",
+                      "annotations": [],
+                      "attachments": []
+                    },
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 1,
+                      "status": "timedOut",
+                      "duration": 120009,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/enterprisesearch.spec.js",
+                            "column": 20,
+                            "line": 78
+                          },
+                          "message": "Error: page.waitForSelector: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('table') to be visible\u001b[22m\n\n\n  76 |       // verify table is visible for 1st question\n  77 |       if (question.includes(\"OTIF\")) {\n> 78 |         await page.waitForSelector(\"table\", { timeout: 120000 });\n     |                    ^\n  79 |         await expect(page.locator(\"table\")).toBeVisible();\n  80 |       }\n  81 |\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/enterprisesearch.spec.js:78:20"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Using existing auth session...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/v2/nterprise-search\n"
+                        },
+                        {
+                          "text": "Storage state expired, creating new session...\n"
+                        },
+                        {
+                          "text": "Starting direct login process...\n"
+                        },
+                        {
+                          "text": "Navigated to login URL directly\n"
+                        },
+                        {
+                          "text": "Go to Login button visible: \u001b[33mfalse\u001b[39m\n"
+                        },
+                        {
+                          "text": "Login button visible: \u001b[33mfalse\u001b[39m\n"
+                        },
+                        {
+                          "text": "Waiting for Auth0 login page...\n"
+                        },
+                        {
+                          "text": "Auth check error, continuing with current page state\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "🗑️ Attempting to delete Insights workspace: \"Tesla’s Transforming\"\n"
+                        },
+                        {
+                          "text": "⚠️ Error deleting Insights workspace: page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Delete Workspace\")') to be visible\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "🗑️ Attempting to delete Query workspace: \"acme_chatbot\"\n"
+                        },
+                        {
+                          "text": "⚠️ Error deleting Query workspace: page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Delete Workspace\")') to be visible\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "✅ Cleanup completed\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "Direct login failed: page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n"
+                        }
+                      ],
+                      "retry": 2,
+                      "startTime": "2026-02-13T19:21:59.460Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "62f9178d886387b97391-14bae53fd51f0537c25b",
+              "file": "enterprisesearch.spec.js",
+              "line": 56,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Extract.spec.js",
+      "file": "Extract.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login and Navigation Tests",
+          "file": "Extract.spec.js",
+          "line": 18,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "OCR Document Processing Tests",
+              "file": "Extract.spec.js",
+              "line": 20,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "@smoke @e2e @integration TC01:Verify File content Extracted successfully",
+                  "ok": true,
+                  "tags": [
+                    "smoke",
+                    "e2e",
+                    "integration"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "parallelIndex": 2,
+                          "status": "passed",
+                          "duration": 52407,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "Creating new auth session...\n"
+                            },
+                            {
+                              "text": "Auth session saved successfully\n"
+                            },
+                            {
+                              "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/extract\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-13T19:15:50.600Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fb8171f0e1175ce3cf80-68aacaa146fbd464b5ec",
+                  "file": "Extract.spec.js",
+                  "line": 37,
+                  "column": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "insights.spec.js",
+      "file": "insights.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Insights Feature Tests",
+          "file": "insights.spec.js",
+          "line": 14,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke @e2e @integration TC02: Create workspace with Insights use case",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "e2e",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 6586,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-13T19:16:43.137Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-1c63accefecc48dc6616",
+              "file": "insights.spec.js",
+              "line": 65,
+              "column": 3
+            },
+            {
+              "title": "@smoke @e2e @integration TC06:Insights use case - Verify workspace functionality - upload document",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "e2e",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 11438,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to application home...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Successfully loaded project page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        },
+                        {
+                          "text": "Successfully navigated to Insights page\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-13T19:16:49.731Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fab48f91e823cfd90669-accd187e60cc142bc42c",
+              "file": "insights.spec.js",
+              "line": 148,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "KPIdashboard/AIAssistant.spec.js",
+      "file": "KPIdashboard/AIAssistant.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "AI Assistant Text_Bot Tests",
+          "file": "KPIdashboard/AIAssistant.spec.js",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke @e2e @integration Ask a question and verify results",
+              "ok": false,
+              "tags": [
+                "smoke",
+                "e2e",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 240000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 94692,
+                      "error": {
+                        "message": "Error: \u001b[31mTimed out 90000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m()\u001b[22m\n\nLocator: getByText('Executing SQL query')\nExpected: hidden\nReceived: visible\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" with timeout 90000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Executing SQL query')\u001b[22m\n\u001b[2m    93 × locator resolved to <span class=\"font-medium text-foreground\">Executing SQL query</span>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n",
+                        "stack": "Error: \u001b[31mTimed out 90000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m()\u001b[22m\n\nLocator: getByText('Executing SQL query')\nExpected: hidden\nReceived: visible\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" with timeout 90000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Executing SQL query')\u001b[22m\n\u001b[2m    93 × locator resolved to <span class=\"font-medium text-foreground\">Executing SQL query</span>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n    at AIAssistantPage.waitForProcessing (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:43:41)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:25:25\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:24:16",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                          "column": 41,
+                          "line": 43
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/AIAssistant.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m   \u001b[36masync\u001b[39m waitForProcessing() {\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m maxWaitTime \u001b[33m=\u001b[39m \u001b[35m90000\u001b[39m\u001b[33m;\u001b[39m \u001b[90m// 90 seconds wait for processing to finish\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mexecutingSQLText)\u001b[33m.\u001b[39mtoBeHidden({ timeout\u001b[33m:\u001b[39m maxWaitTime })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mprocessingText)\u001b[33m.\u001b[39mtoBeHidden({ timeout\u001b[33m:\u001b[39m maxWaitTime })\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mwaitText)\u001b[33m.\u001b[39mtoBeHidden({ timeout\u001b[33m:\u001b[39m maxWaitTime })\u001b[33m;\u001b[39m\n \u001b[90m 46 |\u001b[39m   }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                            "column": 41,
+                            "line": 43
+                          },
+                          "message": "Error: \u001b[31mTimed out 90000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m()\u001b[22m\n\nLocator: getByText('Executing SQL query')\nExpected: hidden\nReceived: visible\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" with timeout 90000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Executing SQL query')\u001b[22m\n\u001b[2m    93 × locator resolved to <span class=\"font-medium text-foreground\">Executing SQL query</span>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/AIAssistant.js:43\n\n  41 |   async waitForProcessing() {\n  42 |     const maxWaitTime = 90000; // 90 seconds wait for processing to finish\n> 43 |     await expect(this.executingSQLText).toBeHidden({ timeout: maxWaitTime });\n     |                                         ^\n  44 |     await expect(this.processingText).toBeHidden({ timeout: maxWaitTime });\n  45 |     await expect(this.waitText).toBeHidden({ timeout: maxWaitTime });\n  46 |   }\n    at AIAssistantPage.waitForProcessing (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:43:41)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:25:25\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:24:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Toggle AI Assistant and ask a question",
+                          "duration": 803
+                        },
+                        {
+                          "title": "Wait for processing and verify results",
+                          "duration": 90006,
+                          "error": {
+                            "message": "Error: \u001b[31mTimed out 90000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m()\u001b[22m\n\nLocator: getByText('Executing SQL query')\nExpected: hidden\nReceived: visible\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" with timeout 90000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Executing SQL query')\u001b[22m\n\u001b[2m    93 × locator resolved to <span class=\"font-medium text-foreground\">Executing SQL query</span>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n",
+                            "stack": "Error: \u001b[31mTimed out 90000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m()\u001b[22m\n\nLocator: getByText('Executing SQL query')\nExpected: hidden\nReceived: visible\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" with timeout 90000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Executing SQL query')\u001b[22m\n\u001b[2m    93 × locator resolved to <span class=\"font-medium text-foreground\">Executing SQL query</span>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n    at AIAssistantPage.waitForProcessing (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:43:41)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:25:25\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:24:16",
+                            "location": {
+                              "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                              "column": 41,
+                              "line": 43
+                            },
+                            "snippet": "   at ../pages/KpiDashboardPages/AIAssistant.js:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m   \u001b[36masync\u001b[39m waitForProcessing() {\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m maxWaitTime \u001b[33m=\u001b[39m \u001b[35m90000\u001b[39m\u001b[33m;\u001b[39m \u001b[90m// 90 seconds wait for processing to finish\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mexecutingSQLText)\u001b[33m.\u001b[39mtoBeHidden({ timeout\u001b[33m:\u001b[39m maxWaitTime })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mprocessingText)\u001b[33m.\u001b[39mtoBeHidden({ timeout\u001b[33m:\u001b[39m maxWaitTime })\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mwaitText)\u001b[33m.\u001b[39mtoBeHidden({ timeout\u001b[33m:\u001b[39m maxWaitTime })\u001b[33m;\u001b[39m\n \u001b[90m 46 |\u001b[39m   }\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-02-13T19:16:53.596Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                        "column": 41,
+                        "line": 43
+                      }
+                    },
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30311,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AIAssistantPage.navigateToDashboard (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:25:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:10:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                          "column": 21,
+                          "line": 25
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/AIAssistant.js:25\n\n\u001b[0m \u001b[90m 23 |\u001b[39m\n \u001b[90m 24 |\u001b[39m   \u001b[36masync\u001b[39m navigateToDashboard() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://nsight-dev.ngenux.app/project/ai-dashboard\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m   }\n \u001b[90m 27 |\u001b[39m\n \u001b[90m 28 |\u001b[39m   \u001b[36masync\u001b[39m toggleAssistant() {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                            "column": 21,
+                            "line": 25
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/AIAssistant.js:25\n\n  23 |\n  24 |   async navigateToDashboard() {\n> 25 |     await this.page.goto(\"https://nsight-dev.ngenux.app/project/ai-dashboard\");\n     |                     ^\n  26 |   }\n  27 |\n  28 |   async toggleAssistant() {\n    at AIAssistantPage.navigateToDashboard (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:25:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:10:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-02-13T19:18:28.964Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                        "column": 21,
+                        "line": 25
+                      }
+                    },
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30304,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n    at AIAssistantPage.navigateToDashboard (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:25:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:10:23",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                          "column": 21,
+                          "line": 25
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/AIAssistant.js:25\n\n\u001b[0m \u001b[90m 23 |\u001b[39m\n \u001b[90m 24 |\u001b[39m   \u001b[36masync\u001b[39m navigateToDashboard() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://nsight-dev.ngenux.app/project/ai-dashboard\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m   }\n \u001b[90m 27 |\u001b[39m\n \u001b[90m 28 |\u001b[39m   \u001b[36masync\u001b[39m toggleAssistant() {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                            "column": 21,
+                            "line": 25
+                          },
+                          "message": "Error: page.goto: net::ERR_TIMED_OUT at https://nsight-dev.ngenux.app/project/ai-dashboard\nCall log:\n\u001b[2m  - navigating to \"https://nsight-dev.ngenux.app/project/ai-dashboard\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/AIAssistant.js:25\n\n  23 |\n  24 |   async navigateToDashboard() {\n> 25 |     await this.page.goto(\"https://nsight-dev.ngenux.app/project/ai-dashboard\");\n     |                     ^\n  26 |   }\n  27 |\n  28 |   async toggleAssistant() {\n    at AIAssistantPage.navigateToDashboard (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:25:21)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:10:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 2,
+                      "startTime": "2026-02-13T19:19:00.007Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                        "column": 21,
+                        "line": 25
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a6ff67ba357b9c52e637-26295399957cd0908042",
+              "file": "KPIdashboard/AIAssistant.spec.js",
+              "line": 17,
+              "column": 3
+            },
+            {
+              "title": "@smoke @e2e @integration Start a new chat and verify results",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "e2e",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 240000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 222224,
+                      "error": {
+                        "message": "Error: \u001b[31mTimed out 90000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m()\u001b[22m\n\nLocator: getByText('Processing')\nExpected: hidden\nReceived: visible\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" with timeout 90000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Processing')\u001b[22m\n\u001b[2m    93 × locator resolved to <div class=\"bg-muted p-4 rounded-md text-sm whitespace-pre-wrap\">Error: An error occurred while processing your qu…</div>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n",
+                        "stack": "Error: \u001b[31mTimed out 90000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m()\u001b[22m\n\nLocator: getByText('Processing')\nExpected: hidden\nReceived: visible\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" with timeout 90000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Processing')\u001b[22m\n\u001b[2m    93 × locator resolved to <div class=\"bg-muted p-4 rounded-md text-sm whitespace-pre-wrap\">Error: An error occurred while processing your qu…</div>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n    at AIAssistantPage.waitForProcessing (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:44:39)\n    at AIAssistantPage.startNewChat (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:58:5)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:35:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:32:5",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                          "column": 39,
+                          "line": 44
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/AIAssistant.js:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m maxWaitTime \u001b[33m=\u001b[39m \u001b[35m90000\u001b[39m\u001b[33m;\u001b[39m \u001b[90m// 90 seconds wait for processing to finish\u001b[39m\n \u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mexecutingSQLText)\u001b[33m.\u001b[39mtoBeHidden({ timeout\u001b[33m:\u001b[39m maxWaitTime })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mprocessingText)\u001b[33m.\u001b[39mtoBeHidden({ timeout\u001b[33m:\u001b[39m maxWaitTime })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mwaitText)\u001b[33m.\u001b[39mtoBeHidden({ timeout\u001b[33m:\u001b[39m maxWaitTime })\u001b[33m;\u001b[39m\n \u001b[90m 46 |\u001b[39m   }\n \u001b[90m 47 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                            "column": 39,
+                            "line": 44
+                          },
+                          "message": "Error: \u001b[31mTimed out 90000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m()\u001b[22m\n\nLocator: getByText('Processing')\nExpected: hidden\nReceived: visible\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" with timeout 90000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Processing')\u001b[22m\n\u001b[2m    93 × locator resolved to <div class=\"bg-muted p-4 rounded-md text-sm whitespace-pre-wrap\">Error: An error occurred while processing your qu…</div>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n\n   at ../pages/KpiDashboardPages/AIAssistant.js:44\n\n  42 |     const maxWaitTime = 90000; // 90 seconds wait for processing to finish\n  43 |     await expect(this.executingSQLText).toBeHidden({ timeout: maxWaitTime });\n> 44 |     await expect(this.processingText).toBeHidden({ timeout: maxWaitTime });\n     |                                       ^\n  45 |     await expect(this.waitText).toBeHidden({ timeout: maxWaitTime });\n  46 |   }\n  47 |\n    at AIAssistantPage.waitForProcessing (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:44:39)\n    at AIAssistantPage.startNewChat (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:58:5)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:35:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:32:5"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Start a new chat and ask a question",
+                          "duration": 176349,
+                          "error": {
+                            "message": "Error: \u001b[31mTimed out 90000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m()\u001b[22m\n\nLocator: getByText('Processing')\nExpected: hidden\nReceived: visible\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" with timeout 90000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Processing')\u001b[22m\n\u001b[2m    93 × locator resolved to <div class=\"bg-muted p-4 rounded-md text-sm whitespace-pre-wrap\">Error: An error occurred while processing your qu…</div>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n",
+                            "stack": "Error: \u001b[31mTimed out 90000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m()\u001b[22m\n\nLocator: getByText('Processing')\nExpected: hidden\nReceived: visible\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" with timeout 90000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Processing')\u001b[22m\n\u001b[2m    93 × locator resolved to <div class=\"bg-muted p-4 rounded-md text-sm whitespace-pre-wrap\">Error: An error occurred while processing your qu…</div>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n    at AIAssistantPage.waitForProcessing (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:44:39)\n    at AIAssistantPage.startNewChat (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js:58:5)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:35:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/AIAssistant.spec.js:32:5",
+                            "location": {
+                              "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                              "column": 39,
+                              "line": 44
+                            },
+                            "snippet": "   at ../pages/KpiDashboardPages/AIAssistant.js:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m maxWaitTime \u001b[33m=\u001b[39m \u001b[35m90000\u001b[39m\u001b[33m;\u001b[39m \u001b[90m// 90 seconds wait for processing to finish\u001b[39m\n \u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mexecutingSQLText)\u001b[33m.\u001b[39mtoBeHidden({ timeout\u001b[33m:\u001b[39m maxWaitTime })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mprocessingText)\u001b[33m.\u001b[39mtoBeHidden({ timeout\u001b[33m:\u001b[39m maxWaitTime })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mwaitText)\u001b[33m.\u001b[39mtoBeHidden({ timeout\u001b[33m:\u001b[39m maxWaitTime })\u001b[33m;\u001b[39m\n \u001b[90m 46 |\u001b[39m   }\n \u001b[90m 47 |\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-02-13T19:17:01.183Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/AIAssistant.js",
+                        "column": 39,
+                        "line": 44
+                      }
+                    },
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 61053,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Matching elements for \"Executing SQL query\": 0\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "steps": [
+                        {
+                          "title": "Start a new chat and ask a question",
+                          "duration": 49977
+                        },
+                        {
+                          "title": "Verify results in the new chat",
+                          "duration": 91
+                        }
+                      ],
+                      "startTime": "2026-02-13T19:20:44.055Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "flaky"
+                }
+              ],
+              "id": "a6ff67ba357b9c52e637-639e1c9348080df9f2bd",
+              "file": "KPIdashboard/AIAssistant.spec.js",
+              "line": 31,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "KPIdashboard/aiDashboard.spec.js",
+      "file": "KPIdashboard/aiDashboard.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": " AI Dashboard KPI Flow",
+          "file": "KPIdashboard/aiDashboard.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke @e2e @integration OTIF metrics chart operations",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "e2e",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 600000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 42488,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ Page is ready\n"
+                        },
+                        {
+                          "text": "🎯 Attempting to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "🔄 Trying strategy 1 to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "✅ Successfully opened metric: OTIF (On-Time In-Full) using strategy 1 (1 indicators verified, URL changed: true)\n"
+                        },
+                        {
+                          "text": "🔍 Verifying correct metric opened: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "✅ Confirmed correct metric opened: OTIF (On-Time In-Full) (3/4 verifications passed, URL match: true)\n"
+                        },
+                        {
+                          "text": "✅ Opened OTIF metrics view\n"
+                        },
+                        {
+                          "text": "📊 Captured initial chart state\n"
+                        },
+                        {
+                          "text": "🔄 Testing chart type: Bar Chart\n"
+                        },
+                        {
+                          "text": "🔄 Changing chart type to: Bar Chart\n"
+                        },
+                        {
+                          "text": "✅ Changed chart type to: Bar Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart rendering verified for Bar Chart\n"
+                        },
+                        {
+                          "text": "⚠️ Chart may not have visually changed for: Bar Chart\n"
+                        },
+                        {
+                          "text": "🔄 Testing chart type: Line Chart\n"
+                        },
+                        {
+                          "text": "🔄 Changing chart type to: Line Chart\n"
+                        },
+                        {
+                          "text": "✅ Changed chart type to: Line Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart rendering verified for Line Chart\n"
+                        },
+                        {
+                          "text": "⚠️ Chart may not have visually changed for: Line Chart\n"
+                        },
+                        {
+                          "text": "🔄 Testing chart type: Area Chart\n"
+                        },
+                        {
+                          "text": "🔄 Changing chart type to: Area Chart\n"
+                        },
+                        {
+                          "text": "✅ Changed chart type to: Area Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart rendering verified for Area Chart\n"
+                        },
+                        {
+                          "text": "⚠️ Chart may not have visually changed for: Area Chart\n"
+                        },
+                        {
+                          "text": "🔄 Testing chart type: Pie Chart\n"
+                        },
+                        {
+                          "text": "🔄 Changing chart type to: Pie Chart\n"
+                        },
+                        {
+                          "text": "✅ Changed chart type to: Pie Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart rendering verified for Pie Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart visually changed to: Pie Chart\n"
+                        },
+                        {
+                          "text": "🔄 Testing chart type: Gauge Chart\n"
+                        },
+                        {
+                          "text": "🔄 Changing chart type to: Gauge Chart\n"
+                        },
+                        {
+                          "text": "✅ Changed chart type to: Gauge Chart\n"
+                        },
+                        {
+                          "text": "✅ Chart rendering verified for Gauge Chart\n"
+                        },
+                        {
+                          "text": "⚠️ Chart may not have visually changed for: Gauge Chart\n"
+                        },
+                        {
+                          "text": "✅ All chart type changes tested and verified\n"
+                        },
+                        {
+                          "text": "✅ Returned to main dashboard\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Navigate to Supply Chain Head and open OTIF metrics",
+                          "duration": 8184
+                        },
+                        {
+                          "title": "Test different chart types with visual verification",
+                          "duration": 18645
+                        },
+                        {
+                          "title": "Return to main dashboard",
+                          "duration": 144
+                        }
+                      ],
+                      "startTime": "2026-02-13T19:19:31.032Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e1d7752688fb686de41b-bf2052b32cb1112b817a",
+              "file": "KPIdashboard/aiDashboard.spec.js",
+              "line": 297,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "KPIdashboard/generateAIInsights.spec.js",
+      "file": "KPIdashboard/generateAIInsights.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Generate AI Insights Tests",
+          "file": "KPIdashboard/generateAIInsights.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke @e2e @integration Generate AI Insights and verify results",
+              "ok": false,
+              "tags": [
+                "smoke",
+                "e2e",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 600000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 27870,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m\n    at GenerateAIInsightsPage.verifyResultsContent (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js:26:45)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:41:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:39:5",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                          "column": 45,
+                          "line": 26
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/generateAIInsights.js:26\n\n\u001b[0m \u001b[90m 24 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`🔍 Verifying results content: ${content}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m    \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(content\u001b[33m.\u001b[39msplit(\u001b[32m' '\u001b[39m)\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m30\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m   }\n \u001b[90m 28 |\u001b[39m }\n \u001b[90m 29 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                            "column": 45,
+                            "line": 26
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m\n\n   at ../pages/KpiDashboardPages/generateAIInsights.js:26\n\n  24 |     console.log(`🔍 Verifying results content: ${content}`);\n  25 |    \n> 26 |     await expect(content.split(' ').length).toBeGreaterThan(30);\n     |                                             ^\n  27 |   }\n  28 | }\n  29 |\n    at GenerateAIInsightsPage.verifyResultsContent (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js:26:45)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:41:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:39:5"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\n🎯 COMPREHENSIVE TIME PERIOD METRIC TEST - OTIF\n"
+                        },
+                        {
+                          "text": "✅ Page is ready\n"
+                        },
+                        {
+                          "text": "🎯 Attempting to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "🔄 Trying strategy 1 to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "✅ Successfully opened metric: OTIF (On-Time In-Full) using strategy 1 (1 indicators verified, URL changed: true)\n"
+                        },
+                        {
+                          "text": "🔍 Verifying correct metric opened: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "✅ Confirmed correct metric opened: OTIF (On-Time In-Full) (3/4 verifications passed, URL match: true)\n"
+                        },
+                        {
+                          "text": "\u001b[33mtrue\u001b[39m\n"
+                        },
+                        {
+                          "text": "✅ Successfully opened OTIF metric detail view\n"
+                        },
+                        {
+                          "text": "🔍 Verifying results content: Failed to generate insights▴\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Navigate to Supply Chain Head and open OTIF metrics",
+                          "duration": 8172
+                        },
+                        {
+                          "title": "Click Generate AI Insights button",
+                          "duration": 62
+                        },
+                        {
+                          "title": "Wait for loading and verify results",
+                          "duration": 5323,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m\n    at GenerateAIInsightsPage.verifyResultsContent (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js:26:45)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:41:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:39:5",
+                            "location": {
+                              "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                              "column": 45,
+                              "line": 26
+                            },
+                            "snippet": "   at ../pages/KpiDashboardPages/generateAIInsights.js:26\n\n\u001b[0m \u001b[90m 24 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`🔍 Verifying results content: ${content}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m    \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(content\u001b[33m.\u001b[39msplit(\u001b[32m' '\u001b[39m)\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m30\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m   }\n \u001b[90m 28 |\u001b[39m }\n \u001b[90m 29 |\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-02-13T19:20:13.605Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-generateAIIns-eb19c-Insights-and-verify-results-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                        "column": 45,
+                        "line": 26
+                      }
+                    },
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 31209,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m\n    at GenerateAIInsightsPage.verifyResultsContent (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js:26:45)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:41:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:39:5",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                          "column": 45,
+                          "line": 26
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/generateAIInsights.js:26\n\n\u001b[0m \u001b[90m 24 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`🔍 Verifying results content: ${content}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m    \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(content\u001b[33m.\u001b[39msplit(\u001b[32m' '\u001b[39m)\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m30\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m   }\n \u001b[90m 28 |\u001b[39m }\n \u001b[90m 29 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                            "column": 45,
+                            "line": 26
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m\n\n   at ../pages/KpiDashboardPages/generateAIInsights.js:26\n\n  24 |     console.log(`🔍 Verifying results content: ${content}`);\n  25 |    \n> 26 |     await expect(content.split(' ').length).toBeGreaterThan(30);\n     |                                             ^\n  27 |   }\n  28 | }\n  29 |\n    at GenerateAIInsightsPage.verifyResultsContent (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js:26:45)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:41:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:39:5"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\n🎯 COMPREHENSIVE TIME PERIOD METRIC TEST - OTIF\n"
+                        },
+                        {
+                          "text": "✅ Page is ready\n"
+                        },
+                        {
+                          "text": "🎯 Attempting to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "🔄 Trying strategy 1 to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "✅ Successfully opened metric: OTIF (On-Time In-Full) using strategy 1 (1 indicators verified, URL changed: true)\n"
+                        },
+                        {
+                          "text": "🔍 Verifying correct metric opened: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "✅ Confirmed correct metric opened: OTIF (On-Time In-Full) (3/4 verifications passed, URL match: true)\n"
+                        },
+                        {
+                          "text": "\u001b[33mtrue\u001b[39m\n"
+                        },
+                        {
+                          "text": "✅ Successfully opened OTIF metric detail view\n"
+                        },
+                        {
+                          "text": "🔍 Verifying results content: Failed to generate insights▴\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "steps": [
+                        {
+                          "title": "Navigate to Supply Chain Head and open OTIF metrics",
+                          "duration": 10287
+                        },
+                        {
+                          "title": "Click Generate AI Insights button",
+                          "duration": 77
+                        },
+                        {
+                          "title": "Wait for loading and verify results",
+                          "duration": 7354,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m\n    at GenerateAIInsightsPage.verifyResultsContent (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js:26:45)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:41:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:39:5",
+                            "location": {
+                              "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                              "column": 45,
+                              "line": 26
+                            },
+                            "snippet": "   at ../pages/KpiDashboardPages/generateAIInsights.js:26\n\n\u001b[0m \u001b[90m 24 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`🔍 Verifying results content: ${content}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m    \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(content\u001b[33m.\u001b[39msplit(\u001b[32m' '\u001b[39m)\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m30\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m   }\n \u001b[90m 28 |\u001b[39m }\n \u001b[90m 29 |\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-02-13T19:20:42.106Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-generateAIIns-eb19c-Insights-and-verify-results-chromium-retry1/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                        "column": 45,
+                        "line": 26
+                      }
+                    },
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 21801,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m\n    at GenerateAIInsightsPage.verifyResultsContent (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js:26:45)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:41:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:39:5",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                          "column": 45,
+                          "line": 26
+                        },
+                        "snippet": "   at ../pages/KpiDashboardPages/generateAIInsights.js:26\n\n\u001b[0m \u001b[90m 24 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`🔍 Verifying results content: ${content}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m    \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(content\u001b[33m.\u001b[39msplit(\u001b[32m' '\u001b[39m)\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m30\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m   }\n \u001b[90m 28 |\u001b[39m }\n \u001b[90m 29 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                            "column": 45,
+                            "line": 26
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m\n\n   at ../pages/KpiDashboardPages/generateAIInsights.js:26\n\n  24 |     console.log(`🔍 Verifying results content: ${content}`);\n  25 |    \n> 26 |     await expect(content.split(' ').length).toBeGreaterThan(30);\n     |                                             ^\n  27 |   }\n  28 | }\n  29 |\n    at GenerateAIInsightsPage.verifyResultsContent (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js:26:45)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:41:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:39:5"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\n🎯 COMPREHENSIVE TIME PERIOD METRIC TEST - OTIF\n"
+                        },
+                        {
+                          "text": "✅ Page is ready\n"
+                        },
+                        {
+                          "text": "🎯 Attempting to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "🔄 Trying strategy 1 to open metric: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "✅ Successfully opened metric: OTIF (On-Time In-Full) using strategy 1 (1 indicators verified, URL changed: true)\n"
+                        },
+                        {
+                          "text": "🔍 Verifying correct metric opened: OTIF (On-Time In-Full)\n"
+                        },
+                        {
+                          "text": "✅ Confirmed correct metric opened: OTIF (On-Time In-Full) (3/4 verifications passed, URL match: true)\n"
+                        },
+                        {
+                          "text": "\u001b[33mtrue\u001b[39m\n"
+                        },
+                        {
+                          "text": "✅ Successfully opened OTIF metric detail view\n"
+                        },
+                        {
+                          "text": "🔍 Verifying results content: Failed to generate insights▴\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 2,
+                      "steps": [
+                        {
+                          "title": "Navigate to Supply Chain Head and open OTIF metrics",
+                          "duration": 10020
+                        },
+                        {
+                          "title": "Click Generate AI Insights button",
+                          "duration": 84
+                        },
+                        {
+                          "title": "Wait for loading and verify results",
+                          "duration": 4843,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m30\u001b[39m\nReceived:   \u001b[31m4\u001b[39m\n    at GenerateAIInsightsPage.verifyResultsContent (/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js:26:45)\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:41:7\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/KPIdashboard/generateAIInsights.spec.js:39:5",
+                            "location": {
+                              "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                              "column": 45,
+                              "line": 26
+                            },
+                            "snippet": "   at ../pages/KpiDashboardPages/generateAIInsights.js:26\n\n\u001b[0m \u001b[90m 24 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`🔍 Verifying results content: ${content}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m    \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(content\u001b[33m.\u001b[39msplit(\u001b[32m' '\u001b[39m)\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m30\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m   }\n \u001b[90m 28 |\u001b[39m }\n \u001b[90m 29 |\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-02-13T19:21:14.075Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/KPIdashboard-generateAIIns-eb19c-Insights-and-verify-results-chromium-retry2/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/pages/KpiDashboardPages/generateAIInsights.js",
+                        "column": 45,
+                        "line": 26
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4c71a8a457cfce231c08-8bd795abc0836152191b",
+              "file": "KPIdashboard/generateAIInsights.spec.js",
+              "line": 18,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "pulse.spec.js",
+      "file": "pulse.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Pulse sentiment analysis – functional flow",
+          "file": "pulse.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke @e2e @integration TC001_generateSentimentFromText",
+              "ok": false,
+              "tags": [
+                "smoke",
+                "e2e",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 8809,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                          "column": 28,
+                          "line": 106
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 104 |\u001b[39m       \n \u001b[90m 105 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mgetSentimentValue())\u001b[33m.\u001b[39mtoLowerCase()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 106 |\u001b[39m       \u001b[36mawait\u001b[39m expect(result)\u001b[33m.\u001b[39mtoBe(dataset[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mexpected)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 107 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Correct: \"${dataset[0].text}\" → ${result}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 109 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 28,
+                            "line": 106
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n\n  104 |       \n  105 |       const result = (await pulse.getSentimentValue()).toLowerCase();\n> 106 |       await expect(result).toBe(dataset[0].expected);\n      |                            ^\n  107 |       console.log(`✅ Correct: \"${dataset[0].text}\" → ${result}`);\n  108 |     });\n  109 |   });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 8,
+                            "line": 283
+                          },
+                          "message": "\u001b[31m\"afterAll\" hook timeout of 90000ms exceeded.\u001b[39m\n\n  281 |   });\n  282 |\n> 283 |   test.afterAll(async ({ page }) => {\n      |        ^\n  284 |     await test.step('Navigate to pulse page', async () => {\n  285 |       await page.goto(`${loginUrl}/project/pulse`);\n  286 |     });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:283:8"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 76,
+                            "line": 295
+                          },
+                          "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Delete Workspace' }).first()\u001b[22m\n\n\n  293 |\n  294 |       // Click delete workspace option\n> 295 |       await page.getByRole(\"button\", { name: \"Delete Workspace\" }).first().click();\n      |                                                                            ^\n  296 |\n  297 |       // Confirm deletion\n  298 |       await page.getByRole(\"button\", { name: \"Delete\" }).click();\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:295:76\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:288:5"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Using existing auth session...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Open pulse workspace",
+                          "duration": 25
+                        },
+                        {
+                          "title": "Analyze text and verify sentiment",
+                          "duration": 5179,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5",
+                            "location": {
+                              "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                              "column": 28,
+                              "line": 106
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 104 |\u001b[39m       \n \u001b[90m 105 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mgetSentimentValue())\u001b[33m.\u001b[39mtoLowerCase()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 106 |\u001b[39m       \u001b[36mawait\u001b[39m expect(result)\u001b[33m.\u001b[39mtoBe(dataset[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mexpected)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 107 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Correct: \"${dataset[0].text}\" → ${result}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 109 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-02-13T19:21:36.675Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse-Pulse-sentiment-anal-4d4d4-1-generateSentimentFromText-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 28,
+                        "line": 106
+                      }
+                    },
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 8861,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                          "column": 28,
+                          "line": 106
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 104 |\u001b[39m       \n \u001b[90m 105 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mgetSentimentValue())\u001b[33m.\u001b[39mtoLowerCase()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 106 |\u001b[39m       \u001b[36mawait\u001b[39m expect(result)\u001b[33m.\u001b[39mtoBe(dataset[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mexpected)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 107 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Correct: \"${dataset[0].text}\" → ${result}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 109 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 28,
+                            "line": 106
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n\n  104 |       \n  105 |       const result = (await pulse.getSentimentValue()).toLowerCase();\n> 106 |       await expect(result).toBe(dataset[0].expected);\n      |                            ^\n  107 |       console.log(`✅ Correct: \"${dataset[0].text}\" → ${result}`);\n  108 |     });\n  109 |   });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 8,
+                            "line": 283
+                          },
+                          "message": "\u001b[31m\"afterAll\" hook timeout of 90000ms exceeded.\u001b[39m\n\n  281 |   });\n  282 |\n> 283 |   test.afterAll(async ({ page }) => {\n      |        ^\n  284 |     await test.step('Navigate to pulse page', async () => {\n  285 |       await page.goto(`${loginUrl}/project/pulse`);\n  286 |     });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:283:8"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 76,
+                            "line": 295
+                          },
+                          "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Delete Workspace' }).first()\u001b[22m\n\n\n  293 |\n  294 |       // Click delete workspace option\n> 295 |       await page.getByRole(\"button\", { name: \"Delete Workspace\" }).first().click();\n      |                                                                            ^\n  296 |\n  297 |       // Confirm deletion\n  298 |       await page.getByRole(\"button\", { name: \"Delete\" }).click();\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:295:76\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:288:5"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Using existing auth session...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "steps": [
+                        {
+                          "title": "Open pulse workspace",
+                          "duration": 54
+                        },
+                        {
+                          "title": "Analyze text and verify sentiment",
+                          "duration": 5181,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5",
+                            "location": {
+                              "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                              "column": 28,
+                              "line": 106
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 104 |\u001b[39m       \n \u001b[90m 105 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mgetSentimentValue())\u001b[33m.\u001b[39mtoLowerCase()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 106 |\u001b[39m       \u001b[36mawait\u001b[39m expect(result)\u001b[33m.\u001b[39mtoBe(dataset[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mexpected)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 107 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Correct: \"${dataset[0].text}\" → ${result}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 109 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-02-13T19:23:24.350Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse-Pulse-sentiment-anal-4d4d4-1-generateSentimentFromText-chromium-retry1/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 28,
+                        "line": 106
+                      }
+                    },
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 8831,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5",
+                        "location": {
+                          "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                          "column": 28,
+                          "line": 106
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 104 |\u001b[39m       \n \u001b[90m 105 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mgetSentimentValue())\u001b[33m.\u001b[39mtoLowerCase()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 106 |\u001b[39m       \u001b[36mawait\u001b[39m expect(result)\u001b[33m.\u001b[39mtoBe(dataset[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mexpected)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 107 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Correct: \"${dataset[0].text}\" → ${result}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 109 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 28,
+                            "line": 106
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n\n  104 |       \n  105 |       const result = (await pulse.getSentimentValue()).toLowerCase();\n> 106 |       await expect(result).toBe(dataset[0].expected);\n      |                            ^\n  107 |       console.log(`✅ Correct: \"${dataset[0].text}\" → ${result}`);\n  108 |     });\n  109 |   });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 8,
+                            "line": 283
+                          },
+                          "message": "\u001b[31m\"afterAll\" hook timeout of 90000ms exceeded.\u001b[39m\n\n  281 |   });\n  282 |\n> 283 |   test.afterAll(async ({ page }) => {\n      |        ^\n  284 |     await test.step('Navigate to pulse page', async () => {\n  285 |       await page.goto(`${loginUrl}/project/pulse`);\n  286 |     });\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:283:8"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                            "column": 76,
+                            "line": 295
+                          },
+                          "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Delete Workspace' }).first()\u001b[22m\n\n\n  293 |\n  294 |       // Click delete workspace option\n> 295 |       await page.getByRole(\"button\", { name: \"Delete Workspace\" }).first().click();\n      |                                                                            ^\n  296 |\n  297 |       // Confirm deletion\n  298 |       await page.getByRole(\"button\", { name: \"Delete\" }).click();\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:295:76\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:288:5"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Using existing auth session...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/pulse\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 2,
+                      "steps": [
+                        {
+                          "title": "Open pulse workspace",
+                          "duration": 54
+                        },
+                        {
+                          "title": "Analyze text and verify sentiment",
+                          "duration": 5176,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"positive\"\u001b[39m\nReceived: \u001b[31m\"neutral\"\u001b[39m\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:106:28\n    at /home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js:100:5",
+                            "location": {
+                              "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                              "column": 28,
+                              "line": 106
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 104 |\u001b[39m       \n \u001b[90m 105 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m pulse\u001b[33m.\u001b[39mgetSentimentValue())\u001b[33m.\u001b[39mtoLowerCase()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 106 |\u001b[39m       \u001b[36mawait\u001b[39m expect(result)\u001b[33m.\u001b[39mtoBe(dataset[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mexpected)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 107 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`✅ Correct: \"${dataset[0].text}\" → ${result}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 109 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-02-13T19:25:10.642Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/test-results/pulse-Pulse-sentiment-anal-4d4d4-1-generateSentimentFromText-chromium-retry2/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Ngen_studio_Automation/Ngen_studio_Automation/tests/pulse.spec.js",
+                        "column": 28,
+                        "line": 106
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4199f64b3242841a2ce2-4ed47870f417f2dc6092",
+              "file": "pulse.spec.js",
+              "line": 93,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "quality-check.spec.js",
+      "file": "quality-check.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Quality Check Feature Tests",
+          "file": "quality-check.spec.js",
+          "line": 14,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke @e2e @integration TC04: Image comparison shows results with similarity score and visual difference",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "e2e",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 12420,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Using existing auth session...\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/quality-check\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-13T19:21:45.212Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "094a1e5d42dc18e53fae-87b71c0f2c118256ab06",
+              "file": "quality-check.spec.js",
+              "line": 74,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "query.spec.js",
+      "file": "query.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Query feature – functional tests",
+          "file": "query.spec.js",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": " @smoke TC01_validQueryDisplaysResults",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 47095,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-13T19:21:57.687Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e81f4f68ea27254567d8-282d117fc0d24988b51f",
+              "file": "query.spec.js",
+              "line": 43,
+              "column": 3
+            },
+            {
+              "title": "@smoke TC03_longQueryHandled",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 50099,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        },
+                        {
+                          "text": "Navigating to app URL: https://ngen-uat.ngenux.app/project/query?tab=text2sql\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-13T19:22:56.129Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e81f4f68ea27254567d8-aa345018465156b707ee",
+              "file": "query.spec.js",
+              "line": 68,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-02-13T19:15:49.210Z",
+    "duration": 667060.969,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 1
+  }
+}
