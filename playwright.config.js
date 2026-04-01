@@ -53,6 +53,22 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
+    /**
+     * API Testing project — runs tests in tests/api.spec.js using Playwright's
+     * built-in `request` fixture. Pure HTTP tests (API-001 to API-003, API-006)
+     * require no browser context. Tests that exercise `page.route()` mocking
+     * (API-004, API-005, API-007) are tagged `@integration` and do use a
+     * browser context; they are included here for a single consolidated API run.
+     */
+    {
+      name: 'api',
+      testMatch: '**/api.spec.js',
+    },
+
+    /**
+     * Default chromium project — runs all UI, E2E, smoke, sanity, and
+     * regression tests in a full browser context.
+     */
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
